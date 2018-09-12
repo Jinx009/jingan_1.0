@@ -1,6 +1,5 @@
 package com.protops.gateway.service.device;
 
-import com.alibaba.fastjson.JSON;
 import com.protops.gateway.dao.log.SensorDeviceLogDao;
 import com.protops.gateway.dao.log.SensorInOutLogDao;
 import com.protops.gateway.dao.log.SensorOperationLogDao;
@@ -8,7 +7,6 @@ import com.protops.gateway.domain.iot.Sensor;
 import com.protops.gateway.domain.log.SensorDeviceLog;
 import com.protops.gateway.domain.log.SensorInOutLog;
 import com.protops.gateway.domain.log.SensorOperationLog;
-import com.protops.gateway.service.AppInfoService;
 import com.protops.gateway.util.StringUtils;
 import com.protops.gateway.utils.baoxin.SendUtils;
 import org.slf4j.Logger;
@@ -34,8 +32,6 @@ public class NewSensorService {
     private SensorOperationLogDao sensorOperationLogDao;
     @Autowired
     private SensorInOutLogDao sensorInOutLogDao;
-    @Autowired
-    private AppInfoService appInfoService;
 
 
 
@@ -108,79 +104,6 @@ public class NewSensorService {
 
     }
 
-    private void changeStatus(SensorOperationLog sensorOperationLog){
-        sensorOperationLog = sensorOperationLogDao.get(sensorOperationLog.getId());
-        log.warn("same data:{}", JSON.toJSONString(sensorOperationLog));
-        sensorOperationLog.setSendStatus(1);
-        sensorOperationLog.setSendTime(new Date());
-        sensorOperationLog.setFailTimes(7);
-        sensorOperationLogDao.update(sensorOperationLog);
-    }
-
-    private void changeBokenSendStatus(String result,SensorOperationLog sensorOperationLog){
-        String code = JSON.parseObject(result).getString("code");
-        sensorOperationLog = sensorOperationLogDao.get(sensorOperationLog.getId());
-        if ("10000".equals(code)) {
-            sensorOperationLog.setSendStatus(1);
-            sensorOperationLog.setSendTime(new Date());
-            sensorOperationLogDao.update(sensorOperationLog);
-        } else {
-            sensorOperationLog.setFailTimes(sensorOperationLog.getFailTimes() + 1);
-            sensorOperationLogDao.update(sensorOperationLog);
-        }
-    }
-
-    private void changeShangchengSendStatus(String result,SensorOperationLog sensorOperationLog){
-        String code = JSON.parseObject(result).getString("status");
-        sensorOperationLog = sensorOperationLogDao.get(sensorOperationLog.getId());
-        if ("1".equals(code)) {
-            sensorOperationLog.setSendStatus(1);
-            sensorOperationLog.setSendTime(new Date());
-            sensorOperationLogDao.update(sensorOperationLog);
-        } else {
-            sensorOperationLog.setFailTimes(sensorOperationLog.getFailTimes() + 1);
-            sensorOperationLogDao.update(sensorOperationLog);
-        }
-    }
-
-    private void changeChaozhouSendStatus(String result,SensorOperationLog sensorOperationLog){
-        String code = JSON.parseObject(result).getString("state");
-        sensorOperationLog = sensorOperationLogDao.get(sensorOperationLog.getId());
-        if ("0".equals(code)) {
-            sensorOperationLog.setSendStatus(1);
-            sensorOperationLog.setSendTime(new Date());
-            sensorOperationLogDao.update(sensorOperationLog);
-        } else {
-            sensorOperationLog.setFailTimes(5);
-            sensorOperationLogDao.update(sensorOperationLog);
-        }
-    }
-
-    private void changeBearhuntingSendStatus(String result,SensorOperationLog sensorOperationLog){
-        Integer code = JSON.parseObject(result).getInteger("status");
-        sensorOperationLog = sensorOperationLogDao.get(sensorOperationLog.getId());
-        if (1 == code) {
-            sensorOperationLog.setSendStatus(1);
-            sensorOperationLog.setSendTime(new Date());
-            sensorOperationLogDao.update(sensorOperationLog);
-        } else {
-            sensorOperationLog.setFailTimes(sensorOperationLog.getFailTimes() + 1);
-            sensorOperationLogDao.update(sensorOperationLog);
-        }
-    }
-
-    private void changeSendStatus(String result,SensorOperationLog sensorOperationLog){
-        Integer code = JSON.parseObject(result).getInteger("status");
-        sensorOperationLog = sensorOperationLogDao.get(sensorOperationLog.getId());
-        if (200 == code) {
-            sensorOperationLog.setSendStatus(1);
-            sensorOperationLog.setSendTime(new Date());
-            sensorOperationLogDao.update(sensorOperationLog);
-        } else {
-            sensorOperationLog.setFailTimes(sensorOperationLog.getFailTimes() + 1);
-            sensorOperationLogDao.update(sensorOperationLog);
-        }
-    }
 
 
     /**
