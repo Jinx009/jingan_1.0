@@ -1,0 +1,124 @@
+#set($cPath = "#cPath")
+#set($layout = "layout/h5_layout.vm")
+<style>
+
+    #footer{
+        position:fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        background:#111111;
+        color:#FFFFFF;
+    }
+    #footer .cmd-nav{
+        float:left;
+        width:50%;
+        line-height:44px;
+        height:44px;
+        position:relative;
+        text-align:center;
+    }
+
+    .selected{
+        position:absolute;
+        top:0;
+        left:20%;
+        right:20%;
+        height:3px;
+        background:#09B6EE;
+    }
+    #search{
+        width:90%;
+        margin:0 5%;
+        float:left;
+        height:40px;
+        margin-top:5px;
+        position:relative;
+        line-height:inherit;
+    }
+
+    .search-input-wrapper{
+        position:absolute;
+        right:40px;
+        top:0px;
+        left:0;
+        height:40px;
+    }
+    .line{
+        position:absolute;
+        top:50px;
+        left:0;right:0;
+        height:1px;
+        background:#adadad
+    }
+    .area-item{
+        float:left;
+        width:96%;
+        padding:0 2%;
+        height:40px;
+        line-height: 40px;
+        border-bottom:1px solid #adadad;
+        color:#878787;
+        font-size:20px;
+        cursor:pointer;
+    }
+    .location-name{
+        color:#121212;
+    }
+    .available:before{
+        content:"空余位：";
+    }
+    .available:after{
+        content:"  >"
+    }
+</style>
+<div class="line"></div>
+<div id="main-container">
+
+    <div id="search">
+        <div class="search-input-wrapper"><input type="text"></div>
+        <img src="$cPath/resources/img/find.png" style="height:40px;position:absolute;right:0;top:0">
+    </div>
+
+    <div class="area-container" style="border-radius:3px;position:absolute;left:5%;right:5%;top:60px;bottom:52px;border:1px solid #adadad;padding-top:5px;background:#FFFFFF">
+        #if($lbsList.size() == 0)
+            <img src="$cPath/resources/img/nothing.png" style="    width: 80%;text-align: center;margin-top:100px;;padding: 0 10%;">
+            <p style="text-align: center;color:#cecece;">主人，这里什么都没有！</p>
+        #else
+            #foreach($lbs in $lbsList)
+                <div class="location-item" style="border-top:1px solid #adadad">
+                    <div class="area-item location-name">
+                        <div class="area-name" style="float:left;">$lbs.getLocation().getName()</div>
+                    </div>
+
+                    #foreach($area in $lbs.getAreaList())
+                        <a href="$cPath/weixin/h5/detail?id=$area.getId()">
+                            <div class="area-item">
+                                <div class="area-name" style="float:left;">$area.getName()</div>
+                                <div class="available" style="float:right;font-size:14px;">$area.getAvailableCnt()</div>
+                            </div>
+                        </a>
+                    #end
+                </div>
+            #end
+        #end
+    </div>
+
+</div>
+<div id="footer">
+
+</div>
+<div id="err-hint" class="hide"></div>
+
+</body>
+<style>
+
+</style>
+<script type="text/javascript">
+
+    Zepto(function ($) {
+
+
+    });
+
+</script>

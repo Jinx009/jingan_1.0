@@ -1,0 +1,200 @@
+#set($cPath = "#cPath")
+#set($layout = "layout/h5_layout.vm")
+<style>
+
+</style>
+<form action="register" method="post">
+    <div class="head-tips">
+        <p style="position:relative;padding-left:45px;"><img src="$cPath/resources/img/register-tips.png" style="position:absolute;left: 20px;width: 17px;top: 13px">首次使用需绑定您的手机号码</p>
+    </div>
+    <div class="input-wrapper" style="margin-top:30px;">
+        <input type="text" placeholder="手机号码" class="mobile" name="mobile" maxlength="11">
+    </div>
+    <div class="input-wrapper smsCode-wrapper">
+        <input type="text" placeholder="验证码" class="smsCode" name="smsCode" maxlength="6">
+    </div>
+    <div class="input-wrapper sms-wrapper">
+        <div class="sms">获取验证码</div>
+    </div>
+    <p class="protocol agreeProtocol" style="position:relative"><span style="position:relative"><img  class="protocol-agree" src="$cPath/resources/img/selected.png" style="position:absolute;width:18px;height:18px;left:-22px;top:1px;">我已阅读并同意<a href="javascript:void(0)">路内停车服务用户协议</a></span></p>
+
+    <div class="input-wrapper" style="text-align:center">
+        <div class="register">提交</div>
+    </div>
+</form>
+<div style="position:absolute;bottom:40px;left:0;right:0;"><img style="width:100%" src="$cPath/resources/img/register.png"></div>
+<script type="text/javascript">
+
+    Zepto(function ($) {
+
+        var errMsg = "$!errMsg";
+
+        if (errMsg) {
+            $("#err-hint").text(errMsg).show();
+            $(".overlay").removeClass("hide");
+        }
+
+        var sk = "$!secureKey";
+        sk="2342432";
+
+        $(".sms").on("click", handleClick);
+
+        function buildAndValidate() {
+
+            var params = {};
+
+            var mobile = $("input[name='mobile']").val();
+
+            if (mobile == "") {
+
+                protops.base.hint("请输入手机号");
+
+                return;
+
+            }
+
+            var secureKey = sk;
+
+            params.mobile = mobile;
+            params.secureKey = secureKey;
+
+            return params;
+
+        }
+
+        function handleClick() {
+
+            var self = $(this);
+
+            var params = buildAndValidate();
+
+            if (!params) {
+                return;
+            }
+
+            self.css("background", "#d3d3d3");
+
+            // 解绑
+            self.off("click");
+
+            // 发送
+            protops.base.baseSend(window.app.cPath + "/weixin/h5/sendSms", params, function (response) {
+
+                if (response.respCode != "00") {
+
+                    protops.base.hint(response.msg);
+
+                    self.css("background", "#FFFFFF");
+
+                    self.text("获取验证码");
+
+                    self.on("click", handleClick);
+
+                    return false;
+                }
+
+                protops.base.hint("短信验证码已成功发送");
+
+                // 倒计时，倒计时完成后，再绑定
+                cooldown(self, 60, function () {
+
+                    self.css("background", "#cecece");
+
+                    self.text("获取验证码");
+
+                    self.on("click", handleClick);
+
+                });
+
+            })
+
+        }
+
+        function cooldown(target, initDelta, callback) {
+            var delta = initDelta, timer;
+            var u = function () {
+                delta = delta - 1;
+                if (delta == 0) {
+                    clearInterval(timer);
+                    callback();
+                } else {
+                    target.text(delta + "秒");
+                }
+            }
+            timer = setInterval(u, 1000);
+        }
+
+
+        $(".register").click(function(){
+
+            var params = {};
+
+            params.mobile = $("input[name='mobile']").val();
+            params.smsCode = $("input[name='smsCode']").val();
+
+            if(params.mobile.length != 11){
+
+                protops.base.hint("请输入正确的手机号");
+                $("input[name='mobile']").val("");
+                return false;
+
+            }
+
+            if (params.smsCode.length <= 0) {
+                protops.base.hint("请输入正确的验证码");
+                $("input[name='smsCode']").val("");
+                return false;
+            }else{
+
+                var reg = new RegExp(/[\d]/g);
+                var ok = reg.test(params.smsCode);
+                if (!ok) {
+                    protops.base.hint("请输入正确的验证码");
+                    $("input[name='smsCode']").val("");
+                    return false;
+                }
+
+            }
+
+            if(!$(".protocol").hasClass("agreeProtocol")){
+                protops.base.hint("请同意协议");
+                return false;
+            }
+
+            protops.base.startLoading();
+
+            protops.base.baseSend(window.app.cPath + "/weixin/h5/register", params, function (response) {
+
+                if (response.respCode != "00") {
+                    protops.base.hint(response.msg);
+                    protops.base.endLoading();
+                    return false;
+                }
+
+                protops.base.endLoading();
+
+                setTimeout(function () {
+
+                    window.location.href = "$cPath/weixin/h5/payment";
+
+                }, 2000);
+            })
+
+        })
+
+        $(".protocol-agree").click(function(){
+
+            if($(".protocol").hasClass("agreeProtocol")){
+                $(this).attr("src", "$cPath/resources/img/gou.png");
+                $(".protocol").removeClass("agreeProtocol");
+            }else{
+                $(this).attr("src", "$cPath/resources/img/selected.png");
+                $(".protocol").addClass("agreeProtocol");
+            }
+
+        })
+
+
+    });
+
+</script>

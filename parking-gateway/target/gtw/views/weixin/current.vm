@@ -1,0 +1,166 @@
+#set($cPath = "#cPath")
+#set($layout = "layout/h5_layout.vm")
+<style>
+    .current-title {
+        border-bottom: 1px solid #cecece;
+        height: 40px;
+        line-height: 40px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .status-show {
+        float: left;
+        width: 100%;
+        border-bottom: 1px solid #cecece;
+    }
+
+    .payTime {
+        text-align: center;
+    }
+
+    .status-show p {
+        float: left;
+        width: 90%;
+        padding: 0 5%
+    }
+
+    .status-show p span:first-child {
+        float: left;
+    }
+
+    .status-show p span:last-child {
+        float: right;
+    }
+    .countDown-wrapper{
+        text-align:center;
+    }
+    .countDown{
+        float:none !important;
+    }
+</style>
+<div id="main-container">
+
+##    <div id="search">
+##        <div class="input-wrapper"><input type="text"></div>
+##        <img src="$cPath/resources/img/find.png" style="height:40px;position:absolute;right:0;top:0">
+##    </div>
+    #set($rotateTime = $current.getParkTimespan() * 2)
+    <div class="area-container"
+         style="border-radius:3px;position:absolute;left:5%;right:5%;top:10px;bottom:52px;border:1px solid #adadad;padding-top:5px;background:#FFFFFF">
+        <style>
+            .loading{background: red;  border-radius: 50%;margin:20px auto; width: 10em; height: 10em; position: relative;}
+            .loading .progress{position: absolute; width: 4em; height:4em; background-color: white; border-radius: 50%; left: 3em; top: 3em; line-height: 5em; text-align: center;
+            }
+            .left,.right{width: 5em;height: 10em;overflow: hidden; position: relative; float: left;}
+            .left{ border-radius: 10em 0 0 10em;}
+            .right{ border-radius: 0 10em 10em 0;}
+            .left:after,.right:after{content:"";  position:absolute; display:block; width: 5em;height: 10em; background-color: white;border-radius: 10em 0 0 10em;background-color: #00ACE4;}
+            .right:after{content:"";  position:absolute; display:block;   border-radius: 0 10em 10em 0; }
+            @-webkit-keyframes rotateB{
+                25%,50%{transform:rotateZ(180deg);}
+                75%,100%{transform:rotateZ(360deg);}
+            }
+            @-webkit-keyframes rotateA{
+                0%,25%{transform:rotateZ(0deg);}
+                50%,75%{transform:rotateZ(180deg);}
+                100%{transform:rotateZ(360deg);}
+            }
+            .left:after{animation-name:rotateA; animation-timing-function:linear;transform-origin:right center;animation-iteration-count:0.5;animation-duration:${rotateTime}s;}
+            .right:after{animation-name:rotateB; animation-timing-function:linear;transform-origin:left center;animation-iteration-count:0.5;animation-duration:${rotateTime}s;}
+        </style>
+        <p class="current-title">$current.getAreaName() ($current.getLotNo())</p>
+        <div class="loading">
+            <div style="position:absolute;width:11em;height:11em;border-radius:50%;border:1px solid #cecece;top:-0.5em;left:-0.5em;"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="progress"><img src="$cPath/resources/img/center_progress.png" style="width:128px;margin:-32px; 0 0 -32px;"></div>
+        </div>
+        <div class="status-show">
+            <p class="payTime">$current.getDate()</p>
+            <p class="countDown-wrapper">剩余：<span class="countDown"></span></p>
+        </div>
+        <div class="status-show timeout-tips">
+            <p><span>停车时间：</span><span>$current.getStartTime() ~ $current.getEndTime()</span></p>
+        </div>
+        <div class="input-wrapper proceed-payment" style="text-align:center;margin-top:10px;">
+            <a href="$cPath/weixin/h5/payment?lotNo=$current.getLotNo()"><div class="register" style="margin:0;width:100%;border-radius:10px;">续费</div></a>
+        </div>
+    </div>
+
+</div>
+<div id="footer">
+
+</div>
+<div id="err-hint" class="hide"></div>
+
+</body>
+<style>
+
+</style>
+<script type="text/javascript">
+
+    function formatSeconds(value) {
+        var theTime = parseInt(value);// 秒
+        var theTime1 = 0;// 分
+        var theTime2 = 0;// 小时
+        if (theTime > 60) {
+            theTime1 = parseInt(theTime / 60);
+            theTime = parseInt(theTime % 60);
+            if (theTime1 > 60) {
+                theTime2 = parseInt(theTime1 / 60);
+                theTime1 = parseInt(theTime1 % 60);
+            }
+        }
+        var result = "" + (parseInt(theTime) < 10 ? "0" + parseInt(theTime) : parseInt(theTime)) + "";
+        if (theTime1 > 0) {
+            result = "" + (parseInt(theTime1) < 10 ? "0" + parseInt(theTime1) : parseInt(theTime1)) + ":" + result;
+        }else{
+            result = "00:"+result;
+        }
+        if (theTime2 > 0) {
+            result = "" + (parseInt(theTime2) < 10 ? "0" + parseInt(theTime2) : parseInt(theTime2)) + ":" + result;
+        }else{
+            result = "00:"+result;
+        }
+        return result;
+    }
+
+    Zepto(function ($) {
+
+        var timeoutTips = "$!showTips";
+        if(timeoutTips){
+            $(".timeout-tips p").text("车辆停放已经超时，请驶离泊位").css("color", "red").css("text-align", "center");
+            $(".countDown").text("00:00:00").css("color", "red");
+            $(".proceed-payment").hide();
+            return false;
+        }
+
+        var endTime = "$!current.getEndTime()";
+
+        function cooldown(target, initDelta, callback) {
+            var delta = initDelta, timer;
+            var u = function () {
+                delta = delta - 1;
+                if (delta == 0) {
+                    clearInterval(timer);
+                    target.text("00:00:00");
+                    callback();
+                } else {
+                    target.text(formatSeconds(delta));
+                }
+            }
+            timer = setInterval(u, 1000);
+        }
+
+        var seconds = Number("$current.getParkTimespan()");
+
+        cooldown($(".countDown"), seconds, function(){
+
+            $(".countDown-wrapper").css("color", "#E40C0C");
+
+        });
+
+    });
+
+</script>

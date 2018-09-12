@@ -1,0 +1,41 @@
+#set($cPath = "#cPath")
+#set($layout = "layout/h5_layout.vm")
+<style>
+    .current-title {
+        border-bottom: 1px solid #cecece;
+        height: 40px;
+        line-height: 40px;
+        margin: 0;
+        text-align: center;
+    }
+</style>
+<div id="main-container">
+
+    <div class="area-container"
+         style="border-radius:3px;position:absolute;left:5%;right:5%;top:10px;bottom:52px;border:1px solid #adadad;padding-top:5px;background:#FFFFFF">
+
+        <p class="current-title" style="color: #FFFFFF;background: #E40C0C;">支付失败</p>
+        <p class="current-title" style="margin-top:25px;padding-bottom:25px;">您可以点击下方按钮重新发起支付</p>
+        <div class="input-wrapper" style="text-align:center;margin-top:10px;">
+            <a href="$cPath/weixin/h5/payment"><div class="register" style="margin:0;width:100%;border-radius:10px;">去支付</div></a>
+        </div>
+    </div>
+
+</div>
+<div id="footer">
+
+</div>
+<div id="err-hint" class="hide"></div>
+
+</body>
+<style>
+
+</style>
+<script type="text/javascript">
+
+    Zepto(function ($) {
+
+
+    });
+
+</script>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+
+
+           http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+    <!-- 使支持resource等注解 -->
+    <context:annotation-config/>
+    <context:component-scan base-package="com.protops.gateway"/>
+    <tx:annotation-driven/>
+
+    <import resource="db.context.xml"></import>
+
+    <bean id="adminConfig" class="com.protops.gateway.constants.AdminConfig">
+        <property name="systemId" value="2"></property>
+        <property name="onTestMode" value="false"></property>
+        <property name="filePath" value="/apps/conf/"></property>
+        <property name="contextPath" value="http://124.74.252.162:1122/iot"></property>
+    </bean>
+
+    <bean id="smsSender" class="com.protops.gateway.service.SmsSender">
+        <property name="apiKey" value="8cb32b34675d8f6854346f981e8d280d"></property>
+        <property name="url" value="http://yunpian.com/v1/sms/send.json"></property>
+    </bean>
+
+<bean id="smsService" class="com.protops.gateway.service.SmsService">
+    <property name="onTestMode" value="true"></property>
+    <property name="template" value="【汉口城市广场】 短信验证码：{0}，请在300秒内完成验证"></property>
+    <property name="maxLimitCnt" value="3"></property>
+    <property name="invalidTimespan" value="300"></property>
+    <property name="smsSentInterval" value="60"></property>
+</bean>
+
+    <bean id="fileUpload" class="com.protops.gateway.utils.FileUpload">
+        <property name="url" value="/apps/conf/"></property>
+    </bean>
+
+    <import resource="spring/spring-handler.xml"></import>
+
+    <import resource="spring/spring-quartz.xml"></import>
+
+
+    <import resource="spring/spring-event.xml"></import>
+
+
+</beans>

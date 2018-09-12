@@ -1,0 +1,552 @@
+#set($cPath = "#cPath")
+#set($layout = "layout/h5_layout.vm")
+<!--<div class="line"></div>-->
+
+    <div id="search" style="width:90%;padding:0 5%">
+        <div style="float:left">附近泊车</div>
+        <div style="float:right">次日续时</div>
+    </div>
+    <style>
+        .payment-title{
+            font-size:18px;color:#8d8d8d;text-align: center
+        }
+        .payment-subtitle{
+            font-size:14px;color:#000000;text-align: center;
+        }
+        .area-container p{
+            margin:5px 0
+        }
+        .number-input{
+            height:40px;border: 1px solid #adadad;
+        }
+        .number-input .input-fake{
+            float: left;
+            width: 16.3%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            padding: 4px 0;
+            border: none;
+            border-right: 1px solid #E8E8E8;
+        }
+        .number-input input:last-child{
+            border-right:none;
+        }
+        .icon-choose{
+            position:absolute;top:2px;width:36px;height:36px;
+        }
+        .icon-choose.left{
+            left:2px;
+        }
+        .icon-choose.right{
+            right:2px;
+        }
+        .choose{
+            position:relative;height:40px;border:1px solid #adadad;text-align:center;
+        }
+        .choose-value{
+            font-size:20px;
+            line-height:40px;
+        }
+        .payment-amount{
+            border:1px solid #adadad;
+            height:70px;
+            line-height: 70px;
+            font-size:20px;
+            margin-top:15px !important;
+        }
+        .balance{
+            font-size:16px;
+            line-height: 35px;
+            height:35px;
+
+        }
+        .chosen{
+            background:#FFFFFF;
+        }
+        .payment-success, .chargePolicy-tips{
+            position: absolute;
+            border: 1px solid #adadad;
+            width: 253px;
+            margin-left: -127px;
+            left: 50%;
+            height:275px;
+            top:50%;
+            margin-top:-137px;
+            background:#FFFFFF;
+            z-index:99;
+        }
+        .area-item{
+            float:left;
+            width:96%;
+            padding:0 2%;
+            height:40px;
+            line-height: 40px;
+            border-bottom:1px solid #adadad;
+        }
+        .available:before{
+            content:"空余位：";
+        }
+        .available:after{
+            content:"  >"
+        }
+        .keyboard{
+            background:#FFFFFF;
+            zoom: 1;
+            z-index: 9999;
+        }
+        .keyboard .key{
+            float:left;width:33%;
+            text-align:center;
+            line-height:44px;
+            height:44px;
+        }
+        .hide{
+            display:none;
+        }
+        .chosen{
+            background:#FFFFFF;
+        }
+    </style>
+    <div class="area-container" style="position:absolute;padding-left:5%;padding-right:5%;left:0;right:0;top:45px;bottom:44px;background:#F7F7F7;border-top:1px solid #adadad">
+        <p class="payment-title" style="margin:10px 0;">请输入泊位编号</p>
+        <p class="number-input">
+            <span class="input-fake" data-ref="0"></span>
+            <span class="input-fake" data-ref="1"></span>
+            <span class="input-fake" data-ref="2"></span>
+            <span class="input-fake" data-ref="3"></span>
+            <span class="input-fake" data-ref="4"></span>
+            <span class="input-fake" data-ref="5"></span>
+        </p>
+        <p class="payment-title">购买停车时长</p>
+        <p class="payment-subtitle">小时</p>
+        <p class="choose hour-choose" style="">
+            <span class="choose-value">01</span>
+            <img class="icon-choose left hour" src="$cPath/resources/img/decre.png">
+            <img class="icon-choose right hour" src="$cPath/resources/img/incre.png">
+        </p>
+        <p class="payment-subtitle">分钟</p>
+        <p class="choose min-choose" style="">
+            <span class="choose-value">00</span>
+            <img class="icon-choose left min" src="$cPath/resources/img/decre.png">
+            <img class="icon-choose right min" src="$cPath/resources/img/incre.png">
+        </p>
+        <p class="payment-amount">
+            <span style="float:left;margin-left:20px;color:#a2a2a2">缴费金额</span>
+            <span style="float:right;margin-right:20px;color:#d91f21">￥<i class="actual-fee" style="font-style: normal;">0.00</i></span>
+        </p>
+##        <p class="balance">
+##            <span style="float:left;margin-left:20px;color:#a2a2a2">账户余额</span>
+##            <span style="float:right;margin-right:20px;color:#d91f21">$ 0</span>
+##        </p>
+        <p class="pushOrder" style="margin-bottom:60px;margin-top:10px !important;border-radius: 10px;color:#FFFFFF;background:#00C0FF;text-align:center;line-height:44px;height:44px;">确认</p>
+    </div>
+
+</div>
+<div class="tips-overlay hide"></div>
+<script id="chargePolicy-template" type="text/template">
+    <div class="chargePolicy-tips" style="">
+        <p style="margin-bottom:10px;color:#d91f21;text-align:center;border-bottom:1px dotted #adadad;padding:10px;margin:0"><%=tips%></p>
+        <p style="height:30px;margin:5px 0"><span style="float:left;margin-left:10px;">泊位编号</span><span class="parking-no" style="float:right;margin-right:10px;"><%=parkingLot%></span></p>
+        <p style="height:30px;margin:5px 0"><span style="margin-left:10px;float:left">泊车前60分钟</span><span class="parking-date" style="float:right;margin-right:10px;"><%=chargePolicy.firstHour%> 元</span></p>
+        <p style="height:30px;margin:5px 0"><span style="margin-left:10px;float:left">之后每30分钟</span><span class="parking-time"  style="float:right;margin-right:10px;"><%=chargePolicy.remainHalfHour%> 元</span></p>
+        <p style="height:30px;margin:5px 0"><span style="margin-left:10px;float:left">泊位类型</span><span class="parking-amount"  style="float:right;margin-right:10px;">全日停车</span></p>
+        <p class="tips-ok" style="margin:0 10px;margin-top:10px !important;border-radius: 10px;color:#FFFFFF;background:#00C0FF;text-align:center;line-height:44px;height:44px;">确认</p>
+    </div>
+</script>
+<div class="keyboard hide" style="position:fixed;bottom:0;left:0;right:0;height:176px;">
+    <div style="position:fixed;height:176px;width:1px;background:#E2E2E2;left:33%;bottom:0;"></div>
+    <div style="position:fixed;height:176px;width:1px;background:#E2E2E2;right:33%;bottom:0;"></div>
+    <div style="float:left;width:100%;height:3px;border-radius:3px;background:#00C0FF"></div>
+    <div class="key" data-ref="1">1</div>
+    <div class="key" data-ref="2">2</div>
+    <div class="key" data-ref="3">3</div>
+    <div style="float:left;width:100%;height:1px;background:#E2E2E2"></div>
+    <div class="key" data-ref="4">4</div>
+    <div class="key" data-ref="5">5</div>
+    <div class="key" data-ref="6">6</div>
+    <div style="float:left;width:100%;height:1px;background:#E2E2E2"></div>
+    <div class="key" data-ref="7">7</div>
+    <div class="key" data-ref="8">8</div>
+    <div class="key" data-ref="9">9</div>
+    <div style="float:left;width:100%;height:1px;background:#E2E2E2"></div>
+    <div class="confirm key" data-ref="ok" style="color:#00C0FF">OK</div>
+    <div class="key" data-ref="0">0</div>
+    <div class="key" data-ref="del">DEL</div>
+</div>
+<script type="text/javascript">
+
+    Date.prototype.Format = function (fmt) { //author: meizz
+        var o = {
+            "M+": this.getMonth() + 1,                 //月份
+            "d+": this.getDate(),                    //日
+            "h+": this.getHours(),                   //小时
+            "m+": this.getMinutes(),                 //分
+            "s+": this.getSeconds(),                 //秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+            "S": this.getMilliseconds()             //毫秒
+        };
+        if (/(y+)/.test(fmt))
+            fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt))
+                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    };
+
+    function highlightAll(theField) {
+        theField.focus();
+        theField.select();
+    }
+
+    $(document).ready(function () {
+
+        var context = {
+            firstHour : 0,
+            remainHalfHour : 0,
+            lotNo : "",
+            isRenewal : false
+        }
+
+        function hourClickLeft(){
+            var widget = $(this).parent().find(".choose-value");
+            var lastValue = widget.text();
+            if(lastValue == "01"){
+                return false;
+            }
+
+            var cur = Number(lastValue) - 1;
+
+            var val = "";
+            if(cur < 10){
+                val = "0" + cur;
+            }else{
+                val = cur;
+            }
+
+            widget.text(val);
+        }
+
+        function hourClickRight(){
+            var widget = $(this).parent().find(".choose-value");
+            var lastValue = widget.text();
+
+            var cur = Number(lastValue) + 1;
+
+            var val = "";
+            if(cur < 10){
+                val = "0" + cur;
+            }else{
+                val = cur;
+            }
+            widget.text(val);
+        }
+
+        function minClickLeft(){
+            var widget = $(this).parent().find(".choose-value");
+            var lastValue = widget.text();
+
+            if(lastValue == "00"){
+                var hour = $(".hour-choose .choose-value").text();
+                if(hour == "01"){
+                    return false;
+                }
+                widget.text("30");
+                var hour = $(".hour-choose .choose-value").text();
+                var hourInt = Number(hour) - 1;
+
+                if(hourInt < 0){
+                    return false;
+                }
+
+                if(hourInt < 10){
+                    hourInt = "0" + hourInt;
+                }else{
+                    hourInt = hourInt;
+                }
+
+                $(".hour-choose .choose-value").text(hourInt);
+            }else{
+                widget.text("00");
+                return false;
+            }
+        }
+
+        function minClickRight(){
+            var widget = $(this).parent().find(".choose-value");
+            var lastValue = widget.text();
+
+            var cur = Number(lastValue) + 30;
+
+            if(cur >= 60){
+                var hour = $(".hour-choose .choose-value").text();
+
+                var hourInt = Number(hour) + 1;
+
+                if(hourInt < 10){
+                    hourInt = "0" + hourInt;
+                }else{
+                    hourInt = hourInt;
+                }
+
+                $(".hour-choose .choose-value").text(hourInt);
+
+                widget.text("00");
+
+                return;
+            }
+
+            widget.text(cur);
+
+        }
+
+        setInterval(function(){
+
+            var hour = Number($(".hour-choose .choose-value").text())*60;
+            var min = Number($(".min-choose .choose-value").text());
+
+            var total = Number(context.firstHour) + (hour - 60 + min)/30*Number(context.remainHalfHour);
+            if(total >= 0){
+                if(total < 1){
+                    $(".actual-fee").text(total);
+                }else{
+                    $(".actual-fee").text(total + ".00");
+                }
+
+            }else{
+                $(".actual-fee").text("00");
+            }
+
+        },100);
+
+        function handleValidateLot(lotNo){
+
+            $(".hour.left").off("click");
+
+            $(".hour.right").off("click");
+
+            $(".min.right").off("click");
+
+            $(".min.left").off("click");
+
+            $(".keyboard").addClass("hide");
+
+            var params = {};
+
+            params.lotNo = lotNo;
+
+            protops.base.startLoading();
+
+            // 这里发请求，校验
+            protops.base.baseSend("$cPath/weixin/h5/validateLot", params, function(response){
+
+                if (response.respCode != "00") {
+                    protops.base.hint(response.msg);
+                    protops.base.endLoading();
+                    return false;
+                }
+
+                if(context.isRenewal){
+                    response.params.tips = "该泊位可以续费";
+                }else{
+                    response.params.tips= "该泊位可以使用";
+                }
+
+                var t = _.template($("#chargePolicy-template").html());
+                $(".area-container").append(t(response.params));
+
+                context.firstHour = response.params.chargePolicy.firstHour;
+                context.remainHalfHour = response.params.chargePolicy.remainHalfHour;
+                context.lotNo = response.params.parkingLot;
+
+                $(".tips-overlay").show();
+
+                protops.base.endLoading();
+
+            })
+        }
+
+        $(".area-container").on("click", ".tips-ok", function(){
+
+            $(".hour.left").click(hourClickLeft);
+
+            $(".hour.right").click(hourClickRight);
+
+            $(".min.right").click(minClickRight);
+
+            $(".min.left").click(minClickLeft);
+
+            $(".chargePolicy-tips").remove();
+
+            $(".tips-overlay").hide();
+
+        })
+
+        var cnt = 0;
+
+        $(".pushOrder").click(function(){
+
+            protops.base.startLoading();
+
+            var params = {};
+
+            params.parkingLot = context.lotNo;
+            params.timespan = Number($(".hour-choose .choose-value").text())*60 + Number($(".min-choose .choose-value").text());
+            params.isRenewal = context.isRenewal;
+
+            protops.base.baseSend("$cPath/weixin/h5/pushOrder", params, function (response) {
+
+                var msg;
+
+                if (response.respCode != "00") {
+                    protops.base.hint(response.msg);
+                    protops.base.endLoading();
+                    return;
+                }
+
+                function onBridgeReady() {
+                    WeixinJSBridge.invoke(
+                            'getBrandWCPayRequest', response.params.h5Prepay,
+                            function (res) {
+
+                                // 不关心是否成功，直接发起查询保证查询结果，2s后发起查询
+                                function query() {
+
+                                    $.get("$cPath/weixin/h5/query?orderNumber=" + response.params.orderNumber, function (response) {
+
+                                        if (response == "InProcess") {
+
+                                            console.log("[queryOrder][" + response.params.orderNumber + "][" + cnt + "]");
+
+                                            if (cnt++ == 10) {
+
+                                                setTimeout(function () {
+
+                                                    query();
+
+                                                }, 2000);
+                                            }
+
+                                        } else if (response == "Succeed") {
+                                            // to success
+                                            window.location.href = "$cPath/weixin/h5/current";
+                                        } else {
+                                            // failed to failed Page;
+                                            window.location.href = "$cPath/weixin/h5/orderResult?ret=1" + "&orderNumber=" + response.params.orderNumber;
+                                        }
+
+                                    });
+
+                                }
+
+                                query();
+
+                            }
+                    );
+                }
+
+                if (typeof WeixinJSBridge == "undefined") {
+                    if (document.addEventListener) {
+                        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+                    } else if (document.attachEvent) {
+                        document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+                        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+                    }
+                } else {
+
+                    onBridgeReady();
+
+                }
+
+                protops.base.endLoading();
+
+
+            });
+
+        })
+
+        context.lotNo = "$!lotNo";
+
+        if(context.lotNo){
+
+            var idx = 0;
+            $(".input-fake").each(function(){
+                $(this).text(context.lotNo[idx++]);
+            })
+
+            handleValidateLot(context.lotNo);
+
+            context.isRenewal = true;
+
+            return false;
+        }
+
+        $(".keyboard").on("touchend", " .key", function(){
+
+            if($(this).attr("data-ref") == "ok"){
+
+                var lotNo = "";
+                $(".input-fake").each(function(){
+                    lotNo += $(this).text();
+                })
+
+                handleValidateLot(lotNo);
+
+                return false;
+
+            }
+
+
+            if($(this).attr("data-ref") == "del"){
+
+                var idx = Number($(".input-fake.chosen").attr("data-ref"));
+
+                if(idx > 0){
+                    idx = idx - 1;
+                }
+
+                $(".input-fake.chosen").text("");
+
+                $(".input-fake").removeClass("chosen");
+
+                $(".input-fake[data-ref='"+idx+"']").addClass("chosen");
+
+                return false;
+
+            }
+
+
+            var val = $(this).text();
+            $(".input-fake.chosen").text(val);
+
+            var idx = Number($(".input-fake.chosen").attr("data-ref"));
+
+            if(idx < 5){
+                idx = idx + 1;
+            }
+
+            $(".input-fake").removeClass("chosen");
+
+            $(".input-fake[data-ref='"+idx+"']").addClass("chosen");
+
+        })
+
+        /*
+         1,只要选中，
+
+         */
+        $(".input-fake").click(function(){
+
+            $(".input-fake").removeClass("chosen");
+
+            if($(".keyboard").hasClass("hide")){
+                $(".keyboard").removeClass("hide");
+            }
+
+            $(this).addClass("chosen");
+
+        })
+
+    });
+
+</script>

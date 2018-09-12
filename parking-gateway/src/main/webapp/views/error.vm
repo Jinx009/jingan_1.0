@@ -1,0 +1,11 @@
+#set($cPath = "#cPath")
+<div class="header">
+    <div class="fl label"></div>
+    
+</div>
+
+<div style="text-align:center;padding-top: 100px;font-size: 20px;font-family: '幼圆'">
+    <p style="color:red;font-size:32px;">^_^</p>
+    <p>出了点问题，这个页面被外星人玩坏了</p>
+    <a href="$cPath/weixin/h5/payment" style="text-decoration: none;color:red">》返回</a>
+</div>

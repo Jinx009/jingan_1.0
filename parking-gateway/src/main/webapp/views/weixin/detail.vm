@@ -1,0 +1,101 @@
+#set($cPath = "#cPath")
+#set($layout = "layout/h5_layout.vm")
+<style>
+    .head-tips {
+        float: left;
+        width: 100%;
+        height: 44px;
+        line-height: 44px;
+        border-bottom: 1px solid #cecece;
+        background: #FFFFFF;
+        position: relative;
+    }
+
+    .head-tips p {
+        margin: 0;
+        padding-left: 30px;
+    }
+    .area-name{
+        border-bottom:1px solid #cecece;
+        font-size:22px;
+        font-weight:700;
+        padding-bottom:10px;
+        margin:0;
+        margin-top:20px;
+    }
+    .row{
+        float:left;
+        padding:0 5%;
+        width:90%;
+        text-align: center;
+        color:#121212;
+        font-size:16px;
+    }
+    .row p:first-child{
+        margin-bottom:0;
+    }
+    .row p:last-child{
+        margin-top:5px;
+    }
+
+    .row span{
+        color:#00C0FF
+    }
+</style>
+<div id="main-container">
+    <div class="head-tips">
+        <a href="$cPath/weixin/h5/location" style="text-decoration:none;color:#121212"><p>< 全部泊车位</p></a>
+    </div>
+
+    <div class="row">
+        <p class="area-name">$detail.getName()</p>
+    </div>
+
+    <div class="row">
+        <p>收费时段</p>
+        <p>$detail.getChargePolicy().getStartTime() ~ $detail.getChargePolicy().getEndTime()</p>
+    </div>
+
+    <div class="row">
+        <p><img src="$cPath/resources/img/parkingStats.png" style="width:22px;"></p>
+    </div>
+
+    <div class="row">
+        <p><span>空余车位：</span>$detail.getAvailableCnt()</p>
+        <p><span>车位总数：</span>$detail.getTotalCnt()</p>
+    </div>
+
+    <div class="row">
+        <p><img src="$cPath/resources/img/parkingTime.png" style="width:22px;"></p>
+    </div>
+
+    <div class="row">
+        <p><span>泊车前60分钟：</span>$detail.getChargePolicy().getFirstHour() 元</p>
+        <p><span>之后每30分钟：</span>$detail.getChargePolicy().getRemainHalfHour() 元</p>
+    </div>
+
+    <div class="row">
+        <p><img src="$cPath/resources/img/parkingType.png" style="width:22px;"></p>
+    </div>
+
+    <div class="row">
+        <p style="border-bottom:1px solid #cecece;padding-bottom:20px;"><span>泊位类型：</span>全日停车</p>
+    </div>
+    <div class="input-wrapper" style="margin-top:20px;text-align:center">
+        <a href="$cPath/weixin/h5/payment" style="text-decoration: none"><div class="parking">我要停车</div></a>
+    </div>
+    <div class="row">
+        <p style="color:#cecece">在地图上显示路线</p>
+    </div>
+</div>
+<style>
+
+</style>
+<script type="text/javascript">
+
+    Zepto(function ($) {
+
+
+    });
+
+</script>

@@ -1,0 +1,46 @@
+.location {
+	float: left;
+	height: 426px;
+	position: relative;
+	background: url(/gtw/resources/ja/img/jabg.jpg) no-repeat 0 0;
+	width: 911px
+}
+.location-b {
+	float: left;
+	height: 426px;
+	position: relative;
+	background: url(/gtw/resources/ja/img/B.jpg) no-repeat 0 0;
+	margin-top:20px;
+	width: 911px
+}
+
+.car-row {
+	position: absolute;
+	width: 73px;
+	height: 38px;
+}
+
+.car {
+	transform:rotate(340deg);
+	-ms-transform:rotate(340deg); 	
+	-moz-transform:rotate(340deg); 	
+	-webkit-transform:rotate(340deg); 
+	-o-transform:rotate(340deg); 
+}
+
+.middle-upper {
+	top: 225px;
+}
+
+.middle-lower {
+	top: 315px;
+}
+
+
+.left-middle {
+	left: 158px;
+}
+
+.none{
+	display: none;
+}

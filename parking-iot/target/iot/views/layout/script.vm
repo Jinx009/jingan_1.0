@@ -1,0 +1,3 @@
+#set($cPath = "#cPath")
+<script type="text/javascript" src="$cPath/resources/js/common/zepto.min.js"></script>
+<script type="text/javascript" src="$cPath/resources/js/gateway.js"></script>

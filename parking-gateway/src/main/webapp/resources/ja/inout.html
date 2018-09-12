@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>设备管理</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="js/datepicker/datepicker3.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand"  target="_blank"  href="http://www.zhanway.com"><img height="50px;" style="margin-top: -15px;" src="img/logo.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="location.html">地理位置</a></li>
+                <li><a href="device.html">设备信息</a></li>
+                <li class="active"><a href="inout.html">停车日志</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a  target="_blank"  href="http://www.zhanway.com">走进展为</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="row" style="width: 98%;margin-left: 1%;" >
+    <div class="col-md-12">
+    	<div class="form-group" style="width: 500px;">
+				<div class="btn-group">
+					<button type="button" data-ref="0" class="btn btn-info _b">天</button>
+					<div class="input-group" style="padding-left: 15px;width: 300px;">
+				      <input type="text" class="form-control" readonly="readonly" id="datepicker" >
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" onclick="_getData();" type="button">&nbsp;确&nbsp;定&nbsp;</button>
+				      </span>
+				    </div>
+				</div>
+			</div>
+        <div class="panel panel-default">
+            <div class="alert alert-danger" id="time" role="alert"></div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Mac地址</th>
+                        <th>车位号</th>
+                        <th>发生时间</th>
+                        <th>有车</th>
+                    </tr>
+                </thead>
+                <tbody id="datas" >
+                    <tr v-for="item in datas" >
+                        <td v-text="item.mac" ></td>
+                        <td v-text="item.description" ></td>
+                        <td v-text="item.changeTime" ></td>
+                        <td>
+                        	<span v-if="1===item.available" class="label label-success">有车</span>
+                        	<span v-if="0===item.available" class="label label-danger">车出</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<footer class="main-footer" style="margin-top:30px;margin-bottom:15px;;text-align: center;width: 100%;">
+    <strong>Copyright &copy;  <a href="http://www.zhanway.com" target="_blank">上海展为智能技术股份有限公司</a>.</strong> All rights reserved.
+</footer>
+<div class="control-sidebar-bg"></div>
+<script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.4.4/vue.min.js"></script>
+<script src="js/datepicker/bootstrap-datepicker.js"></script>
+<script src="js/inout.js?_v=1.255"></script>
+<script>
+    function mytime() {
+
+        var a = new Date();
+        var _h = a.getHours();
+        if(_h<10){
+            _h = '0'+_h;
+        }
+        var _m = a.getMinutes();
+        if(_m<10){
+            _m = '0'+_m;
+        }
+        var _s = a.getSeconds();
+        if(_s<10){
+            _s = '0'+_s;
+        }
+        $('#time').html(' 当前时间：'+ _h+ ':' +_m+ ':' +_s);
+    }
+    $(function () {
+        mytime();
+    })
+    setInterval(function () {
+        mytime()
+    }, 1000);
+</script>
+</body>
+</html>

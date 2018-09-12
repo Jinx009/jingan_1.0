@@ -1,0 +1,9 @@
+﻿{
+    "button": [
+        {
+            "type": "view",
+            "name": "微信停车",
+            "url": "http://wx.zhanway.com/gtw/weixin/h5/payment"
+        }
+    ]
+}

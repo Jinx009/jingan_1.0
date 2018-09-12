@@ -1,0 +1,17 @@
+<toolbox>
+	<xhtml>true</xhtml>
+	
+	<!--  
+	<tool>
+		<key>stringUtil</key>
+		<scope>application</scope>
+		<class>com.unionpay.edm.frontal.util.StringUtil</class>
+	</tool>
+	
+	<tool>
+		<key>dateUtil</key>
+		<scope>application</scope>
+		<class>com.unionpay.edm.frontal.util.DateUtil</class>
+	</tool>
+	-->
+</toolbox>

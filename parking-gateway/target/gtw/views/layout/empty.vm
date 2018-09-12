@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>zhanway</title>
+    <!--<link href="../css/mobile.css" rel="stylesheet">-->
+    <link href="$cPath/resources/css/gateway.css?n=234" rel="stylesheet">
+    <script type="text/javascript" src="$cPath/resources/js/common/zepto.min.js"></script>
+    <script type="text/javascript" src="$cPath/resources/js/common/underscore.js"></script>
+    <script type="text/javascript" src="$cPath/resources/js/gateway.js"></script>
+    <script>
+        var app = app || {};
+
+        app.cPath = "$cPath";
+
+        window.app = app;
+
+    </script>
+</head>
+<body style="background:#F7F7F7">
+$screen_content
+<body>
+</html>

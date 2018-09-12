@@ -1,0 +1,80 @@
+#set($cPath = "#cPath")
+#set($layout = "layout/h5_layout.vm")
+<div id="main-container">
+
+    <div id="search" style="background:#FFFFFF;border-bottom:1px solid #cecece">
+        <i style="position:absolute;left:50%;height:39px;width:1px;top:3px;background:#cecece"></i>
+        <a href="$cPath/weixin/h5/parkingFlow"><div style="float:left;width:50%;text-align:center;">已完成</div></a>
+        <a href="$cPath/weixin/h5/punish"><div style="float:left;width:50%;text-align:center;color:#cecece">违停记录</div></a>
+    </div>
+    <div class="area-container" style="border-radius:3px;position:absolute;left:5%;right:5%;top:60px;bottom:52px;border:1px solid #adadad;padding-top:5px;background:#FFFFFF">
+
+        #foreach($parkingFlowList in $ret.entrySet())
+
+            <div class="flow-block">
+                <p class="title toggle">
+                    <span>$parkingFlowList.getKey()</span>
+                    <span>停车次数：$parkingFlowList.getValue().size()笔</span>
+                </p>
+
+                #foreach($parkingFlow in $parkingFlowList.getValue())
+
+                    <div class="detail hide">
+                        <div class="day">$parkingFlow.getDay()</div>
+                        <div class="info2">
+                            <div class="info-wrapper">
+                                <p style="font-size:14px;">$parkingFlow.getParkingStatusDisplay()</p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="info-wrapper">
+                                <p>$parkingFlow.getAreaName() ($parkingFlow.getLotNo())</p>
+                                <p>$parkingFlow.getParkingTime()</p>
+                            </div>
+                        </div>
+                    </div>
+
+                #end
+
+            </div>
+        #end
+
+    </div>
+
+</div>
+<div id="footer">
+
+</div>
+<div id="err-hint" class="hide"></div>
+
+</body>
+<style>
+
+</style>
+<script type="text/javascript">
+
+    Zepto(function ($) {
+
+        $(".flow-block").first().find(".title").removeClass("toggle");
+        $(".flow-block").first().find(".detail").removeClass("hide");
+
+        $(".title").click(function(){
+
+            if($(this).hasClass("toggle")){
+
+                $(this).parent().find(".detail").removeClass("hide");
+
+                $(this).removeClass("toggle");
+
+            }else{
+
+                $(this).parent().find(".detail").addClass("hide");
+
+                $(this).addClass("toggle");
+            }
+
+        })
+
+    });
+
+</script>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>地磁状态</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/layer/3.0.1/mobile/need/layer.min.css" rel="stylesheet">
+    <style>
+        .table-striped th,td{
+            text-align: center;
+        }
+        .table-striped{
+            margin-top: 10px;
+            width: 98%;
+            margin-left: 1%;
+        }
+    </style>
+</head>
+<body>
+<table class="table table-striped">
+    <thead>
+    <th>编号</th>
+    <th>MAC</th>
+    <th>泊位号</th>
+    <th>当前状态</th>
+    <th>最后通讯时间</th>
+    </thead>
+    <tbody>
+    <tr v-for="model in models">
+        <td v-text="model.id" ></td>
+        <td v-text="model.mac" ></td>
+        <td v-text="model.description" ></td>
+        <td v-if="1===model.available" ><span class="label label-danger">有车</span></td>
+        <td v-if="0===model.available" ><span class="label label-success">无车</span></td>
+        <td v-text="model.lastSeenTime" ></td>
+    </tr>
+    </tbody>
+</table>
+<!--<footer class="main-footer">-->
+<!--<div class="pull-right hidden-xs">-->
+<!--</div>-->
+<!--<strong>数据由<a href="http://www.zhanway.com" target="_blank">上海展为智能技术股份有限公司</a></strong> 提供-->
+<!--</footer>-->
+<div class="control-sidebar-bg"></div>
+<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+<script>
+    var _data;
+    $(function(){
+        $.ajax({
+            url:'/gtw/device/boken/sensors?p=1',
+            type:'get',
+            dataType:'json',
+            success:function(res){
+                _data = new Vue({
+                    el: 'tbody',
+                    data:{models:res.params.result}
+                })
+                setInterval(function() {
+                    getData();
+                }, 10000);
+            }
+        })
+    });
+    function getData() {
+        $.ajax({
+            url:'/gtw/device/boken/sensors?p=1',
+            type:'get',
+            dataType:'json',
+            success:function(res){
+                _data.models = res.params.result;
+            }
+        })
+    }
+</script>
+</body>
+</html>

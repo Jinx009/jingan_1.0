@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>设备管理</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand"  target="_blank"  href="http://www.zhanway.com"><img height="50px;" style="margin-top: -15px;" src="img/logo.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="location.html">地理位置</a></li>
+                <li class="active"><a href="device.html">设备信息</a></li>
+                <li><a href="inout.html">停车日志</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a  target="_blank"  href="http://www.zhanway.com">走进展为</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="row" style="width: 98%;margin-left: 1%;" >
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">基本信息</div>
+            <div class="panel-body">
+                <p style="letter-spacing: 1px;color:rgb(35,159,171);" class=“text-success”  >Location:静安NB示范区,Router个数:&nbsp;&nbsp;<font style="color: red;" >1</font>&nbsp;&nbsp;Sensor个数:&nbsp;&nbsp;<font style="color: red;" >26</font>&nbsp;&nbsp;,运行开始时间:&nbsp;&nbsp;<font style="color: red;" >2017-10-08</font></p>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Mac地址</th>
+                        <th>车位号</th>
+                        <th>是否有车</th>
+                        <th>电压</th>
+                        <th>上次通讯时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="data" >
+                    <tr v-for="item in datas" >
+                        <td v-text="item.mac"  ></td>
+                        <td v-text="item.desc" ></td>
+                        <td>
+                        	<span v-if="1===item.available" class="label label-success">是</span>
+                        	<span v-if="0===item.available" class="label label-danger">否</span>
+                        </td>
+                        <td v-text="item.batteryVoltage" ></td>
+                        <td v-text="item.lastSeenTime" ></td>
+                       <td>
+                           <a v-bind:num="item.mac" onclick="_send(this,0)" class="btn btn-success btn-sm" >推送车出</a>
+                           <a v-bind:num="item.mac"  onclick="_send(this,1)" class="btn btn-danger btn-sm" >推送车进</a>
+                       </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<footer class="main-footer" style="margin-top:30px;margin-bottom:15px;;text-align: center;width: 100%;">
+    <strong>Copyright &copy;  <a href="http://www.zhanway.com" target="_blank">上海展为智能技术股份有限公司</a>.</strong> All rights reserved.
+</footer>
+<div class="control-sidebar-bg"></div>
+<script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.4.4/vue.min.js"></script>
+<script src="js/device.js?_v=1.29"></script>
+</body>
+</html>

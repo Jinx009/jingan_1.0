@@ -1,0 +1,52 @@
+#set($cPath = "#cPath")
+#set($layout = "layout/h5_layout.vm")
+<style>
+    .current-title {
+        border-bottom: 1px solid #cecece;
+        height: 40px;
+        line-height: 40px;
+        margin: 0;
+        text-align: center;
+    }
+
+</style>
+<div id="main-container">
+
+    <div id="search" style="background:#FFFFFF;border-bottom:1px solid #cecece">
+        <i style="position:absolute;left:50%;height:39px;width:1px;top:3px;background:#cecece"></i>
+        <a href="$cPath/weixin/h5/parkingFlow"><div style="float:left;width:50%;text-align:center;color:#cecece">已完成</div></a>
+        <a href="$cPath/weixin/h5/punish"><div style="float:left;width:50%;text-align:center;">违停记录</div></a>
+    </div>
+    <div class="area-container"
+         style="border-radius:3px;position:absolute;left:5%;right:5%;top:60px;bottom:52px;border:1px solid #adadad;padding-top:5px;background:#FFFFFF">
+        <div class="status-show">
+            <p class="countDown-wrapper">请输入车牌号</p>
+        </div>
+        <div class="input-wrapper" style="margin-top:30px;">
+            <input type="text" placeholder="车牌号" class="mobile" name="mobile" maxlength="11">
+        </div>
+        <div class="input-wrapper" style="text-align:center;margin-top:10px;">
+            <div class="register" style="margin:0;width:100%;border-radius:10px;">查询</div>
+        </div>
+    </div>
+
+</div>
+<div id="footer">
+
+</div>
+<div id="err-hint" class="hide"></div>
+
+</body>
+<style>
+
+</style>
+<script type="text/javascript">
+    Zepto(function ($) {
+
+
+
+
+
+    });
+
+</script>

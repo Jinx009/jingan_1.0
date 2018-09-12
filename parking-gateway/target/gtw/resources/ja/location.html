@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>地理位置</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/view.css?_v=1.16" >
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand"  target="_blank"  href="http://www.zhanway.com"><img height="50px;" style="margin-top: -15px;" src="img/logo.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="location.html">地理位置</a></li>
+                <li><a href="device.html">设备信息</a></li>
+                <li><a href="inout.html">停车日志</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a  target="_blank"  href="http://www.zhanway.com">走进展为</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="row" style="width: 98%;margin-left: 1%;" >
+    <div class="col-md-2">
+    	<div class="list-group">
+		  <a href="#" class="list-group-item active">
+		    基本信息
+		  </a>
+		  <a href="#" class="list-group-item">总计：<font style="color: rgb(35,159,171);" >26</font></a>
+		  <a href="#" class="list-group-item">剩余：<font style="color: rgb(35,159,171);" id="leftLot" >0</font></a>
+		</div>
+    </div>
+    <div class="col-md-10">
+    	<div class="location" >
+    		
+    	</div>
+    </div>
+</div>
+<footer class="main-footer" style="margin-top:200px;margin-bottom:15px;;text-align: center;width: 100%;">
+    <strong>Copyright &copy;  <a href="http://www.zhanway.com" target="_blank">上海展为智能技术股份有限公司</a>.</strong> All rights reserved.
+</footer>
+<div class="control-sidebar-bg"></div>
+<script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.4.4/vue.min.js"></script>
+<script src="js/location_data.js?_v=1.44" ></script>
+<script src="js/location.js?_v=1.69" ></script>
+</body>
+</html>

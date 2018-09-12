@@ -1,0 +1,19 @@
+{
+    "button": [
+        {
+            "type": "view",
+            "name": "微信停车",
+            "url": "http://wx.zhanway.com/gtw/weixin/h5/payment"
+        },
+        {
+            "type": "view",
+            "name": "泊车",
+            "url": "http://wx.zhanway.com/gtw/weixin/h5/location"
+        },
+        {
+            "type": "view",
+            "name": "投资展为",
+            "url": "http://m.otc-qiku.com/sanban/carddisplay.do?from=_WX_PUBLIC_NO_&companyId=22500"
+        }
+    ]
+}

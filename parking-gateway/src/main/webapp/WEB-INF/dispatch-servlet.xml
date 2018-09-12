@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd"
+       default-lazy-init="false">
+
+    <context:component-scan base-package="com.protops.gateway.controller"/>
+
+    <mvc:resources mapping="/resources/**" location="/resources/" cache-period="86400"/>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/api/**/*"/>
+            <bean class="com.protops.gateway.interceptor.AccessTokenInterceptor">
+                <property name="white">
+                    <list>
+                        <value>localhost</value>
+                        <value>127.0.0.1</value>
+                        <value>172.17.236.161</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:interceptor>
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/weixin/plain/**/*"/>-->
+            <!--<bean class="com.protops.gateway.interceptor.WeixinSecureInterceptor">-->
+                <!--<property name="excludeUrl">-->
+                    <!--<list>-->
+                        <!--<value>process</value>-->
+                    <!--</list>-->
+                <!--</property>-->
+            <!--</bean>-->
+        <!--</mvc:interceptor>-->
+        <mvc:interceptor>
+            <mvc:mapping path="/weixin/h5/**/*"/>
+            <bean class="com.protops.gateway.interceptor.WeixinOAuthSessionInterceptor">
+                <property name="path" value="/weixin/h5"></property>
+                <property name="excludeUrl">
+                    <list>
+                        <value>/notify</value>
+                    </list>
+                </property>
+                <property name="memberRequireExcludeUrl">
+                    <list>
+                        <value>/register</value>
+                        <value>/sendSms</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <mvc:annotation-driven ignoreDefaultModelOnRedirect="true"/>
+
+    <bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath"><!-- 页面文件的路径,相对于webapp -->
+            <value>views</value>
+        </property>
+
+        <!-- Velocity属性配置 -->
+        <property name="velocityProperties">
+            <props>
+                <prop key="file.resource.loader.cache">true</prop>
+                <prop key="file.resource.loader.modificationCheckInterval">2</prop>
+                <prop key="input.encoding">UTF-8</prop>
+                <!-- 指定模板引擎进行模板处理的编码 -->
+                <prop key="output.encoding">UTF-8</prop>
+                <!-- 指定输出流的编码 -->
+                <prop key="contentType">text/html;charset=UTF-8</prop>
+                <!-- contentType -->
+                <!--&lt;!&ndash;<prop key="velocimacro.library">macro/macros.vm</prop>Velocimacro 模板库的列表-->
+                <prop key="userdirective">com.protops.gateway.view.AdminContextDirective</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- View resolvers can also be configured with ResourceBundles or XML files.
+        If you need different view resolving based on Locale, you have to use the
+        resource bundle resolver. -->
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
+
+        <property name="cache" value="false"/>
+        <!--是否缓存模板-->
+        <property name="prefix" value=""/>
+        <property name="suffix" value=".vm"/>
+
+        <!--toolbox配置文件路径-->
+        <!--<property name="toolboxConfigLocation" value="/WEB-INF/toolbox.xml" />-->
+
+        <!-- <property name="dateToolAttribute" value="date" />日期函数名称-->
+        <!--<property name="numberToolAttribute" value="number" />数字函数名称-->
+
+        <property name="contentType" value="text/html;charset=UTF-8"/>
+
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <!--是否使用spring对宏定义的支持-->
+        <property name="exposeRequestAttributes" value="true"/>
+        <!--是否开放request属性-->
+        <property name="requestContextAttribute" value="rc"/>
+        <!--request属性引用名称-->
+        <property name="exposeSessionAttributes" value="true"></property>
+        <property name="allowSessionOverride" value="true"/>
+        <!--允许session覆盖旧值  VelocityViewResolver配置-->
+        <property name="allowRequestOverride" value="true"></property>
+
+        <property name="layoutUrl" value="layout/default.vm"/>
+        <!--指定layout文件-->
+
+    </bean>
+</beans>

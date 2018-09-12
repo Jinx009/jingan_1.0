@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>zhanway</title>
+    <!--<link href="../css/mobile.css" rel="stylesheet">-->
+    <link href="$cPath/resources/css/gateway.css?n=234" rel="stylesheet">
+    <script type="text/javascript" src="$cPath/resources/js/common/zepto.min.js"></script>
+    <script type="text/javascript" src="$cPath/resources/js/common/underscore.js"></script>
+    <script type="text/javascript" src="$cPath/resources/js/gateway.js"></script>
+    <script>
+        var app = app || {};
+
+        app.cPath = "$cPath";
+
+        window.app = app;
+
+        Zepto(function ($) {
+
+            curUri = "$!curUri";
+
+            $(".cmd-nav").find("span").removeClass("selected");
+
+            $(".cmd-nav").find("."+curUri).addClass("selected");
+
+
+        });
+
+    </script>
+</head>
+<body style="background:#F7F7F7">
+<style>
+    .nearby{
+        position: absolute;
+        background: #121212;
+        line-height: 20px;
+        top: -37px;
+        left: -5px;
+        right: -5px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        padding-top: 50px;
+        background-image: url($cPath/resources/img/lbs.png);
+        background-repeat: no-repeat;
+        background-position: 50% 5px;
+        background-size:24px;
+    }
+        #footer a{
+            text-decoration:none;
+            color:#FFFFFF;
+        }
+</style>
+<div id="main-container">
+    $screen_content
+</div>
+<div class="loading-block hide">
+    <div class="overlay"></div>
+    <div style="position:absolute;top:45%;color:#F2F2F2;z-index:9999;left:0;right:0;text-align:center">
+        <div class="loading-text">
+            <i class="quan"></i>
+            <span class="msg">正在请求，请稍后</span>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    #if($page)
+        <a href="$cPath/weixin/h5/nearby"><div class="cmd-nav"><img src="$cPath/resources/img/nearby.png" style="position:absolute;top:14px;height:16px;left:20%;"><span style="padding-left:24px;">附近泊车位</span></div></a>
+        <a href="$cPath/weixin/h5/location"><div class="cmd-nav"><img src="$cPath/resources/img/all.png" style="position:absolute;top:14px;height:16px;left:20%;"><span class="location selected"></span><span style="padding-left:24px;">全部泊车位</span></div></a>
+    #else
+        <a href="$cPath/weixin/h5/payment"><div class="cmd-nav" style="width:20%"><img src="$cPath/resources/img/park.png" style="position:absolute;top:14px;height:16px;left:20%;"><span class="payment selected"></span><span style="padding-left:24px;">停车</span></div></a>
+        <a href="javascript:void(0)"><div class="cmd-nav" style="width:20%"><img src="$cPath/resources/img/charge.png" style="position:absolute;top:14px;height:16px;left:20%;"><span class="charge"></span><span style="padding-left:24px;">充值</span></div></a>
+        <a href="$cPath/weixin/h5/location"><div class="cmd-nav" style="width:20%;position:relative"><span class="nearby"></span><span style="position:absolute;background:#121212;color:#00C0FF;line-height:20px;top:0px;left:0;right:0">附近<br/>泊车</span></div></a>
+        <a href="$cPath/weixin/h5/member"><div class="cmd-nav" style="width:20%;float:right"><img src="$cPath/resources/img/mine.png" style="position:absolute;top:14px;height:16px;left:20%;"><span class="mine"></span><span style="padding-left:24px;">我的</span></div></a>
+        <a href="$cPath/weixin/h5/parkingFlow"><div class="cmd-nav" style="width:20%;float:right"><img src="$cPath/resources/img/record.png" style="position:absolute;top:14px;height:16px;left:20%;"><span class="parkingFlow"></span><span style="padding-left:24px;">记录</span></div></a>
+    #end
+
+</div>
+<div id="err-hint" class="hide"></div>
+
+</body>
+</html>

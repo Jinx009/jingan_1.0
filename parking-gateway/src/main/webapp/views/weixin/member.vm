@@ -1,0 +1,97 @@
+#set($cPath = "#cPath")
+#set($layout = "layout/h5_layout.vm")
+<style>
+    .member-block {
+        height: 80px;
+        width: 100%;
+        float: left;
+        border-bottom: 1px solid #cecece
+    }
+
+    .member-block .logo {
+        float: left;
+        width: 30%;
+        height: 80px;
+        position: relative;
+    }
+
+    .member-block .logo img {
+        position: absolute;
+        left: 50%;
+        margin-left: -40px;
+        width: 60px;
+        top: 10px;
+    }
+
+    .member-block .desc {
+        float: left;
+        width: 70%;
+        height: 80px;
+        line-height: 30px;
+        margin-top: 10px;
+    }
+
+    .member-block .desc p {
+        margin: 0
+    }
+
+    .member-block .desc p:first-child {
+        font-weight: 700
+    }
+
+    .member-link {
+        text-decoration: none;
+        color: #666
+    }
+
+</style>
+<div class="member-block" style="background:#ffffff">
+    <div class="logo">
+        <img src="$headImgUrl">
+    </div>
+    <div class="desc">
+        <p>$member.getMobile()</p>
+        <p>余额：￥ 0</p>
+    </div>
+</div>
+<a class="member-link" href="$cPath/weixin/h5/orders">
+    <div class="member-block">
+        <div class="logo">
+            <img src="$cPath/resources/img/order.png" style="">
+        </div>
+        <div class="desc">
+            <p>账单明细</p>
+            <p>账单明细一目了然</p>
+        </div>
+    </div>
+</a>
+<a class="member-link" href="javascript:void(0)">
+    <div class="member-block">
+        <div class="logo">
+            <img src="$cPath/resources/img/safety.png">
+        </div>
+        <div class="desc">
+            <p>账户安全</p>
+            <p>确保账户安全无忧</p>
+        </div>
+    </div>
+</a>
+<a class="member-link" href="$cPath/weixin/h5/location">
+    <div class="member-block">
+        <div class="logo">
+            <img src="$cPath/resources/img/lot-search.png"">
+        </div>
+        <div class="desc">
+            <p>泊位搜索</p>
+            <p>方便停车竟在掌握</p>
+        </div>
+    </div>
+</a>
+<script type="text/javascript">
+
+    Zepto(function ($) {
+
+
+    });
+
+</script>

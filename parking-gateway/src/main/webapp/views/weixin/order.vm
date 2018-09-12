@@ -1,0 +1,82 @@
+#set($cPath = "#cPath")
+#set($layout = "layout/h5_layout.vm")
+<div class="line"></div>
+<div id="main-container">
+    <div class="head-tips">
+        <a href="$cPath/weixin/h5/location" style="text-decoration:none;color:#121212"><p>账单明细</p></a>
+    </div>
+##    <div id="search">
+##        <div class="input-wrapper"><input type="text"></div>
+##        <img src="$cPath/resources/img/find.png" style="height:40px;position:absolute;right:0;top:0">
+##    </div>
+    <div class="area-container" style="border-radius:3px;position:absolute;left:5%;right:5%;top:60px;bottom:52px;border:1px solid #adadad;padding-top:5px;background:#FFFFFF">
+
+        #foreach($orderVoList in $ret.entrySet())
+
+            <div class="flow-block">
+                <p class="title toggle">
+                    <span>$orderVoList.getKey()</span>
+                    <span>停车次数：$orderVoList.getValue().size()笔</span>
+                </p>
+
+                #foreach($orderVo in $orderVoList.getValue())
+
+                    <div class="detail hide">
+                        <div class="day">$orderVo.getDay()</div>
+                        <div class="info2">
+                            <div class="info-wrapper">
+                                <p style="font-size:14px;color:#FF270A">$orderVo.getAmountDisplay() 元</p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="info-wrapper">
+                                <p>$orderVo.getOrderTypeDisplay()</p>
+                                <p>$orderVo.getPayTime()</p>
+                            </div>
+                        </div>
+                    </div>
+
+                #end
+
+            </div>
+        #end
+
+    </div>
+
+</div>
+<div id="footer">
+
+</div>
+<div id="err-hint" class="hide"></div>
+
+</body>
+<style>
+
+</style>
+<script type="text/javascript">
+
+    Zepto(function ($) {
+
+        $(".flow-block").first().find(".title").removeClass("toggle");
+        $(".flow-block").first().find(".detail").removeClass("hide");
+
+        $(".title").click(function(){
+
+            if($(this).hasClass("toggle")){
+
+                $(this).parent().find(".detail").removeClass("hide");
+
+                $(this).removeClass("toggle");
+
+            }else{
+
+                $(this).parent().find(".detail").addClass("hide");
+
+                $(this).addClass("toggle");
+            }
+
+        })
+
+    });
+
+</script>
