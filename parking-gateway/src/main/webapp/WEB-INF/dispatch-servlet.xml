@@ -13,48 +13,6 @@
 
     <mvc:resources mapping="/resources/**" location="/resources/" cache-period="86400"/>
 
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/api/**/*"/>
-            <bean class="com.protops.gateway.interceptor.AccessTokenInterceptor">
-                <property name="white">
-                    <list>
-                        <value>localhost</value>
-                        <value>127.0.0.1</value>
-                        <value>172.17.236.161</value>
-                    </list>
-                </property>
-            </bean>
-        </mvc:interceptor>
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/weixin/plain/**/*"/>-->
-            <!--<bean class="com.protops.gateway.interceptor.WeixinSecureInterceptor">-->
-                <!--<property name="excludeUrl">-->
-                    <!--<list>-->
-                        <!--<value>process</value>-->
-                    <!--</list>-->
-                <!--</property>-->
-            <!--</bean>-->
-        <!--</mvc:interceptor>-->
-        <mvc:interceptor>
-            <mvc:mapping path="/weixin/h5/**/*"/>
-            <bean class="com.protops.gateway.interceptor.WeixinOAuthSessionInterceptor">
-                <property name="path" value="/weixin/h5"></property>
-                <property name="excludeUrl">
-                    <list>
-                        <value>/notify</value>
-                    </list>
-                </property>
-                <property name="memberRequireExcludeUrl">
-                    <list>
-                        <value>/register</value>
-                        <value>/sendSms</value>
-                    </list>
-                </property>
-            </bean>
-        </mvc:interceptor>
-    </mvc:interceptors>
-
     <mvc:annotation-driven ignoreDefaultModelOnRedirect="true"/>
 
     <bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
@@ -74,7 +32,7 @@
                 <prop key="contentType">text/html;charset=UTF-8</prop>
                 <!-- contentType -->
                 <!--&lt;!&ndash;<prop key="velocimacro.library">macro/macros.vm</prop>Velocimacro 模板库的列表-->
-                <prop key="userdirective">com.protops.gateway.view.AdminContextDirective</prop>
+                <!--<prop key="userdirective">com.protops.gateway.view.AdminContextDirective</prop>-->
             </props>
         </property>
     </bean>

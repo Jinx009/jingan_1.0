@@ -19,43 +19,8 @@
 
     <import resource="db.context.xml"></import>
 
-    <bean id="adminConfig" class="com.protops.gateway.constants.AdminConfig">
-        <property name="systemId" value="2"></property>
-        <property name="onTestMode" value="${onTestMode}"></property>
-        <property name="filePath" value="${config.files.path}"></property>
-        <property name="contextPath" value="${config.context.gtw.path}"></property>
-    </bean>
 
-    <bean id="weixinConfig" class="com.protops.gateway.constants.WeixinConfig">
-        <property name="token" value="${weixin_token}"></property>
-        <property name="appId" value="${weixin_app_id}"></property>
-        <property name="appSecret" value="${weixin_app_secret}"></property>
-        <property name="filePath" value="${config.files.path}"></property>
-        <property name="merchantId" value="${merchant_id}"></property>
-        <property name="currencyCode" value="CNY"></property>
-        <property name="key" value="${key}"></property>
-    </bean>
 
-    <bean id="smsSender" class="com.protops.gateway.service.SmsSender">
-        <property name="apiKey" value="e9da56bde4f658ff8e2f0c9fb3fb0d91"></property>
-        <property name="url" value="http://yunpian.com/v1/sms/send.json"></property>
-    </bean>
-
-    <bean id="smsService" class="com.protops.gateway.service.SmsService">
-        <property name="onTestMode" value="${sms_test_mode}"></property>
-        <property name="template" value="【汉口城市广场】 短信验证码：{0}，请在${sms_invalid_timespan}秒内完成验证"></property>
-        <property name="maxLimitCnt" value="${sms_limit_cnt}"></property>
-        <property name="invalidTimespan" value="${sms_invalid_timespan}"></property>
-        <property name="smsSentInterval" value="${sms_sent_interval}"></property>
-    </bean>
-
-    <bean id="weixinPaymentClient" class="com.protops.gateway.controller.client.WeixinPaymentClient">
-        <property name="prepayUrl" value="${prepay_url}"></property>
-        <property name="notifyUrl" value="${weixin_payment_notify_url}"></property>
-        <property name="queryUrl" value="${weixin_payment_query_url}"></property>
-    </bean>
-
-    <bean id="threadProcessor" class="com.protops.gateway.processor.ThreadProcessor"></bean>
 
     <bean id="fileUpload" class="com.protops.gateway.utils.FileUpload">
         <property name="url" value="${upload_url}"></property>
@@ -66,8 +31,5 @@
 
     <import resource="spring/spring-event.xml"></import>
 
-    <bean id="cityService" class="com.protops.gateway.service.CityService">
-        <property name="filePath" value="${config.files.path}"></property>
-    </bean>
 
 </beans>

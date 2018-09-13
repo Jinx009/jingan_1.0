@@ -60,7 +60,7 @@ public class SensorNoticeTask {
     /**
      * 设备业务状态上报
      */
-    @Scheduled(fixedRate = 20 * 1000)//每10S执行一次
+    @Scheduled(fixedRate = 40 * 1000)//每10S执行一次
     public void sendNormal() {
         List<Location> locations = locationService.findNeedNotice();
         if (locations != null && !locations.isEmpty()) {

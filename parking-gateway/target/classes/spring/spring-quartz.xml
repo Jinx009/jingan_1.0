@@ -4,45 +4,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
        default-lazy-init="false">
 
-    <bean id="areaJob" class="com.protops.gateway.Job.AreaJob">
-    </bean>
 
-    <bean id="statsJob" class="com.protops.gateway.Job.StatsJob">
-        <property name="statsIds">
-            <list>
-                <value>1</value>
-            </list>
-        </property>
-    </bean>
-
-    <bean id="areaJobTask"
-          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
-        <property name="targetObject" ref="areaJob"></property>
-        <property name="targetMethod" value="process"></property>
-    </bean>
-
-    <bean id="statsJobTask"
-          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
-        <property name="targetObject" ref="statsJob"></property>
-        <property name="targetMethod" value="process"></property>
-    </bean>
-
-    <bean id="areaJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
-        <property name="jobDetail" ref="areaJobTask"/>
-        <property name="cronExpression" value="0 0 * * * ?"></property>
-    </bean>
-
-    <bean id="statsJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
-        <property name="jobDetail" ref="statsJobTask"/>
-        <property name="cronExpression" value="0 0/5 * * * ?"></property>
-    </bean>
 
     <bean name="quartzScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean" lazy-init="default">
         <property name="autoStartup" value="false"></property>
         <property name="triggers">
             <list>
-                <ref bean="areaJobTrigger"/>
-                <ref bean="statsJobTrigger"/>
             </list>
         </property>
     </bean>
