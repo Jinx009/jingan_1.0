@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
 
@@ -65,6 +66,10 @@ public class IoTDataController {
                 sensor.setAddr(sensorDeviceLog.getRssi());
                 sensorService.update(sensor);
                 sensorDeviceLogService.save(sensorDeviceLog);
+                FileWriter fileWriter = new FileWriter("/apps/logs/heart_log_time.txt", false);
+                fileWriter.write(String.valueOf(new Date().getTime()));
+                fileWriter.flush();
+                fileWriter.close();
             }
         }catch (Exception e){
             log.error("error:{}",e);

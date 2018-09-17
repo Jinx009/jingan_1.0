@@ -13,6 +13,7 @@ com/protops/gateway/domain/HeartBeatRequest.class
 com/protops/gateway/utils/FileUpload.class
 com/protops/gateway/utils/SpringContextUtil.class
 com/protops/gateway/vo/internal/BluetoothLogVo.class
+com/protops/gateway/Job/NbProcessTask.class
 com/protops/gateway/domain/base/BaseMessage.class
 com/protops/gateway/service/common/NewJobService.class
 com/protops/gateway/constants/ResponseCodes$RouterErr.class
