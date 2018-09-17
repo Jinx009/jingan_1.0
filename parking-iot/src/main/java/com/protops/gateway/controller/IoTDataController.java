@@ -61,6 +61,9 @@ public class IoTDataController {
             SensorDeviceLog sensorDeviceLog = JSONObject.parseObject(new String(bytes, Constants.Default_SysEncoding),SensorDeviceLog.class);
             if(sensorDeviceLog!=null){
                 sensorDeviceLog.setCreateTime(new Date());
+                Sensor sensor = sensorService.getByMac(sensorDeviceLog.getMac());
+                sensor.setAddr(sensorDeviceLog.getRssi());
+                sensorService.update(sensor);
                 sensorDeviceLogService.save(sensorDeviceLog);
             }
         }catch (Exception e){

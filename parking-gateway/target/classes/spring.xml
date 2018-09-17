@@ -23,7 +23,7 @@
 
 
     <bean id="fileUpload" class="com.protops.gateway.utils.FileUpload">
-        <property name="url" value="/apps/conf/"></property>
+        <property name="url" value="${upload_url}"></property>
     </bean>
 
     <import resource="spring/spring-quartz.xml"></import>
