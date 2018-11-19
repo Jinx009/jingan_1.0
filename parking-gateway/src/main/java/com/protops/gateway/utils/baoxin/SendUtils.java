@@ -68,21 +68,16 @@ private static final String url = "http://10.105.0.200/iPlatDAM/service/S_FM_01"
             List<String[]> list1 = new ArrayList<String[]>();
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             for(Sensor sensor:list){
-                Double d = 0.00;
-                if(StringUtils.isNotBlank(sensor.getUid())){
-                    d = Double.valueOf(sensor.getUid());
-                }else{
-                    d = Double.valueOf(sensor.getBatteryVoltage());
-                }
+                Double d = Double.valueOf(sensor.getBatteryVoltage());
                 String dumpEnergy = "1";
                 if(d<2.00){
                     dumpEnergy = "0";
                 }
                 if(d>=3.0){
                     sensor.setBatteryVoltage("80");
-                }else if(d>=2.8&&d<3.0){
+                }else if(d>=2.7&&d<3.0){
                     sensor.setBatteryVoltage("50");
-                }else if(d<2.8){
+                }else if(d<2.7){
                     sensor.setBatteryVoltage("20");
                 }
                 String[] strs = new String[]{simpleDateFormat.format(new Date()),sensor.getMac(),dumpEnergy,sensor.getBatteryVoltage()};

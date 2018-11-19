@@ -4,8 +4,10 @@ import com.protops.gateway.dao.log.SensorOperationLogService;
 import com.protops.gateway.domain.AppInfo;
 import com.protops.gateway.domain.iot.Location;
 import com.protops.gateway.domain.iot.Sensor;
+import com.protops.gateway.domain.log.SensorDeviceLog;
 import com.protops.gateway.domain.log.SensorOperationLog;
 import com.protops.gateway.service.*;
+import com.protops.gateway.service.log.SensorDeviceLogService;
 import com.protops.gateway.utils.baoxin.SendUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +16,7 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -37,6 +40,8 @@ public class SensorNoticeTask {
     @Autowired
     private SensorService sensorService;
     @Autowired
+    private SensorDeviceLogService sensorDeviceLogService;
+    @Autowired
     private ErrorFlowService errorFlowService;
 
 
@@ -48,8 +53,13 @@ public class SensorNoticeTask {
     public void sendJinganDeviceHeart() {
         try { logger.error("jingan device[start]");
            List<Sensor> list = sensorService.getSensorsByArea(1);
+           List<Sensor> arrays = new ArrayList<Sensor>();
            if(list!=null&&!list.isEmpty()){
-               SendUtils.sendDeviceHeart(list);
+               for(Sensor sensor:list){
+                   sensor.setBatteryVoltage(sensorDeviceLogService.findByMacAndDate(sensor.getMac()));
+                   arrays.add(sensor);
+               }
+               SendUtils.sendDeviceHeart(arrays);
            }
         }catch(Exception e){
             logger.error("jingan device[error:{}]", e);

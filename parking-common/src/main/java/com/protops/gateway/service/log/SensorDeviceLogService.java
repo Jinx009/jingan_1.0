@@ -25,6 +25,10 @@ public class SensorDeviceLogService {
         return null;
     }
 
+    public String findByMacAndDate(String mac){
+        return sensorDeviceLogDao.findByMacAndDate(mac);
+    }
+
     public void save(SensorDeviceLog sensorDeviceLog){
         sensorDeviceLogDao.save(sensorDeviceLog);
     }
