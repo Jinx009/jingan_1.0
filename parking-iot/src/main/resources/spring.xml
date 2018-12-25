@@ -26,18 +26,18 @@
         <property name="contextPath" value="${config.context.iot.path}"></property>
     </bean>
 
-    <bean id="smsSender" class="com.protops.gateway.service.SmsSender">
-        <property name="apiKey" value="8cb32b34675d8f6854346f981e8d280d"></property>
-        <property name="url" value="http://yunpian.com/v1/sms/send.json"></property>
-    </bean>
+    <!--<bean id="smsSender" class="com.protops.gateway.service.SmsSender">-->
+        <!--<property name="apiKey" value="8cb32b34675d8f6854346f981e8d280d"></property>-->
+        <!--<property name="url" value="http://yunpian.com/v1/sms/send.json"></property>-->
+    <!--</bean>-->
 
-<bean id="smsService" class="com.protops.gateway.service.SmsService">
-    <property name="onTestMode" value="${sms_test_mode}"></property>
-    <property name="template" value="【汉口城市广场】 短信验证码：{0}，请在${sms_invalid_timespan}秒内完成验证"></property>
-    <property name="maxLimitCnt" value="${sms_limit_cnt}"></property>
-    <property name="invalidTimespan" value="${sms_invalid_timespan}"></property>
-    <property name="smsSentInterval" value="${sms_sent_interval}"></property>
-</bean>
+<!--<bean id="smsService" class="com.protops.gateway.service.SmsService">-->
+    <!--<property name="onTestMode" value="false"></property>-->
+    <!--<property name="template" value="【汉口城市广场】 短信验证码：{0}，请在${sms_invalid_timespan}秒内完成验证"></property>-->
+    <!--<property name="maxLimitCnt" value="${sms_limit_cnt}"></property>-->
+    <!--<property name="invalidTimespan" value="${sms_invalid_timespan}"></property>-->
+    <!--<property name="smsSentInterval" value="${sms_sent_interval}"></property>-->
+<!--</bean>-->
 
     <bean id="fileUpload" class="com.protops.gateway.utils.FileUpload">
         <property name="url" value="${upload_url}"></property>
