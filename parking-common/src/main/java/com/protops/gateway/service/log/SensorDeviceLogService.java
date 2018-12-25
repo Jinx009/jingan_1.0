@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 @Transactional
@@ -25,7 +26,7 @@ public class SensorDeviceLogService {
         return null;
     }
 
-    public String findByMacAndDate(String mac){
+    public Map<String,Object> findByMacAndDate(String mac){
         return sensorDeviceLogDao.findByMacAndDate(mac);
     }
 

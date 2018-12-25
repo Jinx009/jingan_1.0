@@ -16,9 +16,11 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by jinx on 4/19/17.
@@ -49,14 +51,21 @@ public class SensorNoticeTask {
     /**
      * 静安宝信推送心跳
      */
-    @Scheduled(cron = "0 0 16 * * ?")//每天中午12点推送一次
+    @Scheduled(cron = "0 0 16 * * ?")//每天中午16点推送一次
     public void sendJinganDeviceHeart() {
         try { logger.error("jingan device[start]");
            List<Sensor> list = sensorService.getSensorsByArea(1);
            List<Sensor> arrays = new ArrayList<Sensor>();
            if(list!=null&&!list.isEmpty()){
                for(Sensor sensor:list){
-                   sensor.setBatteryVoltage(sensorDeviceLogService.findByMacAndDate(sensor.getMac()));
+                   Map<String,Object> map = sensorDeviceLogService.findByMacAndDate(sensor.getMac());
+                   SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                   sensor.setBatteryVoltage(String.valueOf(map.get("a")));
+                   if(null==String.valueOf(map.get("b"))){
+                       sensor.setLastSeenTime(sdf.parse(String.valueOf(map.get("b"))));
+                   }else{
+                       sensor.setLastSeenTime(null);
+                   }
                    arrays.add(sensor);
                }
                SendUtils.sendDeviceHeart(arrays);

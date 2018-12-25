@@ -25,7 +25,7 @@ public class NbProcessTask {
     private static final String RESTART_FILE_PATH = "/apps/logs/nb_start_log.txt";
     private static final String CMD = "cd /apps/nb;nohup ./nb_router &";
 
-    @Scheduled(fixedRate = 180 * 1000) // 每3分钟S执行一次
+    @Scheduled(fixedRate = 600 * 1000) // 每10分钟S执行一次
     public void sendNormal() {
         try {
             checkTime();
