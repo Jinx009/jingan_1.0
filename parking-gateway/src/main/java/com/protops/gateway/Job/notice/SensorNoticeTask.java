@@ -61,7 +61,7 @@ public class SensorNoticeTask {
                    Map<String,Object> map = sensorDeviceLogService.findByMacAndDate(sensor.getMac());
                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                    sensor.setBatteryVoltage(String.valueOf(map.get("a")));
-                   if(null==String.valueOf(map.get("b"))){
+                   if(null!=String.valueOf(map.get("b"))){
                        sensor.setLastSeenTime(sdf.parse(String.valueOf(map.get("b"))));
                    }else{
                        sensor.setLastSeenTime(null);
