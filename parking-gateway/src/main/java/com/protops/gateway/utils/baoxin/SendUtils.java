@@ -80,7 +80,11 @@ private static final String url = "http://10.105.0.200/iPlatDAM/service/S_FM_01"
                 }else if(d<2.7){
                     sensor.setBatteryVoltage("20");
                 }
-                String[] strs = new String[]{simpleDateFormat.format(sensor.getLastSeenTime()),sensor.getMac(),dumpEnergy,sensor.getBatteryVoltage()};
+                String dateStr = "";
+                if(sensor.getLastSeenTime()!=null){
+                    dateStr = simpleDateFormat.format(sensor.getLastSeenTime());
+                }
+                String[] strs = new String[]{dateStr,sensor.getMac(),dumpEnergy,sensor.getBatteryVoltage()};
                 list1.add(strs);
             }
             meta.put("columns",initHeart());
