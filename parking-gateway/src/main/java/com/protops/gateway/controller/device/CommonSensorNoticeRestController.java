@@ -10,9 +10,11 @@ import com.protops.gateway.domain.common.LocationNoticeVo;
 import com.protops.gateway.domain.common.TokenFactory;
 import com.protops.gateway.domain.device.LocationMacVo;
 import com.protops.gateway.domain.iot.Location;
+import com.protops.gateway.domain.iot.Sensor;
 import com.protops.gateway.domain.log.SensorUploadOperationLog;
 import com.protops.gateway.service.AppInfoService;
 import com.protops.gateway.service.LocationService;
+import com.protops.gateway.service.SensorService;
 import com.protops.gateway.service.common.TokenFactoryService;
 import com.protops.gateway.service.device.LocationMacVoService;
 import com.protops.gateway.service.device.SensorUploadOperationLogService;
@@ -43,6 +45,24 @@ public class CommonSensorNoticeRestController {
     private SensorUploadOperationLogService sensorUploadOperationLogService;
     @Autowired
     private LocationMacVoService locationMacVoService;
+    @Autowired
+    private SensorService sensorService;
+
+
+    @RequestMapping(value = "rest/sensor/sinleStatus")
+    @ResponseBody
+    public AjaxResponse sensorStatusUpload(String mac) {
+        AjaxResponse ajaxResponse = new AjaxResponse(HttpConstant.ERROR_CODE, HttpConstant.ERROE_MSG, null);
+        try {
+            Sensor sensor = sensorService.getByMac(mac);
+            ajaxResponse.setDomain(sensor);
+        } catch (Exception e) {
+            logger.error("sinleStatus.sinleStatus [error:{}]", e);
+        }
+        logger.warn("sinleStatus.sinleStatus[res:{}]",ajaxResponse);
+        return ajaxResponse;
+    }
+
 
     /**
      * 开启和关闭
