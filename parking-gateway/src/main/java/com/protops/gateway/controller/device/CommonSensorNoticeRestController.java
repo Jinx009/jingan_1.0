@@ -61,6 +61,7 @@ public class CommonSensorNoticeRestController {
                 sensor1.setMac(sensor.getMac());
                 sensor1.setLastSeenTime(sensor.getLastSeenTime());
                 sensor1.setAvailable(sensor.getAvailable());
+                sensor1.setDesc(String.valueOf(sensor.getAvailable()));
             }
         } catch (Exception e) {
             logger.error("sinleStatus.sinleStatus [error:{}]", e);
