@@ -51,22 +51,22 @@ public class CommonSensorNoticeRestController {
 
     @RequestMapping(value = "rest/sensor/sinleStatus")
     @ResponseBody
-    public AjaxResponse sensorStatusUpload(String mac) {
+    public Sensor sensorStatusUpload(String mac) {
         AjaxResponse ajaxResponse = new AjaxResponse(HttpConstant.OK_CODE, HttpConstant.OK_MSG, null);
+        Sensor sensor1 = new Sensor();
         try {
             Sensor sensor = sensorService.getByMac(mac);
-            Sensor sensor1 = new Sensor();
+
             if(sensor!=null){
                 sensor1.setMac(sensor.getMac());
                 sensor1.setLastSeenTime(sensor.getLastSeenTime());
                 sensor1.setAvailable(sensor.getAvailable());
             }
-            ajaxResponse.setDomain(sensor);
         } catch (Exception e) {
             logger.error("sinleStatus.sinleStatus [error:{}]", e);
         }
-        logger.warn("sinleStatus.sinleStatus[res:{}]",ajaxResponse);
-        return ajaxResponse;
+        logger.warn("sinleStatus.sinleStatus[res:{}]",JSONObject.toJSONString(sensor1));
+        return sensor1;
     }
 
 
