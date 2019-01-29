@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 @Controller
 public class IoTDataController {
@@ -54,6 +56,32 @@ public class IoTDataController {
 
         return "ok";
     }
+
+    @RequestMapping(value = "/openApi/changeSendStatus")
+    @ResponseBody
+    public Map<String,String> changeStatus(@RequestParam(value = "status", required = true) String status,
+                                           @RequestParam(value = "sign", required = true) String sign,
+                                           @RequestParam(value = "mac", required = true) String mac){
+        Map<String,String> map = new HashMap<String, String>();
+        map.put("code","500");
+        map.put("msg","Sign not invalid");
+        try {
+            if(MD5Utils.md5("mac="+mac+"&status="+status+"&sign=zhanway_guozhi").equals(sign)){
+                Sensor sensor = sensorService.getByMac(mac);
+                sensor.setAreaId(1);
+                if("0".equals(status)){
+                    sensor.setAreaId(2);
+                }
+                sensorService.update(sensor);
+                map.put("code","200");
+                map.put("msg","ok");
+            }
+        }catch (Exception e){
+            log.error("error:{}",e);
+        }
+        return map;
+    }
+
 
     @RequestMapping(value = "/sensor/heartBeatLog/report", method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
