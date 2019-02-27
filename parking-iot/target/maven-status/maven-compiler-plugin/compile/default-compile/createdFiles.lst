@@ -4,6 +4,7 @@ com/protops/gateway/view/AdminContextDirective.class
 com/protops/gateway/utils/BytesUtil.class
 com/protops/gateway/service/SmsService.class
 com/protops/gateway/handler/BaseHandler.class
+com/protops/gateway/service/device/BluetoothService.class
 com/protops/gateway/service/device/IntersectionSensorService.class
 com/protops/gateway/service/device/NewRouterService.class
 com/protops/gateway/handler/v1_0/SensorRegisterHandler.class

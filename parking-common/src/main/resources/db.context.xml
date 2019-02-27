@@ -6,9 +6,9 @@
 
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" >
         <property name="driverClass" value="com.mysql.jdbc.Driver" />
-        <property name="jdbcUrl" value="${db.jdbc.url}" />
-        <property name="user" value="${db.user}" />
-        <property name="password" value="${db.pwd}" />
+        <property name="jdbcUrl" value="#{systemEnvironment['iot_hosting_rds_zhanwaydb_mysqlUrl']}" />
+        <property name="user" value="zhanway" />
+        <property name="password" value="Zhanway2017" />
         <property name="maxPoolSize" value="${maxPoolSize}" />
         <property name="minPoolSize" value="${minPoolSize}" />
         <property name="maxIdleTime" value="3600" />

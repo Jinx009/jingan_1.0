@@ -1,12 +1,16 @@
 package com.protops.gateway.service.device;
 
+import com.alibaba.fastjson.JSONObject;
+import com.protops.gateway.dao.AreaDao;
 import com.protops.gateway.dao.log.SensorDeviceLogDao;
 import com.protops.gateway.dao.log.SensorInOutLogDao;
 import com.protops.gateway.dao.log.SensorOperationLogDao;
+import com.protops.gateway.domain.iot.Area;
 import com.protops.gateway.domain.iot.Sensor;
 import com.protops.gateway.domain.log.SensorDeviceLog;
 import com.protops.gateway.domain.log.SensorInOutLog;
 import com.protops.gateway.domain.log.SensorOperationLog;
+import com.protops.gateway.util.HttpUtils;
 import com.protops.gateway.util.StringUtils;
 import com.protops.gateway.utils.baoxin.SendUtils;
 import org.slf4j.Logger;
@@ -15,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -32,6 +37,8 @@ public class NewSensorService {
     private SensorOperationLogDao sensorOperationLogDao;
     @Autowired
     private SensorInOutLogDao sensorInOutLogDao;
+    @Autowired
+    private AreaDao areaDao;
 
 
 
@@ -80,27 +87,20 @@ public class NewSensorService {
         }
         sensorOperationLogDao.save(sensorOperationLog);
         sensorOperationLog = sensorOperationLogDao.get(sensorOperationLog.getId());
-        //宝信
-        if (sensorOperationLog.getAreaId()!=null&& 1 == sensorOperationLog.getAreaId()) {
-            List<SensorOperationLog> sensorOperationLogs = new ArrayList<SensorOperationLog>();
-           sensorOperationLogs.add(sensorOperationLog);
-            if (SendUtils.send(sensorOperationLogs)) {
-               for (SensorOperationLog sensorOperationLog1 : sensorOperationLogs) {
-                    sensorOperationLog1 = sensorOperationLogDao.get(sensorOperationLog1.getId());
-                    sensorOperationLog1.setSendStatus(1);
-                    sensorOperationLog1.setSendTime(new Date());
-                    sensorOperationLogDao.update(sensorOperationLog1);
-                }
-            } else {
-                for (SensorOperationLog sensorOperationLog1 : sensorOperationLogs) {
-                   sensorOperationLog1 = sensorOperationLogDao.get(sensorOperationLog1.getId());
-                   sensorOperationLog1.setFailTimes(sensorOperationLog.getFailTimes() + 1);
-                   sensorOperationLogDao.update(sensorOperationLog);
-                }
+        //推送
+        if (sensorOperationLog.getAreaId()!=null) {
+            Area area = areaDao.get(sensorOperationLog.getAreaId());
+            if(StringUtils.isNotBlank(area.getSendUrl())){
+                Map<String,Object> data = new HashMap<String, Object>();
+                data.put("mac",sensorOperationLog.getMac());
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                data.put("change_time",simpleDateFormat.format(sensorOperationLog.getChangeTime()));
+                data.put("status",sensorOperationLog.getAvailable());
+                HttpUtils.postJson(area.getSendUrl(), JSONObject.toJSONString(data));
             }
         }
 
-        saveInOutLog(sensorOperationLog);
+       // saveInOutLog(sensorOperationLog);
 
     }
 

@@ -29,6 +29,9 @@ public class Area {
     @Column(name = "description")
     private String desc;
 
+    @Column(name = "send_url")
+    private String sendUrl;
+
     @Column(name = "charge_policy_id")
     private Integer chargePolicyId;
 
@@ -131,5 +134,13 @@ public class Area {
 
     public void setLatitude(String latitude) {
         this.latitude = latitude;
+    }
+
+    public String getSendUrl() {
+        return sendUrl;
+    }
+
+    public void setSendUrl(String sendUrl) {
+        this.sendUrl = sendUrl;
     }
 }
