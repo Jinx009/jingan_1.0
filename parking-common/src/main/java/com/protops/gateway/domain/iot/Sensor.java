@@ -137,4 +137,6 @@ public class Sensor {
     @Column(name = "bluetooth")
     private String bluetooth;
 
+
+
 }

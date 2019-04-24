@@ -47,4 +47,6 @@ public class SensorOperationLog {
     private Date sendTime;//下次发送时间，三次失败之后
 
 
+
+
 }

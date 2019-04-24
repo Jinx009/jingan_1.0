@@ -33,6 +33,7 @@ public class IoTDataController {
     @Autowired
     private SensorDeviceLogService sensorDeviceLogService;
 
+
     @RequestMapping(value = "/iot/sensor/report/voltage", method = RequestMethod.POST)
     @ResponseBody
     public String process(
