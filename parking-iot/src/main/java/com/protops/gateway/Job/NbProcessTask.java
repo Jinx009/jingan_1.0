@@ -21,9 +21,16 @@ public class NbProcessTask {
 
     private static final Logger log = LoggerFactory.getLogger(NbProcessTask.class);
 
-    private static final String TIME_FILE_PATH = "/apps/logs/heart_log_time.txt";
-    private static final String RESTART_FILE_PATH = "/apps/logs/nb_start_log.txt";
-    private static final String CMD = "cd /apps/nb;nohup ./nb_router &";
+    /**
+     * 测试环境
+     */
+    private static final String TIME_FILE_PATH = "/home/baoadmin/logs/heart_log_time.txt";
+    private static final String RESTART_FILE_PATH = "/home/baoadmin/logs/nb_start_log.txt";
+    private static final String CMD = "cd /home/baoadmin/nb;nohup ./nb_router &";
+
+//    private static final String TIME_FILE_PATH = "/apps/logs/heart_log_time.txt";
+//    private static final String RESTART_FILE_PATH = "/apps/logs/nb_start_log.txt";
+//    private static final String CMD = "cd /apps/nb;nohup ./nb_router &";
 
     @Scheduled(fixedRate = 600 * 1000) // 每10分钟S执行一次
     public void sendNormal() {

@@ -233,6 +233,20 @@
                 <compressingPhase>validate</compressingPhase>
             </properties>
         </profile>
+        <profile>
+            <id>test</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <filters>
+                    <filter>${project.parent.relativePath}/../config/test.properties</filter>
+                </filters>
+            </build>
+            <properties>
+                <compressingPhase>validate</compressingPhase>
+            </properties>
+        </profile>
     </profiles>
 
 </project>

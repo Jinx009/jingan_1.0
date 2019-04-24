@@ -2,35 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a16383b3-f1de-474d-a0d5-996bf5d4d411" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Sensor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/controller/IoTDataController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/device/NewSensorService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/baoxin/HeartModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/baoxin/HeartModelList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/baoxin/PosModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/baoxin/SendUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/baoxin/StatusModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/baoxin/StatusModelList.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/test.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Area.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Area.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Sensor.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Sensor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/parking-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/parking-common-1.0.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/parking-common/target/parking-common-1.0.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/Job/notice/SensorNoticeTask.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/Job/notice/SensorNoticeTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/baoxin/HeartModel.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/baoxin/HeartModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/baoxin/HeartModelList.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/baoxin/HeartModelList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/baoxin/PosModel.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/baoxin/PosModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/baoxin/SendUtils.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/baoxin/SendUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/baoxin/StatusModel.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/baoxin/StatusModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/baoxin/StatusModelList.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/baoxin/StatusModelList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw.war" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/Job/notice/SensorNoticeTask.class" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/Job/notice/SensorNoticeTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModel.class" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModelList.class" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModelList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/PosModel.class" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/PosModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/SendUtils.class" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/SendUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModel.class" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModelList.class" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModelList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/lib/parking-common-1.0.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/lib/parking-common-1.0.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/parking-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/Job/NbProcessTask.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/Job/NbProcessTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/controller/IoTDataController.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/controller/IoTDataController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler$1.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/device/NewSensorService.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/device/NewSensorService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/baoxin/SendUtils.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/baoxin/SendUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot.war" afterPath="$PROJECT_DIR$/parking-iot/target/iot.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/Job/NbProcessTask.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/Job/NbProcessTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/controller/IoTDataController.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/controller/IoTDataController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler$1.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/service/device/NewSensorService.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/service/device/NewSensorService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModel.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModelList.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModelList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/PosModel.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/PosModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/SendUtils.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/SendUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModel.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModelList.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModelList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/lib/parking-common-1.0.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/lib/parking-common-1.0.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/iot/Sensor.java" afterPath="$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/iot/Sensor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/log/SensorOperationLog.java" afterPath="$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/log/SensorOperationLog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/Job/notice/SensorNoticeTask.java" afterPath="$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/Job/notice/SensorNoticeTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/db.context.xml" afterPath="$PROJECT_DIR$/parking-common/target/classes/db.context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/excel.properties" afterPath="$PROJECT_DIR$/parking-common/target/classes/excel.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/parking-common/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java" afterPath="$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/spring.xml" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/spring.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/spring.xml" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/spring.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/parking-gateway/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/NbProcessTask.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/NbProcessTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/ReportStatusHandler.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/ReportStatusHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/parking-iot/target/classes/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/spring.xml" afterPath="$PROJECT_DIR$/parking-iot/target/classes/spring.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/spring.xml" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/spring.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/parking-iot/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/parking-iot/target/" />
@@ -67,7 +95,17 @@
         <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="580">
-              <caret line="96" column="17" lean-forward="true" selection-start-line="84" selection-start-column="16" selection-end-line="96" selection-end-column="17" />
+              <caret line="96" column="17" lean-forward="false" selection-start-line="84" selection-start-column="16" selection-end-line="96" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NbProcessTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/NbProcessTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -76,8 +114,8 @@
       <file leaf-file-name="Sensor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/iot/Sensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+            <state relative-caret-position="251">
+              <caret line="141" column="3" lean-forward="false" selection-start-line="141" selection-start-column="3" selection-end-line="159" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -96,8 +134,8 @@
       <file leaf-file-name="SendUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="24" column="85" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="24" selection-end-column="85" />
+            <state relative-caret-position="204">
+              <caret line="21" column="95" lean-forward="false" selection-start-line="21" selection-start-column="95" selection-end-line="21" selection-end-column="95" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1244#1260#0" expanded="true" />
@@ -165,14 +203,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IoTDataController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SendUtils.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1459#1475#0" expanded="true" />
+                <element signature="e#1636#1646#0" expanded="true" />
+                <element signature="e#3387#3397#0" expanded="true" />
+                <element signature="e#5261#5271#0" expanded="true" />
+                <element signature="e#6462#6472#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IoTDataController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="93" column="13" lean-forward="true" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+            <state relative-caret-position="522">
+              <caret line="197" column="94" lean-forward="false" selection-start-line="197" selection-start-column="94" selection-end-line="197" selection-end-column="94" />
               <folding>
-                <marker date="1556093240925" expanded="false" signature="5911:5927" ph="&lt;~&gt;" />
+                <marker date="1556099253364" expanded="false" signature="5911:5927" ph="&lt;~&gt;" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/test.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="446">
+              <caret line="242" column="73" lean-forward="false" selection-start-line="242" selection-start-column="73" selection-end-line="242" selection-end-column="73" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -180,8 +255,8 @@
       <file leaf-file-name="SensorOperationLog.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/log/SensorOperationLog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="25" />
+            <state relative-caret-position="510">
+              <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -219,14 +294,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/parking-iot/src/main/resources/spring/spring-quartz.xml" />
         <option value="$PROJECT_DIR$/parking-gateway/src/main/resources/spring/spring-quartz.xml" />
         <option value="$PROJECT_DIR$/parking-gateway/src/main/resources/spring.xml" />
         <option value="$PROJECT_DIR$/parking-gateway/src/main/webapp/WEB-INF/dispatch-servlet.xml" />
         <option value="$PROJECT_DIR$/config/jingan.properties" />
         <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/utils/D.java" />
-        <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/NbProcessTask.java" />
         <option value="$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/dao/log/SensorDeviceLogDao.java" />
         <option value="$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/service/log/SensorDeviceLogService.java" />
         <option value="$PROJECT_DIR$/parking-iot/src/main/resources/spring.xml" />
@@ -236,14 +309,17 @@
         <option value="$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/controller/GlobalErrController.java" />
         <option value="$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/controller/device/CommonSensorNoticeRestController.java" />
         <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/BluetoothService.java" />
-        <option value="$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java" />
         <option value="$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/Job/notice/SensorNoticeTask.java" />
-        <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java" />
         <option value="$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/log/SensorOperationLog.java" />
         <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java" />
         <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/ReportStatusHandler.java" />
         <option value="$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/iot/Sensor.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/config/test.properties" />
+        <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/NbProcessTask.java" />
         <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java" />
+        <option value="$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java" />
+        <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java" />
       </list>
     </option>
   </component>
@@ -267,6 +343,11 @@
       </MavenGeneralSettings>
     </option>
     <option name="enabledProfiles">
+      <list>
+        <option value="test" />
+      </list>
+    </option>
+    <option name="disabledProfiles">
       <list>
         <option value="jingan" />
       </list>
@@ -551,6 +632,29 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="gateway" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jingan_1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="parking-iot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="baoxin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jingan_1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="parking-iot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="baoxin" type="462c0819:PsiDirectoryNode" />
+              <item name="SendUtils.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
@@ -867,7 +971,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72914000" />
+    <option name="totallyTimeSpent" value="76444000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -880,12 +984,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5028653" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -959,20 +1062,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/dao/device/CarNumViewVoDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/controller/common/CommonTokenRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/dao/log/SensorDeviceLogDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1005,13 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1227,13 +1309,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/NbProcessTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="54" column="50" lean-forward="false" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/controller/common/CommonLocationRestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1272,24 +1347,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java">
+    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        <state relative-caret-position="580">
+          <caret line="96" column="17" lean-forward="false" selection-start-line="84" selection-start-column="16" selection-end-line="96" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parking-iot/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="242" column="73" lean-forward="false" selection-start-line="242" selection-start-column="73" selection-end-line="242" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/iot/Sensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="141" column="3" lean-forward="false" selection-start-line="141" selection-start-column="3" selection-end-line="159" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/log/SensorOperationLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/ReportStatusHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="169" column="8" lean-forward="false" selection-start-line="169" selection-start-column="8" selection-end-line="169" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/test.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/NbProcessTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="197" column="94" lean-forward="false" selection-start-line="197" selection-start-column="94" selection-end-line="197" selection-end-column="94" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1636#1646#0" expanded="true" />
-            <element signature="e#3387#3397#0" expanded="true" />
-            <element signature="e#5261#5271#0" expanded="true" />
-            <element signature="e#6462#6472#0" expanded="true" />
+            <marker date="1556099253364" expanded="false" signature="5911:5927" ph="&lt;~&gt;" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="24" column="85" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="24" selection-end-column="85" />
+        <state relative-caret-position="204">
+          <caret line="21" column="95" lean-forward="false" selection-start-line="21" selection-start-column="95" selection-end-line="21" selection-end-column="95" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1244#1260#0" expanded="true" />
@@ -1356,44 +1491,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/log/SensorOperationLog.java">
+    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="96" column="17" lean-forward="true" selection-start-line="84" selection-start-column="16" selection-end-line="96" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/iot/Sensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/ReportStatusHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="169" column="8" lean-forward="false" selection-start-line="169" selection-start-column="8" selection-end-line="169" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="93" column="13" lean-forward="true" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <marker date="1556093240925" expanded="false" signature="5911:5927" ph="&lt;~&gt;" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1459#1475#0" expanded="true" />
+            <element signature="e#1636#1646#0" expanded="true" />
+            <element signature="e#3387#3397#0" expanded="true" />
+            <element signature="e#5261#5271#0" expanded="true" />
+            <element signature="e#6462#6472#0" expanded="true" />
           </folding>
         </state>
       </provider>

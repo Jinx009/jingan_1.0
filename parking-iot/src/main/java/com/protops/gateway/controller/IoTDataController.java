@@ -160,6 +160,30 @@ public class IoTDataController {
     }
 
 
+//    @RequestMapping(value = "/sensor/heartBeatLog/report", method = RequestMethod.POST, produces = "application/json")
+//    @ResponseBody
+//    public String heartBeatLog(@RequestBody byte[] bytes){
+//        try {
+//            SensorDeviceLog sensorDeviceLog = JSONObject.parseObject(new String(bytes, Constants.Default_SysEncoding),SensorDeviceLog.class);
+//            if(sensorDeviceLog!=null){
+//                sensorDeviceLog.setCreateTime(new Date());
+//                Sensor sensor = sensorService.getByMac(sensorDeviceLog.getMac());
+//                sensor.setAddr(sensorDeviceLog.getRssi());
+//                sensorService.update(sensor);
+//                sensorDeviceLogService.save(sensorDeviceLog);
+//                FileWriter fileWriter = new FileWriter("/apps/logs/heart_log_time.txt", false);
+//                fileWriter.write(String.valueOf(new Date().getTime()));
+//                fileWriter.flush();
+//                fileWriter.close();
+//            }
+//        }catch (Exception e){
+//            log.error("error:{}",e);
+//        }
+//
+//        return "{\"status\":\"ok\"}";
+//    }
+
+
     @RequestMapping(value = "/sensor/heartBeatLog/report", method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
     public String heartBeatLog(@RequestBody byte[] bytes){
@@ -171,7 +195,7 @@ public class IoTDataController {
                 sensor.setAddr(sensorDeviceLog.getRssi());
                 sensorService.update(sensor);
                 sensorDeviceLogService.save(sensorDeviceLog);
-                FileWriter fileWriter = new FileWriter("/apps/logs/heart_log_time.txt", false);
+                FileWriter fileWriter = new FileWriter("/home/baoadmin/logs/heart_log_time.txt", false);
                 fileWriter.write(String.valueOf(new Date().getTime()));
                 fileWriter.flush();
                 fileWriter.close();

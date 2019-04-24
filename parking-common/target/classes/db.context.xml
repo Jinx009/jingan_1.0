@@ -6,9 +6,9 @@
 
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" >
         <property name="driverClass" value="com.mysql.jdbc.Driver" />
-        <property name="jdbcUrl" value="jdbc:mysql://10.105.2.1:3306/zw_iot?useUnicode=true&amp;characterEncoding=UTF-8" />
+        <property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/zw_iot?useUnicode=true&amp;characterEncoding=UTF-8" />
         <property name="user" value="root" />
-        <property name="password" value="Pass@word1" />
+        <property name="password" value="zhanway2017" />
         <property name="maxPoolSize" value="40" />
         <property name="minPoolSize" value="10" />
         <property name="maxIdleTime" value="3600" />
