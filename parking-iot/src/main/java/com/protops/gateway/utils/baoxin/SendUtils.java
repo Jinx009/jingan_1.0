@@ -16,42 +16,52 @@ public class SendUtils {
 
 
     private static final Logger logger = LoggerFactory.getLogger(SendUtils.class);
-//    private static final String url = "http://10.101.2.1:8080/iPlatDAM/service/S_FM_01";
+    //    private static final String url = "http://10.101.2.1:8080/iPlatDAM/service/S_FM_01";
 //    private static final String url = "http://10.101.2.1:8088/iPlatDAM/service/S_FM_01";
-    private static final String url = "http://10.105.0.200/iPlatDAM/service/S_FM_01";
-    public static boolean send(List<SensorOperationLog> list){
-        if(list!=null&&!list.isEmpty()){
-            try {
-                Map<String,Object> data = new HashMap<String, Object>();
-                data.put("msg","message");
-                data.put("status",0);
-                Map<String,Object> blocks = new HashMap<String, Object>();
-                Map<String,Object> block1 = new HashMap<String, Object>();
-                Map<String,Object> meta = new HashMap<String, Object>();
-                meta.put("columns",init());
-                List<String[]> list1 = new ArrayList<String[]>();
-                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                for(SensorOperationLog sensorOperationLog:list){
-                    String[] strs = new String[]{simpleDateFormat.format(sensorOperationLog.getChangeTime()),sensorOperationLog.getMac(),String.valueOf(sensorOperationLog.getAvailable())};
-                    list1.add(strs);
-                }
-                meta.put("columns",init());
-                block1.put("rows",list1);
-                block1.put("meta",meta);
-                blocks.put("block1",block1);
-                data.put("blocks",blocks);
-                String jsonStr = JSON.toJSONString(data);
-                logger.warn("data:{},url:{}",jsonStr,url);
-                String res = HttpUtils.postTextJson(url, jsonStr);
-                logger.warn(",res:{}",res);
-                JSONObject jsonObject = JSONObject.parseObject(res);
-                if(0==jsonObject.getInteger("status")){
-                    return true;
-                }
-                return false;
-            }catch (Exception e){
-                logger.error("BaoXin send Error :{}",e);
+    private static final String url = "http://112.64.46.113/iPlatDAM/service/S_FM_01";//测试环境
+    //   private static final String url = "http://10.105.0.200/iPlatDAM/service/S_FM_01";//正式环境
+    public static boolean send(Date ChangeTime,String DeviceId,String SignalStatus,
+                               String recordSource,String diTime,String cameraTime,String cameraId,
+                               String cph,String cpColor,String status,String picLink){
+        try {
+            Map<String,Object> data = new HashMap<String, Object>();
+            data.put("msg","message");
+            data.put("status",0);
+            Map<String,Object> blocks = new HashMap<String, Object>();
+            Map<String,Object> block1 = new HashMap<String, Object>();
+            Map<String,Object> meta = new HashMap<String, Object>();
+            meta.put("columns",init());
+            List<String[]> list1 = new ArrayList<String[]>();
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+            String[] strs = new String[]{simpleDateFormat.format(ChangeTime),
+                    DeviceId,
+                    SignalStatus,
+                    recordSource,
+                    diTime,
+                    cameraTime,
+                    cameraId,
+                    cph,
+                    cpColor,
+                    status,
+                    picLink
+            };
+            list1.add(strs);
+            meta.put("columns",init());
+            block1.put("rows",list1);
+            block1.put("meta",meta);
+            blocks.put("block1",block1);
+            data.put("blocks",blocks);
+            String jsonStr = JSON.toJSONString(data);
+            logger.warn("data:{},url:{}",jsonStr,url);
+            String res = HttpUtils.postTextJson(url, jsonStr);
+            logger.warn(",res:{}",res);
+            JSONObject jsonObject = JSONObject.parseObject(res);
+            if(0==jsonObject.getInteger("status")){
+                return true;
             }
+            return false;
+        }catch (Exception e){
+            logger.error("BaoXin send Error :{}",e);
         }
         return false;
     }
@@ -103,13 +113,10 @@ public class SendUtils {
     }
 
     public static void main(String[] args){
-        List<SensorOperationLog> list = new ArrayList<SensorOperationLog>();
-        SensorOperationLog sensorOperationLog = new SensorOperationLog();
-        sensorOperationLog.setChangeTime(new Date());
-        sensorOperationLog.setMac("123");
-        sensorOperationLog.setAvailable(0);
-        list.add(sensorOperationLog);
-        send(list);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+        Date date = new Date();
+        send(date,"000118061400004F","1","",simpleDateFormat.format(date),
+                "","","","","","");
     }
 
     public static List<PosModel> init(){
@@ -117,9 +124,25 @@ public class SendUtils {
         PosModel posModel = new PosModel("0","ChangeTime","");
         PosModel posModel2 = new PosModel("1","DeviceId","");
         PosModel posModel3 = new PosModel("2","SignalStatus","");
+        PosModel posModel4 = new PosModel("3","recordSource","");
+        PosModel posModel5 = new PosModel("4","diTime","");
+        PosModel posModel6 = new PosModel("5","cameraTime","");
+        PosModel posModel7 = new PosModel("6","cameraId","");
+        PosModel posModel8 = new PosModel("7","cph","");
+        PosModel posModel9 = new PosModel("8","cpColor","");
+        PosModel posModel10 = new PosModel("9","status","");
+        PosModel posModel11 = new PosModel("10","picLink","");
         posModels.add(posModel);
         posModels.add(posModel2);
         posModels.add(posModel3);
+        posModels.add(posModel4);
+        posModels.add(posModel5);
+        posModels.add(posModel6);
+        posModels.add(posModel7);
+        posModels.add(posModel8);
+        posModels.add(posModel9);
+        posModels.add(posModel10);
+        posModels.add(posModel11);
         return posModels;
     }
 
@@ -189,12 +212,93 @@ class StatusModel{
     private Date ChangeTime;
     private String DeviceId;
     private String SignalStatus;
+    private String recordSource;
+    private String diTime;
+    private String cameraTime;
+    private String cameraId;
+    private String cph;
+    private String cpColor;
+    private String status;
+    private String picLink;
 
 
-    public StatusModel(Date ChangeTime,String DeviceId,String SignalStatus){
+    public StatusModel(Date ChangeTime,String DeviceId,String SignalStatus,String recordSource,String diTime,String cameraTime,String cameraId,
+                       String cph,String cpColor,String status,String picLink){
         this.ChangeTime = ChangeTime;
         this.DeviceId = DeviceId;
         this.SignalStatus = SignalStatus;
+        this.recordSource = recordSource;
+        this.diTime = diTime;
+        this.cameraTime = cameraTime;
+        this.cameraId = cameraId;
+        this.cph = cph;
+        this.cpColor = cpColor;
+        this.status = status;
+        this.picLink = picLink;
+    }
+
+    public String getRecordSource() {
+        return recordSource;
+    }
+
+    public void setRecordSource(String recordSource) {
+        this.recordSource = recordSource;
+    }
+
+    public String getDiTime() {
+        return diTime;
+    }
+
+    public void setDiTime(String diTime) {
+        this.diTime = diTime;
+    }
+
+    public String getCameraTime() {
+        return cameraTime;
+    }
+
+    public void setCameraTime(String cameraTime) {
+        this.cameraTime = cameraTime;
+    }
+
+    public String getCameraId() {
+        return cameraId;
+    }
+
+    public void setCameraId(String cameraId) {
+        this.cameraId = cameraId;
+    }
+
+    public String getCph() {
+        return cph;
+    }
+
+    public void setCph(String cph) {
+        this.cph = cph;
+    }
+
+    public String getCpColor() {
+        return cpColor;
+    }
+
+    public void setCpColor(String cpColor) {
+        this.cpColor = cpColor;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getPicLink() {
+        return picLink;
+    }
+
+    public void setPicLink(String picLink) {
+        this.picLink = picLink;
     }
 
     public Date getChangeTime() {

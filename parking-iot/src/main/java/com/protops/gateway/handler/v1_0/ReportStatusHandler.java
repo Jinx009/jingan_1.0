@@ -17,6 +17,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.codehaus.jackson.type.TypeReference;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.persistence.Column;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -46,6 +48,7 @@ public class ReportStatusHandler extends BaseHandler<ReportStatusRequest, Report
         ReportStatusRequest reportStatusRequest = request.getDomain();
 
         Sensor sensorGet = sensorService.getByMac(reportStatusRequest.getMac());
+        int type = sensorGet.getAvailable();
 
         if (sensorGet == null) {
             throw new IOTException(ResponseCodes.Sys.PARAM_ILLEGAL);
@@ -148,8 +151,25 @@ public class ReportStatusHandler extends BaseHandler<ReportStatusRequest, Report
         if(StringUtils.isNotBlank(reportStatusRequest.getLt())){
             sensorGet.setLt(reportStatusRequest.getLt());
         }
+        /**
+         * 2019年04月23日
+         * 如果新消息和现有状态不一致才更新时间 不一致认为新订单
+         */
+        if(sensorGet.getAvailable()!=type){
+            sensorGet.setLastSeenTime(new Date());
+            sensorGet.setVedioStatus("");
+            sensorGet.setSensorTime("");
+            sensorGet.setSensorTime("");
+            sensorGet.setCph("");
+            sensorGet.setCpColor("");
+            sensorGet.setCameraId("");
+            sensorGet.setCameraName("");
+            sensorGet.setPicLink("");
+        }
+        //新增地磁插入时间
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+        sensorGet.setSensorTime(sdf.format(new Date()));
 
-        sensorGet.setLastSeenTime(new Date());
 
         // 这里专门为自己系统做处理
         if (StringUtils.equals(reportStatusRequest.getConnected(), "1")) {
@@ -205,7 +225,7 @@ public class ReportStatusHandler extends BaseHandler<ReportStatusRequest, Report
         //-----浦软推送    end
 
         /**
-         * 插入日志部分
+         * 插入日志部分2019-04-23修改
          */
 
         newSensorService.saveDeviceLog(sensorGet);

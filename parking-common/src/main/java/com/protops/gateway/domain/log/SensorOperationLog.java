@@ -46,5 +46,20 @@ public class SensorOperationLog {
     @Column(name = "send_time")
     private Date sendTime;//下次发送时间，三次失败之后
 
+    /**
+     * 2019-04-23
+     */
+    @Column(name = "type")
+    private Integer type;//数据来源1表示摄像头null表示地磁
+    @Column(name = "status")
+    private String status;
+    @Column(name = "cameraId")
+    private String cameraId;
+    @Column(name = "cph")
+    private String cph;
+    @Column(name = "cp_color")
+    private String cpColor;
+    @Column(name = "pic_link")
+    private String picLink;
 
 }

@@ -82,22 +82,19 @@ public class NewSensorService {
         sensorOperationLog = sensorOperationLogDao.get(sensorOperationLog.getId());
         //宝信
         if (sensorOperationLog.getAreaId()!=null&& 1 == sensorOperationLog.getAreaId()) {
-            List<SensorOperationLog> sensorOperationLogs = new ArrayList<SensorOperationLog>();
-           sensorOperationLogs.add(sensorOperationLog);
-            if (SendUtils.send(sensorOperationLogs)) {
-               for (SensorOperationLog sensorOperationLog1 : sensorOperationLogs) {
-                    sensorOperationLog1 = sensorOperationLogDao.get(sensorOperationLog1.getId());
-                    sensorOperationLog1.setSendStatus(1);
-                    sensorOperationLog1.setSendTime(new Date());
-                    sensorOperationLogDao.update(sensorOperationLog1);
+                boolean res = SendUtils.send(sensor.getLastSeenTime(),sensor.getMac(),String.valueOf(sensor.getAvailable()),
+                        "",sensor.getSensorTime(),sensor.getCameraName(),sensor.getCameraId(),
+                        sensor.getCph(),sensor.getCpColor(),sensor.getVedioStatus(),sensor.getPicLink());
+                sensorOperationLog = sensorOperationLogDao.get(sensorOperationLog.getId());
+                if(res){
+                    sensorOperationLog.setSendStatus(1);
+                    sensorOperationLog.setSendTime(new Date());
+                    sensorOperationLogDao.update(sensorOperationLog);
+                }else{
+                    sensorOperationLog = sensorOperationLogDao.get(sensorOperationLog.getId());
+                    sensorOperationLog.setFailTimes(sensorOperationLog.getFailTimes() + 1);
+                    sensorOperationLogDao.update(sensorOperationLog);
                 }
-            } else {
-                for (SensorOperationLog sensorOperationLog1 : sensorOperationLogs) {
-                   sensorOperationLog1 = sensorOperationLogDao.get(sensorOperationLog1.getId());
-                   sensorOperationLog1.setFailTimes(sensorOperationLog.getFailTimes() + 1);
-                   sensorOperationLogDao.update(sensorOperationLog);
-                }
-            }
         }
 
         saveInOutLog(sensorOperationLog);

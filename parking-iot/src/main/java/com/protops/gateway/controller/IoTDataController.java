@@ -2,13 +2,16 @@ package com.protops.gateway.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.protops.gateway.constants.Constants;
+import com.protops.gateway.dao.log.SensorOperationLogDao;
 import com.protops.gateway.domain.iot.Router;
 import com.protops.gateway.domain.iot.Sensor;
 import com.protops.gateway.domain.log.SensorDeviceLog;
+import com.protops.gateway.domain.log.SensorOperationLog;
 import com.protops.gateway.service.RouterService;
 import com.protops.gateway.service.SensorService;
 import com.protops.gateway.service.log.SensorDeviceLogService;
 import com.protops.gateway.util.MD5Utils;
+import com.protops.gateway.utils.baoxin.SendUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -32,6 +36,79 @@ public class IoTDataController {
     private RouterService routerService;
     @Autowired
     private SensorDeviceLogService sensorDeviceLogService;
+    @Autowired
+    private SensorOperationLogDao sensorOperationLogDao;
+
+    /**
+     * 摄像头数据输入
+     * @param bytes
+     * @return
+     */
+    @RequestMapping(value = "/vedio/dataSend", method = RequestMethod.POST, produces = "application/json")
+    @ResponseBody
+    public String vedioSend(@RequestBody byte[] bytes){
+        try {
+            JSONObject json = JSONObject.parseObject(new String(bytes, Constants.Default_SysEncoding));
+            String mac = json.getString("mac");
+            String cameraTime =  json.getString("ChangeTime");
+            String cameraId = json.getString("cameraId");
+            String cph = json.getString("cph");
+            String cpColor = json.getString("cpColor");
+            String status = json.getString("status");
+            String picLink = json.getString("picLink");
+            Sensor sensor = sensorService.getByMac(mac);
+            sensor.setPicLink(picLink);
+            sensor.setCameraName(cameraId);
+            sensor.setVedioStatus(status);
+            sensor.setCameraId(cameraId);
+            sensor.setCph(cph);
+            sensor.setCpColor(cpColor);
+            sensor.setVedioTime(cameraTime);
+            boolean res = false;
+            SensorOperationLog log = new SensorOperationLog();
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+            log.setMac(sensor.getMac());
+            log.setChangeTime(sdf.parse(cameraTime));
+            log.setAvailable(Integer.valueOf(status));
+            log.setFailTimes(0);
+            log.setSendStatus(0);
+            log.setDescription("");
+            log.setAreaId(sensor.getAreaId());
+            log.setCreateTime(new Date());
+            log.setCameraId(cameraId);
+            log.setCpColor(cpColor);
+            log.setCph(cph);
+            log.setPicLink(picLink);
+            log.setType(1);
+            sensorOperationLogDao.save(log);
+            if(status.equals(String.valueOf(sensor.getAvailable()))||"2".equals(status)){
+                res = SendUtils.send(sensor.getLastSeenTime(),sensor.getMac(),String.valueOf(sensor.getAvailable()),
+                        "",sensor.getSensorTime(),sensor.getCameraName(),sensor.getCameraId(),
+                        sensor.getCph(),sensor.getCpColor(),sensor.getVedioStatus(),sensor.getPicLink());
+
+            }else{
+                sensor.setSensorTime("");
+                res = SendUtils.send(sensor.getLastSeenTime(),sensor.getMac(),"",
+                        "",sensor.getSensorTime(),sensor.getCameraName(),sensor.getCameraId(),
+                        sensor.getCph(),sensor.getCpColor(),sensor.getVedioStatus(),sensor.getPicLink());
+            }
+            log = sensorOperationLogDao.get(log.getId());
+            if(res){
+                log.setSendStatus(1);
+                log.setSendTime(new Date());
+                sensorOperationLogDao.update(log);
+            }else{
+                log = sensorOperationLogDao.get(log.getId());
+                log.setFailTimes(log.getFailTimes() + 1);
+                sensorOperationLogDao.update(log);
+            }
+            sensorService.update(sensor);
+        }catch (Exception e){
+            log.error("error:{}",e);
+        }
+        return "{\"status\":\"ok\"}";
+    }
+
 
     @RequestMapping(value = "/iot/sensor/report/voltage", method = RequestMethod.POST)
     @ResponseBody

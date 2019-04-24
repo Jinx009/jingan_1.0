@@ -75,36 +75,36 @@ public class SensorNoticeTask {
         }
     }
 
-
-    /**
-     * 设备业务状态上报
-     */
-    @Scheduled(fixedRate = 40 * 1000)//每10S执行一次
-    public void sendNormal() {
-        List<Location> locations = locationService.findNeedNotice();
-        if (locations != null && !locations.isEmpty()) {
-            for (Location location : locations) {
-                AppInfo appInfo = appInfoService.findById(location.getAppInfoId());
-                List<SensorOperationLog> sensorOperationLogs = sensorOperationLogService.getLocationId(location.getId());
-               if ("baoxin_1".equals(appInfo.getAppId())) {//宝信第一个项目
-                    if (SendUtils.send(sensorOperationLogs)) {
-                        for (SensorOperationLog sensorOperationLog : sensorOperationLogs) {
-                            sensorOperationLog = sensorOperationLogService.find(sensorOperationLog.getId());
-                            sensorOperationLog.setSendStatus(1);
-                            sensorOperationLog.setSendTime(new Date());
-                            sensorOperationLogService.update(sensorOperationLog);
-                        }
-                    } else {
-                        for (SensorOperationLog sensorOperationLog : sensorOperationLogs) {
-                            sensorOperationLog = sensorOperationLogService.find(sensorOperationLog.getId());
-                            sensorOperationLog.setFailTimes(sensorOperationLog.getFailTimes() + 1);
-                            sensorOperationLogService.update(sensorOperationLog);
-                        }
-                    }
-                }
-            }
-        }
-    }
+//
+//    /**
+//     * 设备业务状态上报
+//     */
+//    @Scheduled(fixedRate = 40 * 1000)//每10S执行一次
+//    public void sendNormal() {
+//        List<Location> locations = locationService.findNeedNotice();
+//        if (locations != null && !locations.isEmpty()) {
+//            for (Location location : locations) {
+//                AppInfo appInfo = appInfoService.findById(location.getAppInfoId());
+//                List<SensorOperationLog> sensorOperationLogs = sensorOperationLogService.getLocationId(location.getId());
+//               if ("baoxin_1".equals(appInfo.getAppId())) {//宝信第一个项目
+//                    if (SendUtils.send(sensorOperationLogs)) {
+//                        for (SensorOperationLog sensorOperationLog : sensorOperationLogs) {
+//                            sensorOperationLog = sensorOperationLogService.find(sensorOperationLog.getId());
+//                            sensorOperationLog.setSendStatus(1);
+//                            sensorOperationLog.setSendTime(new Date());
+//                            sensorOperationLogService.update(sensorOperationLog);
+//                        }
+//                    } else {
+//                        for (SensorOperationLog sensorOperationLog : sensorOperationLogs) {
+//                            sensorOperationLog = sensorOperationLogService.find(sensorOperationLog.getId());
+//                            sensorOperationLog.setFailTimes(sensorOperationLog.getFailTimes() + 1);
+//                            sensorOperationLogService.update(sensorOperationLog);
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
 
 
 
