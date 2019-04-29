@@ -2,63 +2,254 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a16383b3-f1de-474d-a0d5-996bf5d4d411" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/test.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/DeviceErrorMapping.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/DeviceErrorMapping.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/LocaleEnum$1.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/LocaleEnum$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/LocaleEnum.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/LocaleEnum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/RegexConstants.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/RegexConstants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/WeixinConfig.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/WeixinConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/CardTypeEnum.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/CardTypeEnum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/CityEnum.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/CityEnum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/ConfigGroup.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/ConfigGroup.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/DeviceType.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/DeviceType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/EventKeyEnum.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/EventKeyEnum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/LoginType.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/LoginType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/MysqlDateFuncType.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/MysqlDateFuncType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/PayTypeEnum.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/PayTypeEnum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/StatsAction.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/StatsAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/StatsTarget.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/StatsTarget.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/TextKeyEnum.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/TextKeyEnum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/VihicleInOutStatusEnum.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/VihicleInOutStatusEnum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/iot/JobStatus.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/constants/enums/iot/JobStatus.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/AppInfoDao.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/AppInfoDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/AreaVoDao.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/AreaVoDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/RouterDao.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/RouterDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/SensorDao.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/SensorDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/StatsResultDao.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/StatsResultDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/common/TokenFactoryDao.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/common/TokenFactoryDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/log/BluetoothLogDao.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/log/BluetoothLogDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/log/IntersectionSensorOperationLogDao.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/log/IntersectionSensorOperationLogDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/log/SensorDeviceLogDao.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/log/SensorDeviceLogDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/log/SensorInOutLogDao.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/log/SensorInOutLogDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/log/SensorInOutMoneyLogDao.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/log/SensorInOutMoneyLogDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/log/SensorOperationLogDao.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/dao/log/SensorOperationLogDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/AppInfo.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/AppInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/Config.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/Config.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/StatsSample.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/StatsSample.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/base/MaintainableMap.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/base/MaintainableMap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/city/City.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/city/City.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/city/Division.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/city/Division.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/device/IntersectionSensor.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/device/IntersectionSensor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Area.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Area.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/ErrorFlow.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/ErrorFlow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Job.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Job.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Location.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Location.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Router.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Router.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Sensor.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/domain/iot/Sensor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/parking-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/filter/CharacterEncodingFilter.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/filter/CharacterEncodingFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/filter/Log4jFilter.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/filter/Log4jFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/filter/SessionFilter.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/filter/SessionFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/service/CityService.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/service/CityService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/service/SensorService.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/service/SensorService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/service/SmsSender.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/service/SmsSender.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/service/log/SensorInOutMoneyLogService.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/service/log/SensorInOutMoneyLogService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/BaseMemberUtil.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/BaseMemberUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/CustomDateDeserializer.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/CustomDateDeserializer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/CustomDateSerializer.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/CustomDateSerializer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/DateUtil.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/DateUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/DownloadUtil.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/DownloadUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/FileUtil.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/FileUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$1.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$10.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$11.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$12.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$2.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$3.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$4.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$5.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$6.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$7.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$8.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$9.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HibernateBaseDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HttpHelper.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HttpHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HttpUtil.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HttpUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HttpUtils.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HttpUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/IPUtils.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/IPUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/JsonConverter.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/JsonConverter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/JsonUtil.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/JsonUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/NumberGenerator.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/NumberGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/ObjectUtils.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/ObjectUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/Page.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/Page.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/PreciseDateDeserializer.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/PreciseDateDeserializer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/PreciseDateSerializer.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/PreciseDateSerializer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/PropertyFilter$MatchType.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/PropertyFilter$MatchType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/PropertyInjectUtils.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/PropertyInjectUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/RandomIdentity.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/RandomIdentity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/ReflectionUtils.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/ReflectionUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/RegexUtils.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/RegexUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/SignUtils.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/SignUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/StatsUtil.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/StatsUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/StringUtility.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/StringUtility.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/StringUtils.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/StringUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/ThreeDES.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/ThreeDES.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/UpeditorUtils.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/UpeditorUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/WeixinSignUtil.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/WeixinSignUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/XMLParser$1$1.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/XMLParser$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/XMLParser$1.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/XMLParser$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/XMLParser.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/XMLParser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/ZipUtils.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/ZipUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/excel/RefectImpl.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/excel/RefectImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/parking-common-1.0.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/parking-common/target/parking-common-1.0.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/Job/notice/SensorNoticeTask.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/Job/notice/SensorNoticeTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/CodeMapping.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/CodeMapping.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/PlaceHolder.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/PlaceHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/ResponseCodes$Sys.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/ResponseCodes$Sys.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/ResponseCodes$Weixin.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/ResponseCodes$Weixin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/ResponseCodes.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/ResponseCodes.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/MemberStatus.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/MemberStatus.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/NoticeFlagEnum.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/NoticeFlagEnum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/OrderStatus.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/OrderStatus.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/OrderType.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/OrderType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/Page.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/Page.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/ParkingFlowStatus.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/ParkingFlowStatus.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/ParkingLotStatus.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/ParkingLotStatus.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/QueryResult.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/QueryResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/RangeEnum.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/constants/enums/RangeEnum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/GlobalErrController.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/GlobalErrController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/app/CommonParkingRestController.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/app/CommonParkingRestController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/client/JavaSmsApi.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/client/JavaSmsApi.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/client/WeixinPaymentClient.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/client/WeixinPaymentClient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/common/CommonAreaRestController.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/common/CommonAreaRestController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/common/CommonLocationRestController.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/common/CommonLocationRestController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/common/CommonTokenRestController.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/common/CommonTokenRestController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/device/CommonIntersectionLidRestController.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/device/CommonIntersectionLidRestController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/device/CommonIntersectionPosRestController.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/device/CommonIntersectionPosRestController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/device/CommonIntersectionSensorRestController.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/device/CommonIntersectionSensorRestController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/device/CommonJobRestController.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/device/CommonJobRestController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/device/CommonLockRestController.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/device/CommonLockRestController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/device/CommonSensorErrorRestController.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/device/CommonSensorErrorRestController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/device/CommonSensorNoticeRestController.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/controller/device/CommonSensorNoticeRestController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/OrderVoDao.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/OrderVoDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/ParkingFlowVoDao.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/ParkingFlowVoDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/ParkingLotDao.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/ParkingLotDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/SensorVoDao.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/SensorVoDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/common/CommonVoDao.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/common/CommonVoDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/device/CarNumViewVoDao.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/device/CarNumViewVoDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/device/CarNumVoDao.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/device/CarNumVoDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/device/LocationMacVoDao.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/device/LocationMacVoDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/log/SensorOperationLogService.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/dao/log/SensorOperationLogService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/domain/Attach.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/domain/Attach.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/domain/NoticeToExpire.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/domain/NoticeToExpire.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/domain/Order.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/domain/Order.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/domain/ParkingFlow.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/domain/ParkingFlow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/service/NoticeService.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/service/NoticeService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/service/PollingService.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/service/PollingService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/service/SensorVoService.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/service/SensorVoService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/service/StatsService.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/service/StatsService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/service/device/GeCarInOutService.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/service/device/GeCarInOutService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/service/device/JobService.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/service/device/JobService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/AjaxUtils.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/AjaxUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/BytesUtil.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/BytesUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/CipherUtil.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/CipherUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/D.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/D.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/HttpUtil.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/HttpUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/MapUtils.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/MapUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/ServiceStaticAccess.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/ServiceStaticAccess.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/baoxin/SendUtils.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/utils/baoxin/SendUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/vo/member/RegisterRequest.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/vo/member/RegisterRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/vo/order/H5Prepay.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/vo/order/H5Prepay.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/vo/order/OrderQueryRequest.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/vo/order/OrderQueryRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/vo/order/WeixinPaymentMsg.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/vo/order/WeixinPaymentMsg.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/vo/order/WeixinPrepayReq.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/vo/order/WeixinPrepayReq.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/vo/sms/SendSmsRequest.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/vo/sms/SendSmsRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/WeixinSession.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/WeixinSession.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/PushProcessorFactory$1.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/PushProcessorFactory$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/PushProcessorFactory$2.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/PushProcessorFactory$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/PushProcessorFactory.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/PushProcessorFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory$1.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory$2.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory$3.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory$4.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory$5.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory$6.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory$7.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/ReplyProcessorFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/builder/NewsReplyBuilder.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/builder/NewsReplyBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/processor/EventProcessor.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/processor/EventProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/processor/MessageProcessor.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/processor/MessageProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/processor/TextProcessor.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/factory/processor/TextProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/handler/ScanHandler.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/handler/ScanHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/util/ReplyUtil.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/util/ReplyUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/util/WebUtil.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/util/WebUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/util/WeixinUtil.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/util/WeixinUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/util/XmlUtil.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/util/XmlUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/vo/EventPushType.class" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/com/protops/gateway/weixin/vo/EventPushType.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw.war" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/Job/notice/SensorNoticeTask.class" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/Job/notice/SensorNoticeTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModel.class" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModelList.class" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModelList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/PosModel.class" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/PosModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/SendUtils.class" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/SendUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModel.class" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModelList.class" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModelList.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/lib/parking-common-1.0.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/lib/parking-common-1.0.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/parking-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/Job/NbProcessTask.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/Job/NbProcessTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/Job/RefreshJob.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/Job/RefreshJob.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/AdminConfig.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/AdminConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/CodeMapping.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/CodeMapping.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/IOTContext.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/IOTContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/PlaceHolder.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/PlaceHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/ResponseCodes$RouterErr.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/ResponseCodes$RouterErr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/ResponseCodes$SensorErr.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/ResponseCodes$SensorErr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/ResponseCodes$Sys.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/ResponseCodes$Sys.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/ResponseCodes$Weixin.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/ResponseCodes$Weixin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/ResponseCodes.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/ResponseCodes.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/enums/InterCode.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/enums/InterCode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/enums/Version.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/constants/enums/Version.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/controller/IOTController.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/controller/IOTController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/controller/IoTDataController.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/controller/IoTDataController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/controller/client/JavaSmsApi.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/controller/client/JavaSmsApi.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/controller/server/Server.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/controller/server/Server.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/domain/ErrorFlowResponse.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/domain/ErrorFlowResponse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/domain/HeartBeatRequest.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/domain/HeartBeatRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/domain/HeartBeatResponse.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/domain/HeartBeatResponse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/domain/SensorRegisterRequest.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/domain/SensorRegisterRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/domain/SensorRegisterResponse.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/domain/SensorRegisterResponse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/domain/base/IOTResponse.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/domain/base/IOTResponse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/BaseHandler.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/BaseHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/ErrorFlowHandler$1.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/ErrorFlowHandler$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/ErrorFlowHandler.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/ErrorFlowHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/HeartBeatHandler$1.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/HeartBeatHandler$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/HeartBeatHandler.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/HeartBeatHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler$1.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/RouterReportStatusHandler$1.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/RouterReportStatusHandler$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/RouterReportStatusHandler.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/RouterReportStatusHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/SensorRegisterHandler$1.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/SensorRegisterHandler$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/SensorRegisterHandler.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/SensorRegisterHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/SignInHandler$1.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/SignInHandler$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/SignInHandler.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/handler/v1_0/SignInHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/BaseService.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/BaseService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/JobService.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/JobService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/common/NewJobService.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/common/NewJobService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/common/SignService.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/common/SignService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/device/BluetoothService.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/device/BluetoothService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/device/IntersectionSensorService.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/device/IntersectionSensorService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/device/NewRouterService.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/device/NewRouterService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/device/NewSensorService.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/service/device/NewSensorService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/task/IntersectionSensorOperationLogSynTask.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/task/IntersectionSensorOperationLogSynTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/BytesUtil.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/BytesUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/CipherUtil.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/CipherUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/D.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/D.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/HttpUtil.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/HttpUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/ResponseCodeHelper.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/ResponseCodeHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/ServiceStaticAccess.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/ServiceStaticAccess.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/baoxin/SendUtils.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/utils/baoxin/SendUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/view/AdminContextDirective.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/view/AdminContextDirective.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot.war" afterPath="$PROJECT_DIR$/parking-iot/target/iot.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/Job/NbProcessTask.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/Job/NbProcessTask.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/controller/IoTDataController.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/controller/IoTDataController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler$1.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/handler/v1_0/ReportStatusHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/service/device/NewSensorService.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/service/device/NewSensorService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModel.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModelList.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/HeartModelList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/PosModel.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/PosModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/SendUtils.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/SendUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModel.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModelList.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/utils/baoxin/StatusModelList.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/lib/parking-common-1.0.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/lib/parking-common-1.0.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/db.context.xml" afterPath="$PROJECT_DIR$/parking-common/target/classes/db.context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/excel.properties" afterPath="$PROJECT_DIR$/parking-common/target/classes/excel.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/parking-common/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java" afterPath="$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/classes/spring.xml" afterPath="$PROJECT_DIR$/parking-gateway/target/classes/spring.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/spring.xml" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/classes/spring.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/parking-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/parking-gateway/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/NbProcessTask.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/NbProcessTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/parking-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/parking-iot/target/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/spring.xml" afterPath="$PROJECT_DIR$/parking-iot/target/classes/spring.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/spring.xml" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/spring.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/parking-iot/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/parking-iot/target/" />
@@ -91,142 +282,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NewSensorService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="96" column="17" lean-forward="false" selection-start-line="84" selection-start-column="16" selection-end-line="96" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NbProcessTask.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/NbProcessTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sensor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/iot/Sensor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="141" column="3" lean-forward="false" selection-start-line="141" selection-start-column="3" selection-end-line="159" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReportStatusHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/ReportStatusHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="169" column="8" lean-forward="false" selection-start-line="169" selection-start-column="8" selection-end-line="169" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SendUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="21" column="95" lean-forward="false" selection-start-line="21" selection-start-column="95" selection-end-line="21" selection-end-column="95" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1244#1260#0" expanded="true" />
-                <element signature="e#1388#1404#0" expanded="true" />
-                <element signature="e#1459#1475#0" expanded="true" />
-                <element signature="e#1528#1544#0" expanded="true" />
-                <element signature="e#1636#1646#0" expanded="true" />
-                <element signature="e#2995#3011#0" expanded="true" />
-                <element signature="e#3139#3155#0" expanded="true" />
-                <element signature="e#3210#3226#0" expanded="true" />
-                <element signature="e#3279#3295#0" expanded="true" />
-                <element signature="e#3387#3397#0" expanded="true" />
-                <element signature="e#5261#5271#0" expanded="true" />
-                <element signature="e#6462#6472#0" expanded="true" />
-                <element signature="e#7314#7315#0" expanded="true" />
-                <element signature="e#7347#7348#0" expanded="true" />
-                <element signature="e#7397#7398#0" expanded="true" />
-                <element signature="e#7436#7437#0" expanded="true" />
-                <element signature="e#7471#7472#0" expanded="true" />
-                <element signature="e#7502#7503#0" expanded="true" />
-                <element signature="e#7550#7551#0" expanded="true" />
-                <element signature="e#7585#7586#0" expanded="true" />
-                <element signature="e#7622#7623#0" expanded="true" />
-                <element signature="e#7655#7656#0" expanded="true" />
-                <element signature="e#7707#7708#0" expanded="true" />
-                <element signature="e#7751#7752#0" expanded="true" />
-                <element signature="e#7787#7788#0" expanded="true" />
-                <element signature="e#7819#7820#0" expanded="true" />
-                <element signature="e#7869#7870#0" expanded="true" />
-                <element signature="e#7911#7912#0" expanded="true" />
-                <element signature="e#8898#8899#0" expanded="true" />
-                <element signature="e#8933#8934#0" expanded="true" />
-                <element signature="e#8989#8990#0" expanded="true" />
-                <element signature="e#9037#9038#0" expanded="true" />
-                <element signature="e#9070#9071#0" expanded="true" />
-                <element signature="e#9099#9100#0" expanded="true" />
-                <element signature="e#9143#9144#0" expanded="true" />
-                <element signature="e#9179#9180#0" expanded="true" />
-                <element signature="e#9216#9217#0" expanded="true" />
-                <element signature="e#9249#9250#0" expanded="true" />
-                <element signature="e#9301#9302#0" expanded="true" />
-                <element signature="e#9345#9346#0" expanded="true" />
-                <element signature="e#9380#9381#0" expanded="true" />
-                <element signature="e#9411#9412#0" expanded="true" />
-                <element signature="e#9459#9460#0" expanded="true" />
-                <element signature="e#9499#9500#0" expanded="true" />
-                <element signature="e#9529#9530#0" expanded="true" />
-                <element signature="e#9555#9556#0" expanded="true" />
-                <element signature="e#9593#9594#0" expanded="true" />
-                <element signature="e#9623#9624#0" expanded="true" />
-                <element signature="e#9657#9658#0" expanded="true" />
-                <element signature="e#9687#9688#0" expanded="true" />
-                <element signature="e#9733#9734#0" expanded="true" />
-                <element signature="e#9771#9772#0" expanded="true" />
-                <element signature="e#9804#9805#0" expanded="true" />
-                <element signature="e#9833#9834#0" expanded="true" />
-                <element signature="e#9877#9878#0" expanded="true" />
-                <element signature="e#9913#9914#0" expanded="true" />
-                <element signature="e#9947#9948#0" expanded="true" />
-                <element signature="e#9977#9978#0" expanded="true" />
-                <element signature="e#10023#10024#0" expanded="true" />
-                <element signature="e#10061#10062#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SendUtils.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1459#1475#0" expanded="true" />
-                <element signature="e#1636#1646#0" expanded="true" />
-                <element signature="e#3387#3397#0" expanded="true" />
-                <element signature="e#5261#5271#0" expanded="true" />
-                <element signature="e#6462#6472#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IoTDataController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IoTDataController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="197" column="94" lean-forward="false" selection-start-line="197" selection-start-column="94" selection-end-line="197" selection-end-column="94" />
+            <state relative-caret-position="374">
+              <caret line="75" column="46" lean-forward="false" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
               <folding>
-                <marker date="1556099253364" expanded="false" signature="5911:5927" ph="&lt;~&gt;" />
+                <marker date="1556526477474" expanded="false" signature="5954:5970" ph="&lt;~&gt;" />
               </folding>
             </state>
           </provider>
@@ -242,21 +304,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="IOTController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IOTController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="242" column="73" lean-forward="false" selection-start-line="242" selection-start-column="73" selection-end-line="242" selection-end-column="73" />
+            <state relative-caret-position="1327">
+              <caret line="180" column="100" lean-forward="false" selection-start-line="180" selection-start-column="100" selection-end-line="180" selection-end-column="100" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SensorOperationLog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/log/SensorOperationLog.java">
+      <file leaf-file-name="ErrorController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/ErrorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+            <state relative-caret-position="120">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -278,6 +340,7 @@
       <find>findByMacAndDate</find>
       <find>ct</find>
       <find>smsService</find>
+      <find>vedio/</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -317,14 +380,21 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/config/test.properties" />
         <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/NbProcessTask.java" />
-        <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java" />
         <option value="$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java" />
         <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java" />
+        <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -413,9 +483,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -426,74 +495,12 @@
             <path>
               <item name="parking" type="b2602c69:ProjectViewProjectNode" />
               <item name="jingan_1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jingan_1.0" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jingan_1.0" type="462c0819:PsiDirectoryNode" />
-              <item name="parking-common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jingan_1.0" type="462c0819:PsiDirectoryNode" />
-              <item name="parking-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jingan_1.0" type="462c0819:PsiDirectoryNode" />
-              <item name="parking-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jingan_1.0" type="462c0819:PsiDirectoryNode" />
-              <item name="parking-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jingan_1.0" type="462c0819:PsiDirectoryNode" />
-              <item name="parking-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jingan_1.0" type="462c0819:PsiDirectoryNode" />
-              <item name="parking-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jingan_1.0" type="462c0819:PsiDirectoryNode" />
-              <item name="parking-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="iot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jingan_1.0" type="462c0819:PsiDirectoryNode" />
-              <item name="parking-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="parking" type="b2602c69:ProjectViewProjectNode" />
@@ -660,6 +667,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -967,11 +975,13 @@
       <workItem from="1550209843246" duration="34000" />
       <workItem from="1550461180808" duration="429000" />
       <workItem from="1550543322387" duration="399000" />
+      <workItem from="1556428203924" duration="598000" />
+      <workItem from="1556524532333" duration="2363000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76444000" />
+    <option name="totallyTimeSpent" value="80690000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -988,40 +998,8 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5028653" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282123" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282123" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282123" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7611732" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3198324" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3008596" sideWeight="0.49281314" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.49713466" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3653295" sideWeight="0.50718683" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282123" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5028653" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1033,18 +1011,23 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282123" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282123" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7611732" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7611732" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3198324" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27936962" sideWeight="0.49281314" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28796563" sideWeight="0.49281314" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.49713466" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3653295" sideWeight="0.50718683" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282123" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1073,13 +1056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/ErrorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1267,13 +1243,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IOTController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="180" column="100" lean-forward="true" selection-start-line="180" selection-start-column="100" selection-end-line="180" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/controller/common/CommonAreaRestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-607">
@@ -1341,17 +1310,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1305">
           <caret line="107" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <element signature="e#1852#1860#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="96" column="17" lean-forward="false" selection-start-line="84" selection-start-column="16" selection-end-line="96" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1371,19 +1329,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/iot/Sensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="141" column="3" lean-forward="false" selection-start-line="141" selection-start-column="3" selection-end-line="159" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/log/SensorOperationLog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1395,10 +1355,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/test.properties">
+    <entry file="file://$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="44" />
+        <state relative-caret-position="204">
+          <caret line="21" column="95" lean-forward="false" selection-start-line="21" selection-start-column="95" selection-end-line="21" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/domain/iot/Sensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="141" column="3" lean-forward="false" selection-start-line="141" selection-start-column="3" selection-end-line="159" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1411,97 +1378,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-165">
+          <caret line="96" column="17" lean-forward="false" selection-start-line="84" selection-start-column="16" selection-end-line="96" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/ErrorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/test.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IOTController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1327">
+          <caret line="180" column="100" lean-forward="false" selection-start-line="180" selection-start-column="100" selection-end-line="180" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="197" column="94" lean-forward="false" selection-start-line="197" selection-start-column="94" selection-end-line="197" selection-end-column="94" />
+        <state relative-caret-position="374">
+          <caret line="75" column="46" lean-forward="false" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
           <folding>
-            <marker date="1556099253364" expanded="false" signature="5911:5927" ph="&lt;~&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parking-gateway/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="95" lean-forward="false" selection-start-line="21" selection-start-column="95" selection-end-line="21" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1244#1260#0" expanded="true" />
-            <element signature="e#1388#1404#0" expanded="true" />
-            <element signature="e#1459#1475#0" expanded="true" />
-            <element signature="e#1528#1544#0" expanded="true" />
-            <element signature="e#1636#1646#0" expanded="true" />
-            <element signature="e#2995#3011#0" expanded="true" />
-            <element signature="e#3139#3155#0" expanded="true" />
-            <element signature="e#3210#3226#0" expanded="true" />
-            <element signature="e#3279#3295#0" expanded="true" />
-            <element signature="e#3387#3397#0" expanded="true" />
-            <element signature="e#5261#5271#0" expanded="true" />
-            <element signature="e#6462#6472#0" expanded="true" />
-            <element signature="e#7314#7315#0" expanded="true" />
-            <element signature="e#7347#7348#0" expanded="true" />
-            <element signature="e#7397#7398#0" expanded="true" />
-            <element signature="e#7436#7437#0" expanded="true" />
-            <element signature="e#7471#7472#0" expanded="true" />
-            <element signature="e#7502#7503#0" expanded="true" />
-            <element signature="e#7550#7551#0" expanded="true" />
-            <element signature="e#7585#7586#0" expanded="true" />
-            <element signature="e#7622#7623#0" expanded="true" />
-            <element signature="e#7655#7656#0" expanded="true" />
-            <element signature="e#7707#7708#0" expanded="true" />
-            <element signature="e#7751#7752#0" expanded="true" />
-            <element signature="e#7787#7788#0" expanded="true" />
-            <element signature="e#7819#7820#0" expanded="true" />
-            <element signature="e#7869#7870#0" expanded="true" />
-            <element signature="e#7911#7912#0" expanded="true" />
-            <element signature="e#8898#8899#0" expanded="true" />
-            <element signature="e#8933#8934#0" expanded="true" />
-            <element signature="e#8989#8990#0" expanded="true" />
-            <element signature="e#9037#9038#0" expanded="true" />
-            <element signature="e#9070#9071#0" expanded="true" />
-            <element signature="e#9099#9100#0" expanded="true" />
-            <element signature="e#9143#9144#0" expanded="true" />
-            <element signature="e#9179#9180#0" expanded="true" />
-            <element signature="e#9216#9217#0" expanded="true" />
-            <element signature="e#9249#9250#0" expanded="true" />
-            <element signature="e#9301#9302#0" expanded="true" />
-            <element signature="e#9345#9346#0" expanded="true" />
-            <element signature="e#9380#9381#0" expanded="true" />
-            <element signature="e#9411#9412#0" expanded="true" />
-            <element signature="e#9459#9460#0" expanded="true" />
-            <element signature="e#9499#9500#0" expanded="true" />
-            <element signature="e#9529#9530#0" expanded="true" />
-            <element signature="e#9555#9556#0" expanded="true" />
-            <element signature="e#9593#9594#0" expanded="true" />
-            <element signature="e#9623#9624#0" expanded="true" />
-            <element signature="e#9657#9658#0" expanded="true" />
-            <element signature="e#9687#9688#0" expanded="true" />
-            <element signature="e#9733#9734#0" expanded="true" />
-            <element signature="e#9771#9772#0" expanded="true" />
-            <element signature="e#9804#9805#0" expanded="true" />
-            <element signature="e#9833#9834#0" expanded="true" />
-            <element signature="e#9877#9878#0" expanded="true" />
-            <element signature="e#9913#9914#0" expanded="true" />
-            <element signature="e#9947#9948#0" expanded="true" />
-            <element signature="e#9977#9978#0" expanded="true" />
-            <element signature="e#10023#10024#0" expanded="true" />
-            <element signature="e#10061#10062#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1459#1475#0" expanded="true" />
-            <element signature="e#1636#1646#0" expanded="true" />
-            <element signature="e#3387#3397#0" expanded="true" />
-            <element signature="e#5261#5271#0" expanded="true" />
-            <element signature="e#6462#6472#0" expanded="true" />
+            <marker date="1556526477474" expanded="false" signature="5954:5970" ph="&lt;~&gt;" />
           </folding>
         </state>
       </provider>

@@ -44,7 +44,7 @@ public class IoTDataController {
      * @param bytes
      * @return
      */
-    @RequestMapping(value = "/vedio/dataSend", method = RequestMethod.POST, produces = "application/json")
+    @RequestMapping(value = "/iot/sensor/vedioReport", method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
     public String vedioSend(@RequestBody byte[] bytes){
         try {
@@ -80,6 +80,7 @@ public class IoTDataController {
             log.setCph(cph);
             log.setPicLink(picLink);
             log.setType(1);
+            log.setStatus(status);
             sensorOperationLogDao.save(log);
             if(status.equals(String.valueOf(sensor.getAvailable()))||"2".equals(status)){
                 res = SendUtils.send(sensor.getLastSeenTime(),sensor.getMac(),String.valueOf(sensor.getAvailable()),
