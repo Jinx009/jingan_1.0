@@ -158,8 +158,6 @@ public class ReportStatusHandler extends BaseHandler<ReportStatusRequest, Report
         if(sensorGet.getAvailable()!=type){
             sensorGet.setLastSeenTime(new Date());
             sensorGet.setVedioStatus("");
-            sensorGet.setSensorTime("");
-            sensorGet.setSensorTime("");
             sensorGet.setCph("");
             sensorGet.setCpColor("");
             sensorGet.setCameraId("");
@@ -192,6 +190,7 @@ public class ReportStatusHandler extends BaseHandler<ReportStatusRequest, Report
         if(StringUtils.isNoneBlank(reportStatusRequest.getHappenTime())){
             Date date = DateUtil.parseDate(reportStatusRequest.getHappenTime(),DateUtil.DATE_FMT_DISPLAY);
             sensorGet.setHappenTime(date);
+            sensorGet.setSensorTime(reportStatusRequest.getHappenTime());
         }else{
             sensorGet.setHappenTime(new Date());
         }

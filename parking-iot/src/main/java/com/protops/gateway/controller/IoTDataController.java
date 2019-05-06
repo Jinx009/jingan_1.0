@@ -61,7 +61,6 @@ public class IoTDataController {
             sensor.setCameraName(cameraId);
             sensor.setVedioStatus(status);
             sensor.setCameraId(cameraId);
-            sensor.setCph(cph);
             sensor.setCpColor(cpColor);
             sensor.setVedioTime(cameraTime);
             boolean res = false;
@@ -84,13 +83,13 @@ public class IoTDataController {
             sensorOperationLogDao.save(log);
             if(status.equals(String.valueOf(sensor.getAvailable()))||"2".equals(status)){
                 res = SendUtils.send(sensor.getLastSeenTime(),sensor.getMac(),String.valueOf(sensor.getAvailable()),
-                        "",sensor.getSensorTime(),sensor.getCameraName(),sensor.getCameraId(),
+                        "",sensor.getSensorTime(),sensor.getVedioTime(),sensor.getCameraId(),
                         sensor.getCph(),sensor.getCpColor(),sensor.getVedioStatus(),sensor.getPicLink());
-
             }else{
                 sensor.setSensorTime("");
+                sensor.setLastSeenTime(sdf.parse(cameraTime));
                 res = SendUtils.send(sensor.getLastSeenTime(),sensor.getMac(),"",
-                        "",sensor.getSensorTime(),sensor.getCameraName(),sensor.getCameraId(),
+                        "",sensor.getSensorTime(),sensor.getVedioTime(),sensor.getCameraId(),
                         sensor.getCph(),sensor.getCpColor(),sensor.getVedioStatus(),sensor.getPicLink());
             }
             log = sensorOperationLogDao.get(log.getId());
