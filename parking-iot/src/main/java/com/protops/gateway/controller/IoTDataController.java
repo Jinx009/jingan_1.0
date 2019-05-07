@@ -82,9 +82,14 @@ public class IoTDataController {
             log.setStatus(status);
             sensorOperationLogDao.save(log);
             if(status.equals(String.valueOf(sensor.getAvailable()))||"2".equals(status)){
-                res = SendUtils.send(sensor.getLastSeenTime(),sensor.getMac(),String.valueOf(sensor.getAvailable()),
-                        "",sensor.getSensorTime(),sensor.getVedioTime(),sensor.getCameraId(),
-                        sensor.getCph(),sensor.getCpColor(),sensor.getVedioStatus(),sensor.getPicLink());
+                Date last = sensor.getLastSeenTime();
+                Date now = sdf.parse(sensor.getVedioTime());
+                int c = (int)((now.getTime() - last.getTime()) / 1000);
+                if(-120<c&&c<120) {
+                    res = SendUtils.send(sensor.getLastSeenTime(), sensor.getMac(), String.valueOf(sensor.getAvailable()),
+                            "", sensor.getSensorTime(), sensor.getVedioTime(), sensor.getCameraId(),
+                            sensor.getCph(), sensor.getCpColor(), sensor.getVedioStatus(), sensor.getPicLink());
+                }
             }else{
                 sensor.setSensorTime("");
                 sensor.setLastSeenTime(sdf.parse(cameraTime));

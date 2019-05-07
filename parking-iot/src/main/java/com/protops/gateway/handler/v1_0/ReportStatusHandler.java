@@ -163,10 +163,9 @@ public class ReportStatusHandler extends BaseHandler<ReportStatusRequest, Report
             sensorGet.setCameraId("");
             sensorGet.setCameraName("");
             sensorGet.setPicLink("");
+            sensorGet.setVedioTime("");
         }
         //新增地磁插入时间
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
-        sensorGet.setSensorTime(sdf.format(new Date()));
 
 
         // 这里专门为自己系统做处理
@@ -187,17 +186,18 @@ public class ReportStatusHandler extends BaseHandler<ReportStatusRequest, Report
         /**
          * 2017-04-17新增
          */
+
         if(StringUtils.isNoneBlank(reportStatusRequest.getHappenTime())){
             Date date = DateUtil.parseDate(reportStatusRequest.getHappenTime(),DateUtil.DATE_FMT_DISPLAY);
             sensorGet.setHappenTime(date);
-            sensorGet.setSensorTime(reportStatusRequest.getHappenTime());
         }else{
             sensorGet.setHappenTime(new Date());
         }
         if(StringUtils.isNoneBlank(reportStatusRequest.getLogId())){
             sensorGet.setLogId(reportStatusRequest.getLogId());
         }
-
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+        sensorGet.setSensorTime(sdf.format(sensorGet.getHappenTime()));
         sensorGet.setBluetooth("");
         sensorGet.setBluetoothArray("");
         sensorService.save(sensorGet);
