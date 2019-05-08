@@ -80,6 +80,7 @@ public class IoTDataController {
             log.setCph(cph);
             log.setPicLink(picLink);
             log.setType(1);
+            log.setDescription(sensor.getDesc());
             log.setStatus(status);
             sensorOperationLogDao.save(log);
             if(status.equals(String.valueOf(sensor.getAvailable()))||"2".equals(status)){
@@ -95,6 +96,7 @@ public class IoTDataController {
                 sensor.setSensorTime("");
                 sensor.setAvailable(Integer.valueOf(sensor.getVedioStatus()));
                 sensor.setHappenTime(sdf.parse(cameraTime));
+                sensorService.update(sensor);
                 res = SendUtils.send(sensor.getHappenTime(),sensor.getMac(),"",
                         "",sensor.getSensorTime(),sensor.getVedioTime(),sensor.getCameraId(),
                         sensor.getCph(),sensor.getCpColor(),sensor.getVedioStatus(),sensor.getPicLink());
@@ -109,7 +111,6 @@ public class IoTDataController {
                 log.setFailTimes(log.getFailTimes() + 1);
                 sensorOperationLogDao.update(log);
             }
-            sensorService.update(sensor);
         }catch (Exception e){
             log.error("error:{}",e);
         }
