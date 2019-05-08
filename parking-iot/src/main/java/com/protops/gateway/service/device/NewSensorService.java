@@ -82,7 +82,7 @@ public class NewSensorService {
         sensorOperationLog = sensorOperationLogDao.get(sensorOperationLog.getId());
         //宝信
         if (sensorOperationLog.getAreaId()!=null&& 1 == sensorOperationLog.getAreaId()) {
-                boolean res = SendUtils.send(sensor.getLastSeenTime(),sensor.getMac(),String.valueOf(sensor.getAvailable()),
+                boolean res = SendUtils.send(sensor.getHappenTime(),sensor.getMac(),String.valueOf(sensor.getAvailable()),
                         "",sensor.getSensorTime(),sensor.getVedioTime(),sensor.getCameraId(),
                         sensor.getCph(),sensor.getCpColor(),sensor.getVedioStatus(),sensor.getPicLink());
                 sensorOperationLog = sensorOperationLogDao.get(sensorOperationLog.getId());

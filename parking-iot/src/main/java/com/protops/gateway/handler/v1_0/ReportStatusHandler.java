@@ -151,20 +151,7 @@ public class ReportStatusHandler extends BaseHandler<ReportStatusRequest, Report
         if(StringUtils.isNotBlank(reportStatusRequest.getLt())){
             sensorGet.setLt(reportStatusRequest.getLt());
         }
-        /**
-         * 2019年04月23日
-         * 如果新消息和现有状态不一致才更新时间 不一致认为新订单
-         */
-        if(sensorGet.getAvailable()!=type){
-            sensorGet.setLastSeenTime(new Date());
-            sensorGet.setVedioStatus("");
-            sensorGet.setCph("");
-            sensorGet.setCpColor("");
-            sensorGet.setCameraId("");
-            sensorGet.setCameraName("");
-            sensorGet.setPicLink("");
-            sensorGet.setVedioTime("");
-        }
+
         //新增地磁插入时间
 
 
@@ -187,17 +174,37 @@ public class ReportStatusHandler extends BaseHandler<ReportStatusRequest, Report
          * 2017-04-17新增
          */
 
-        if(StringUtils.isNoneBlank(reportStatusRequest.getHappenTime())){
-            Date date = DateUtil.parseDate(reportStatusRequest.getHappenTime(),DateUtil.DATE_FMT_DISPLAY);
-            sensorGet.setHappenTime(date);
-        }else{
-            sensorGet.setHappenTime(new Date());
-        }
+
         if(StringUtils.isNoneBlank(reportStatusRequest.getLogId())){
             sensorGet.setLogId(reportStatusRequest.getLogId());
         }
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+
+
+        /**
+         * 2019年04月23日
+         * 如果新消息和现有状态不一致才更新时间 不一致认为新订单
+         */
+        if(sensorGet.getAvailable()!=type){
+
+            sensorGet.setVedioStatus("");
+            sensorGet.setCph("");
+            sensorGet.setCpColor("");
+            sensorGet.setCameraId("");
+            sensorGet.setCameraName("");
+            sensorGet.setPicLink("");
+            sensorGet.setVedioTime("");
+            if(StringUtils.isNoneBlank(reportStatusRequest.getHappenTime())){
+                Date date = DateUtil.parseDate(reportStatusRequest.getHappenTime(),DateUtil.DATE_FMT_DISPLAY);
+                sensorGet.setHappenTime(date);
+                sensorGet.setLastSeenTime(date);
+            }else{
+                sensorGet.setHappenTime(new Date());
+                sensorGet.setLastSeenTime(new Date());
+            }
+        }
         sensorGet.setSensorTime(sdf.format(sensorGet.getHappenTime()));
+
         sensorGet.setBluetooth("");
         sensorGet.setBluetoothArray("");
         sensorService.save(sensorGet);
