@@ -203,6 +203,7 @@ public class ReportStatusHandler extends BaseHandler<ReportStatusRequest, Report
                 sensorGet.setLastSeenTime(new Date());
             }
         }
+        sensorGet.setSensorStatus(sensorGet.getAvailable());
         sensorGet.setSensorTime(sdf.format(sensorGet.getHappenTime()));
 
         sensorGet.setBluetooth("");

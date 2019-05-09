@@ -100,6 +100,10 @@ public class NbProcessTask {
             FileWriter fw = new FileWriter(f, true);
             PrintWriter pw = new PrintWriter(fw);
             pw.println(stampToDate(String.valueOf(start)) + "	" + stampToDate(String.valueOf(end)));
+            FileWriter fileWriter = new FileWriter(TIME_FILE_PATH, false);
+            fileWriter.write(String.valueOf(new Date().getTime()));
+            fileWriter.flush();
+            fileWriter.close();
             pw.flush();
             fw.flush();
             pw.close();
