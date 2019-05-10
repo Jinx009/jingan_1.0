@@ -1,6 +1,7 @@
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/vo/internal/BluetoothLogVo.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/utils/baoxin/SendUtils.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/domain/HeartBeatResponse.java
+/Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/Job/VedioTask.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/Job/NbProcessTask.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/service/device/NewRouterService.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/utils/SpringContextUtil.java

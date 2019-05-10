@@ -43,6 +43,7 @@ com/protops/gateway/domain/base/IotRequstDomain.class
 com/protops/gateway/utils/baoxin/StatusModelList.class
 com/protops/gateway/view/AbstractDirective.class
 com/protops/gateway/handler/v1_0/SignInHandler.class
+com/protops/gateway/Job/VedioTask.class
 com/protops/gateway/domain/SensorRegisterResponse.class
 com/protops/gateway/domain/base/IOTDomain.class
 com/protops/gateway/domain/ErrorFlowResponse.class

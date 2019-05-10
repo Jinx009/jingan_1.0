@@ -72,7 +72,6 @@ public class IoTDataController {
             log.setAvailable(Integer.valueOf(status));
             log.setFailTimes(0);
             log.setSendStatus(0);
-            log.setDescription("");
             log.setAreaId(sensor.getAreaId());
             log.setCreateTime(new Date());
             log.setCameraId(cameraId);
