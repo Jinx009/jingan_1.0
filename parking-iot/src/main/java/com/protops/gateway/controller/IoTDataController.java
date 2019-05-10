@@ -87,6 +87,7 @@ public class IoTDataController {
                 Date now = sdf.parse(sensor.getVedioTime());
                 int c = (int)((now.getTime() - last.getTime()) / 1000);
                 if(-180<c&&c<180) {
+                    sensorService.update(sensor);
                     res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), String.valueOf(sensor.getAvailable()),
                             "", sensor.getSensorTime(), sensor.getVedioTime(), sensor.getCameraId(),
                             sensor.getCph(), sensor.getCpColor(), sensor.getVedioStatus(), sensor.getPicLink());

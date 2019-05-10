@@ -51,7 +51,7 @@ public class VedioTask {
                 if("".equals(sensor.getCph())&&"".equals(sensor.getPicLink())){
                     Date date = sensor.getHappenTime();
                     Date now = new Date();
-                    if((now.getTime()-date.getTime())>18000){
+                    if((now.getTime()-date.getTime())>180000){
                         String eventTime = sdf.format(date);
                         HttpUtils.get(VEDIO_URL+"?mac="+sensor.getMac()+"&eventTime="+eventTime+"&status="+sensor.getAvailable());
                         SensorOperationLog log = new SensorOperationLog();

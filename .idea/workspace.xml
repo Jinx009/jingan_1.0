@@ -2,24 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a16383b3-f1de-474d-a0d5-996bf5d4d411" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/VedioTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HttpUtils.class" afterPath="$PROJECT_DIR$/parking-common/target/classes/com/protops/gateway/util/HttpUtils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/parking-common-1.0.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/parking-common/target/parking-common-1.0.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw.war" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/lib/parking-common-1.0.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/parking-gateway/target/gtw/WEB-INF/lib/parking-common-1.0.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/Job/VedioTask.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/Job/VedioTask.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/controller/IoTDataController.class" afterPath="$PROJECT_DIR$/parking-iot/target/classes/com/protops/gateway/controller/IoTDataController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot.war" afterPath="$PROJECT_DIR$/parking-iot/target/iot.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/Job/VedioTask.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/Job/VedioTask.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/controller/IoTDataController.class" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/classes/com/protops/gateway/controller/IoTDataController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/lib/parking-common-1.0.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/parking-iot/target/iot/WEB-INF/lib/parking-common-1.0.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/util/HttpUtils.java" afterPath="$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/util/HttpUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/parking-common/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/parking-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-gateway/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/parking-gateway/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/VedioTask.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/VedioTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/parking-iot/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/parking-iot/target/" />
@@ -52,24 +50,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IoTDataController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IoTDataController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="111" column="13" lean-forward="false" selection-start-line="103" selection-start-column="11" selection-end-line="111" selection-end-column="13" />
+            <state relative-caret-position="175">
+              <caret line="83" column="44" lean-forward="false" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="44" />
               <folding>
-                <marker date="1557467246920" expanded="false" signature="6364:6380" ph="&lt;~&gt;" />
+                <marker date="1557472245652" expanded="false" signature="6414:6430" ph="&lt;~&gt;" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VedioTask.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VedioTask.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/VedioTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="529">
+              <caret line="73" column="49" lean-forward="false" selection-start-line="73" selection-start-column="49" selection-end-line="73" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -184,8 +184,8 @@
         <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/ReportStatusHandler.java" />
         <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/NbProcessTask.java" />
         <option value="$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/util/HttpUtils.java" />
-        <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java" />
         <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/VedioTask.java" />
+        <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java" />
       </list>
     </option>
   </component>
@@ -779,12 +779,12 @@
       <workItem from="1557204539969" duration="9770000" />
       <workItem from="1557296968585" duration="2774000" />
       <workItem from="1557364677435" duration="1066000" />
-      <workItem from="1557455036659" duration="5104000" />
+      <workItem from="1557455036659" duration="6739000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104633000" />
+    <option name="totallyTimeSpent" value="106268000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -819,7 +819,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7611732" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3198324" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30945557" sideWeight="0.49281314" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22707736" sideWeight="0.49281314" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.49713466" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3653295" sideWeight="0.50718683" order="2" side_tool="true" content_ui="tabs" />
@@ -1207,21 +1207,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java">
+    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/VedioTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="111" column="13" lean-forward="false" selection-start-line="103" selection-start-column="11" selection-end-line="111" selection-end-column="13" />
+        <state relative-caret-position="529">
+          <caret line="73" column="49" lean-forward="false" selection-start-line="73" selection-start-column="49" selection-end-line="73" selection-end-column="49" />
           <folding>
-            <marker date="1557467246920" expanded="false" signature="6364:6380" ph="&lt;~&gt;" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/VedioTask.java">
+    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="175">
+          <caret line="83" column="44" lean-forward="false" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="44" />
+          <folding>
+            <marker date="1557472245652" expanded="false" signature="6414:6430" ph="&lt;~&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
