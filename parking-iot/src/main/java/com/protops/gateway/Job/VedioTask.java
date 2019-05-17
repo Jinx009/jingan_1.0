@@ -5,6 +5,7 @@ import com.protops.gateway.domain.iot.Sensor;
 import com.protops.gateway.domain.log.SensorOperationLog;
 import com.protops.gateway.service.SensorService;
 import com.protops.gateway.util.HttpUtils;
+import com.protops.gateway.util.StringUtils;
 import com.protops.gateway.utils.baoxin.SendUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -94,7 +95,9 @@ public class VedioTask {
                     Date date = sensor.getHappenTime();
                     Date now = new Date();
                     long sub_time = (now.getTime()-date.getTime())/1000;
-                    if(sub_time>180){//视频停满三分钟
+                    if(sub_time>180&& StringUtils.isBlank(sensor.getBluetooth())){//视频停满三分钟
+                        sensor.setBluetooth("ASD");
+                        sensorService.update(sensor);
                         String eventTime = sdf.format(date);
                         HttpUtils.get(VEDIO_URL+"?mac="+sensor.getMac()+"&eventTime="+eventTime+"&status=2");
                         SendUtils.send(sensor.getHappenTime(), sensor.getMac(), String.valueOf(sensor.getAvailable()),
