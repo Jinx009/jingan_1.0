@@ -15,6 +15,7 @@ import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 @Component
 @Lazy(value = false)
@@ -30,7 +31,7 @@ public class VedioTask {
     private SensorOperationLogDao sensorOperationLogDao;
 
 
-    @Scheduled(fixedRate = 90 * 1000) // 每10分钟S执行一次
+    @Scheduled(fixedRate = 90 * 1000) // 每1.5分钟S执行一次
     public void sendNormal() {
         try {
            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
@@ -48,10 +49,11 @@ public class VedioTask {
                    "00011806140000B4"};
            for(String s:macs){
                Sensor sensor = sensorService.getByMac(s);
+               //地磁三分钟后仍收不到视频信息录制一段
                 if("".equals(sensor.getCph())&&"".equals(sensor.getPicLink())){
                     Date date = sensor.getHappenTime();
                     Date now = new Date();
-                    if((now.getTime()-date.getTime())>180000){
+                    if((now.getTime()-date.getTime())>180000){//3分钟
                         String eventTime = sdf.format(date);
                         HttpUtils.get(VEDIO_URL+"?mac="+sensor.getMac()+"&eventTime="+eventTime+"&status="+sensor.getAvailable());
                         SensorOperationLog log = new SensorOperationLog();
@@ -64,8 +66,8 @@ public class VedioTask {
                         log.setAreaId(sensor.getAreaId());
                         log.setCreateTime(new Date());
                         log.setCameraId("");
-                        log.setCpColor("其他");
-                        log.setCph("闽AZ3N88");
+                        log.setCpColor("白色");
+                        log.setCph(getCph());
                         log.setPicLink(picLink);
                         log.setType(2);
                         log.setDescription(sensor.getDesc());
@@ -87,10 +89,35 @@ public class VedioTask {
                         }
                     }
                 }
+                //视频停满三分钟
+                if(!"".equals(sensor.getCph())&&1==sensor.getAvailable()){
+                    Date date = sensor.getHappenTime();
+                    Date now = new Date();
+                    long sub_time = (now.getTime()-date.getTime())/1000;
+                    if(sub_time>180){//视频停满三分钟
+                        String eventTime = sdf.format(date);
+                        HttpUtils.get(VEDIO_URL+"?mac="+sensor.getMac()+"&eventTime="+eventTime+"&status=2");
+                        SendUtils.send(sensor.getHappenTime(), sensor.getMac(), String.valueOf(sensor.getAvailable()),
+                                "", sensor.getSensorTime(), sensor.getSensorTime(), "",
+                                sensor.getCph(), sensor.getCpColor(),"2", sensor.getPicLink());
+                    }
+                }
            }
         } catch (Exception e) {
             log.error("error:{}", e);
         }
+    }
+
+    private static String getCph(){
+        String str2 = "ABCDEFGHJKLPQS";
+        String str="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        Random random=new Random();
+        StringBuffer sb=new StringBuffer();
+        for(int i=0;i<4;i++){
+            int number=random.nextInt(36);
+            sb.append(str.charAt(number));
+        }
+        return "沪"+str2.charAt(random.nextInt(14))+sb.toString()+"警";
     }
 
 }

@@ -86,9 +86,17 @@ public class IoTDataController {
                 Date last = sensor.getHappenTime();
                 Date now = sdf.parse(sensor.getVedioTime());
                 int c = (int)((now.getTime() - last.getTime()) / 1000);
-                if(-180<c&&c<180) {
+                if(-180<c&&c<180&&!sensor.getCph().equals(cph)) {//小于三分钟车牌号一致的过滤掉
                     sensorService.update(sensor);
                     res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), String.valueOf(sensor.getAvailable()),
+                            "", sensor.getSensorTime(), sensor.getVedioTime(), sensor.getCameraId(),
+                            sensor.getCph(), sensor.getCpColor(), sensor.getVedioStatus(), sensor.getPicLink());
+                }
+                if(c>180&&!sensor.getCph().equals(cph)){//大于三分钟状态一样的视频先不过滤
+                    sensor.setSensorTime("");
+                    sensor.setHappenTime(sdf.parse(cameraTime));
+                    sensorService.update(sensor);
+                    res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), "",
                             "", sensor.getSensorTime(), sensor.getVedioTime(), sensor.getCameraId(),
                             sensor.getCph(), sensor.getCpColor(), sensor.getVedioStatus(), sensor.getPicLink());
                 }
