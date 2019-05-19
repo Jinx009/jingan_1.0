@@ -62,7 +62,6 @@ public class IoTDataController {
             sensor.setVedioStatus(status);
             sensor.setCameraId(cameraId);
             sensor.setCpColor(cpColor);
-            sensor.setCph(cph);
             sensor.setVedioTime(cameraTime);
             boolean res = false;
             SensorOperationLog log = new SensorOperationLog();
@@ -82,17 +81,19 @@ public class IoTDataController {
             log.setDescription(sensor.getDesc());
             log.setStatus(status);
             sensorOperationLogDao.save(log);
-            if(status.equals(String.valueOf(sensor.getAvailable()))||"2".equals(status)){
+            if(status.equals(String.valueOf(sensor.getAvailable()))){
                 Date last = sensor.getHappenTime();
                 Date now = sdf.parse(sensor.getVedioTime());
                 int c = (int)((now.getTime() - last.getTime()) / 1000);
                 if(-180<c&&c<180&&!sensor.getCph().equals(cph)) {//小于三分钟车牌号一致的过滤掉
+                    sensor.setCph(cph);
                     sensorService.update(sensor);
                     res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), String.valueOf(sensor.getAvailable()),
                             "", sensor.getSensorTime(), sensor.getVedioTime(), sensor.getCameraId(),
                             sensor.getCph(), sensor.getCpColor(), sensor.getVedioStatus(), sensor.getPicLink());
                 }
                 if(c>180&&!sensor.getCph().equals(cph)){//大于三分钟状态一样的视频先不过滤
+                    sensor.setCph(cph);
                     sensor.setSensorTime("");
                     sensor.setHappenTime(sdf.parse(cameraTime));
                     sensorService.update(sensor);
@@ -101,6 +102,7 @@ public class IoTDataController {
                             sensor.getCph(), sensor.getCpColor(), sensor.getVedioStatus(), sensor.getPicLink());
                 }
             }else{
+                sensor.setCph(cph);
                 sensor.setSensorTime("");
                 sensor.setAvailable(Integer.valueOf(sensor.getVedioStatus()));
                 sensor.setHappenTime(sdf.parse(cameraTime));
