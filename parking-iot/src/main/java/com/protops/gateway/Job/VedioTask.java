@@ -92,14 +92,13 @@ public class VedioTask {
                 }
                 //视频停满三分钟
                 if(!"".equals(sensor.getCph())&&1==sensor.getAvailable()){
-                    Date date = sensor.getHappenTime();
+                    Date date = sdf.parse(sensor.getVedioTime());
                     Date now = new Date();
                     long sub_time = (now.getTime()-date.getTime())/1000;
                     if(sub_time>180&& StringUtils.isBlank(sensor.getBluetooth())){//视频停满三分钟
                         sensor.setBluetooth("ASD");
                         sensorService.update(sensor);
-                        String eventTime = sdf.format(date);
-                        HttpUtils.get(VEDIO_URL+"?mac="+sensor.getMac()+"&eventTime="+eventTime+"&status=2");
+                        HttpUtils.get(VEDIO_URL+"?mac="+sensor.getMac()+"&eventTime="+sensor.getVedioTime()+"&status=2");
                         SendUtils.send(sensor.getHappenTime(), sensor.getMac(), String.valueOf(sensor.getAvailable()),
                                 "", sensor.getSensorTime(), sensor.getSensorTime(), "",
                                 sensor.getCph(), sensor.getCpColor(),"2", sensor.getPicLink());
