@@ -63,6 +63,7 @@ public class IoTDataController {
             sensor.setCameraId(cameraId);
             sensor.setCpColor(cpColor);
             sensor.setVedioTime(cameraTime);
+            sensor.setCId(cameraId);
             boolean res = false;
             SensorOperationLog log = new SensorOperationLog();
             SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");

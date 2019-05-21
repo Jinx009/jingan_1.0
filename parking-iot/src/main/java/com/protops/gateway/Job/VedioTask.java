@@ -77,7 +77,7 @@ public class VedioTask {
                         sensorService.update(sensor);
                         sensorOperationLogDao.save(log);
                         boolean res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), String.valueOf(sensor.getAvailable()),
-                                "", sensor.getSensorTime(), sensor.getSensorTime(), "",
+                                "", sensor.getSensorTime(), sensor.getSensorTime(), sensor.getCId(),
                                 log.getCph(), log.getCpColor(), log.getStatus(), log.getPicLink());
                         if(res){
                             log.setSendStatus(1);
@@ -112,11 +112,11 @@ public class VedioTask {
 
     private static String getCph(){
         String str2 = "ABCDEFGHJKLPQS";
-        String str="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        String str="ABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
         Random random=new Random();
         StringBuffer sb=new StringBuffer();
         for(int i=0;i<4;i++){
-            int number=random.nextInt(36);
+            int number=random.nextInt(34);
             sb.append(str.charAt(number));
         }
         return "沪"+str2.charAt(random.nextInt(14))+sb.toString()+"警";

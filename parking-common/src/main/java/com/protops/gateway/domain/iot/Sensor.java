@@ -161,6 +161,8 @@ public class Sensor {
 
     @Column(name = "sensor_status")
     private Integer sensorStatus;
+    @Column(name = "c_id")
+    private String cId;
 
 
 }
