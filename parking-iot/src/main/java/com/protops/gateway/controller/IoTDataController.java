@@ -88,12 +88,16 @@ public class IoTDataController {
                 int c = (int)((now.getTime() - last.getTime()) / 1000);
                 if(-180<c&&c<180&&!sensor.getCph().equals(cph)) {//小于三分钟车牌号一致的过滤掉
                     sensor.setCph(cph);
+                    sensor.setSensorTime("");
                     sensorService.update(sensor);
-                    res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), String.valueOf(sensor.getAvailable()),
+//                    res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), String.valueOf(sensor.getAvailable()),
+//                            "", sensor.getSensorTime(), sensor.getVedioTime(), sensor.getCameraId(),
+//                            sensor.getCph(), sensor.getCpColor(), sensor.getVedioStatus(), sensor.getPicLink());
+                    res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), "",
                             "", sensor.getSensorTime(), sensor.getVedioTime(), sensor.getCameraId(),
                             sensor.getCph(), sensor.getCpColor(), sensor.getVedioStatus(), sensor.getPicLink());
                 }
-                if(c>180&&!sensor.getCph().equals(cph)){//大于三分钟状态一样的视频先不过滤
+                if(c>180&&!sensor.getCph().equals(cph)){//大于三分钟状态车牌一样的视频先不过滤
                     sensor.setCph(cph);
                     sensor.setSensorTime("");
                     sensor.setHappenTime(sdf.parse(cameraTime));
@@ -179,30 +183,6 @@ public class IoTDataController {
     }
 
 
-//    @RequestMapping(value = "/sensor/heartBeatLog/report", method = RequestMethod.POST, produces = "application/json")
-//    @ResponseBody
-//    public String heartBeatLog(@RequestBody byte[] bytes){
-//        try {
-//            SensorDeviceLog sensorDeviceLog = JSONObject.parseObject(new String(bytes, Constants.Default_SysEncoding),SensorDeviceLog.class);
-//            if(sensorDeviceLog!=null){
-//                sensorDeviceLog.setCreateTime(new Date());
-//                Sensor sensor = sensorService.getByMac(sensorDeviceLog.getMac());
-//                sensor.setAddr(sensorDeviceLog.getRssi());
-//                sensorService.update(sensor);
-//                sensorDeviceLogService.save(sensorDeviceLog);
-//                FileWriter fileWriter = new FileWriter("/apps/logs/heart_log_time.txt", false);
-//                fileWriter.write(String.valueOf(new Date().getTime()));
-//                fileWriter.flush();
-//                fileWriter.close();
-//            }
-//        }catch (Exception e){
-//            log.error("error:{}",e);
-//        }
-//
-//        return "{\"status\":\"ok\"}";
-//    }
-
-
     @RequestMapping(value = "/sensor/heartBeatLog/report", method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
     public String heartBeatLog(@RequestBody byte[] bytes){
@@ -214,7 +194,7 @@ public class IoTDataController {
                 sensor.setAddr(sensorDeviceLog.getRssi());
                 sensorService.update(sensor);
                 sensorDeviceLogService.save(sensorDeviceLog);
-                FileWriter fileWriter = new FileWriter("/home/baoadmin/logs/heart_log_time.txt", false);
+                FileWriter fileWriter = new FileWriter("/apps/logs/heart_log_time.txt", false);
                 fileWriter.write(String.valueOf(new Date().getTime()));
                 fileWriter.flush();
                 fileWriter.close();
@@ -225,5 +205,29 @@ public class IoTDataController {
 
         return "{\"status\":\"ok\"}";
     }
+
+
+//    @RequestMapping(value = "/sensor/heartBeatLog/report", method = RequestMethod.POST, produces = "application/json")
+//    @ResponseBody
+//    public String heartBeatLog(@RequestBody byte[] bytes){
+//        try {
+//            SensorDeviceLog sensorDeviceLog = JSONObject.parseObject(new String(bytes, Constants.Default_SysEncoding),SensorDeviceLog.class);
+//            if(sensorDeviceLog!=null){
+//                sensorDeviceLog.setCreateTime(new Date());
+//                Sensor sensor = sensorService.getByMac(sensorDeviceLog.getMac());
+//                sensor.setAddr(sensorDeviceLog.getRssi());
+//                sensorService.update(sensor);
+//                sensorDeviceLogService.save(sensorDeviceLog);
+//                FileWriter fileWriter = new FileWriter("/home/baoadmin/logs/heart_log_time.txt", false);
+//                fileWriter.write(String.valueOf(new Date().getTime()));
+//                fileWriter.flush();
+//                fileWriter.close();
+//            }
+//        }catch (Exception e){
+//            log.error("error:{}",e);
+//        }
+//
+//        return "{\"status\":\"ok\"}";
+//    }
 
 }

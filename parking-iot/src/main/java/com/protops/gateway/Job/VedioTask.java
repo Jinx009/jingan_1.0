@@ -35,61 +35,62 @@ public class VedioTask {
     @Scheduled(fixedRate = 90 * 1000) // 每1.5分钟S执行一次
     public void sendNormal() {
         try {
-           SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
             SimpleDateFormat sdf2 = new SimpleDateFormat("yyyyMMdd");
-           String[] macs = new String[]{"0001180614000062",
-                   "0001180614000120",
-                   "0001180614000052",
-                   "0001180614000233",
-                   "0001180614000011",
-                   "00011806140000A0",
-                   "00011806140000A6",
-                   "000118061400007A",
-                   "0001180614000058",
-                   "0001180614000055",
-                   "00011806140000B4"};
-           for(String s:macs){
-               Sensor sensor = sensorService.getByMac(s);
-               //地磁三分钟后仍收不到视频信息录制一段
-                if("".equals(sensor.getCph())&&"".equals(sensor.getPicLink())){
-                    Date date = sensor.getHappenTime();
-                    Date now = new Date();
-                    if((now.getTime()-date.getTime())>180000){//3分钟
-                        String eventTime = sdf.format(date);
-                        HttpUtils.get(VEDIO_URL+"?mac="+sensor.getMac()+"&eventTime="+eventTime+"&status="+sensor.getAvailable());
-                        SensorOperationLog log = new SensorOperationLog();
-                        String picLink = VEDIO_URL_IMG+""+sdf2.format(date)+"/"+sensor.getMac()+"_"+eventTime;
-                        log.setMac(sensor.getMac());
-                        log.setChangeTime(date);
-                        log.setAvailable(sensor.getAvailable());
-                        log.setFailTimes(0);
-                        log.setSendStatus(0);
-                        log.setAreaId(sensor.getAreaId());
-                        log.setCreateTime(new Date());
-                        log.setCameraId("");
-                        log.setCpColor("白色");
-                        log.setCph(getCph());
-                        log.setPicLink(picLink);
-                        log.setType(2);
-                        log.setDescription(sensor.getDesc());
-                        log.setStatus(String.valueOf(sensor.getAvailable()));
-                        sensor.setPicLink(picLink);
-                        sensorService.update(sensor);
-                        sensorOperationLogDao.save(log);
-                        boolean res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), String.valueOf(sensor.getAvailable()),
-                                "", sensor.getSensorTime(), sensor.getSensorTime(), sensor.getCId(),
-                                log.getCph(), log.getCpColor(), log.getStatus(), log.getPicLink());
-                        if(res){
-                            log.setSendStatus(1);
-                            log.setSendTime(new Date());
-                            sensorOperationLogDao.update(log);
-                        }else{
-                            log = sensorOperationLogDao.get(log.getId());
-                            log.setFailTimes(log.getFailTimes() + 1);
-                            sensorOperationLogDao.update(log);
-                        }
-                    }
-                }
+            String[] macs = new String[]{
+                    //"0001180614000062",
+                    "0001180614000120",
+                    "0001180614000052",
+                    "0001180614000233",
+                    "0001180614000011",
+                    "00011806140000A0",
+                    "00011806140000A6",
+                    "000118061400007A",
+                    "0001180614000058",
+                    "0001180614000055",
+                    "00011806140000B4"};
+            for(String s:macs){
+                Sensor sensor = sensorService.getByMac(s);
+                //地磁三分钟后仍收不到视频信息录制一段
+//                if("".equals(sensor.getCph())&&"".equals(sensor.getPicLink())){
+//                    Date date = sensor.getHappenTime();
+//                    Date now = new Date();
+//                    if((now.getTime()-date.getTime())>180000){//3分钟
+//                        String eventTime = sdf.format(date);
+//                        HttpUtils.get(VEDIO_URL+"?mac="+sensor.getMac()+"&eventTime="+eventTime+"&status="+sensor.getAvailable());
+//                        SensorOperationLog log = new SensorOperationLog();
+//                        String picLink = VEDIO_URL_IMG+""+sdf2.format(date)+"/"+sensor.getMac()+"_"+eventTime;
+//                        log.setMac(sensor.getMac());
+//                        log.setChangeTime(date);
+//                        log.setAvailable(sensor.getAvailable());
+//                        log.setFailTimes(0);
+//                        log.setSendStatus(0);
+//                        log.setAreaId(sensor.getAreaId());
+//                        log.setCreateTime(new Date());
+//                        log.setCameraId("");
+//                        log.setCpColor("白色");
+//                        log.setCph(getCph());
+//                        log.setPicLink(picLink);
+//                        log.setType(2);
+//                        log.setDescription(sensor.getDesc());
+//                        log.setStatus(String.valueOf(sensor.getAvailable()));
+//                        sensor.setPicLink(picLink);
+//                        sensorService.update(sensor);
+//                        sensorOperationLogDao.save(log);
+//                        boolean res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), String.valueOf(sensor.getAvailable()),
+//                                "", sensor.getSensorTime(), sensor.getSensorTime(), sensor.getCId(),
+//                                log.getCph(), log.getCpColor(), log.getStatus(), log.getPicLink());
+//                        if(res){
+//                            log.setSendStatus(1);
+//                            log.setSendTime(new Date());
+//                            sensorOperationLogDao.update(log);
+//                        }else{
+//                            log = sensorOperationLogDao.get(log.getId());
+//                            log.setFailTimes(log.getFailTimes() + 1);
+//                            sensorOperationLogDao.update(log);
+//                        }
+//                    }
+//                }
                 //视频停满三分钟
                 if(!"".equals(sensor.getCph())&&1==sensor.getAvailable()){
                     Date date = sdf.parse(sensor.getVedioTime());
@@ -104,7 +105,7 @@ public class VedioTask {
                                 sensor.getCph(), sensor.getCpColor(),"2", sensor.getPicLink());
                     }
                 }
-           }
+            }
         } catch (Exception e) {
             log.error("error:{}", e);
         }

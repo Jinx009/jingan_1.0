@@ -82,6 +82,26 @@ public class NewSensorService {
         sensorOperationLog = sensorOperationLogDao.get(sensorOperationLog.getId());
         //宝信
         if (sensorOperationLog.getAreaId()!=null&& 1 == sensorOperationLog.getAreaId()) {
+            String[] macs = new String[]{
+                    //"0001180614000062",
+                    "0001180614000120",
+                    "0001180614000052",
+                    "0001180614000233",
+                    "0001180614000011",
+                    "00011806140000A0",
+                    "00011806140000A6",
+                    "000118061400007A",
+                    "0001180614000058",
+                    "0001180614000055",
+                    "00011806140000B4"};
+            boolean a = true;
+            for(String s:macs){
+                if(s.equals(sensor.getMac())){
+                    a = false;
+                    break;
+                }
+            }
+            if(a){
                 boolean res = SendUtils.send(sensor.getHappenTime(),sensor.getMac(),String.valueOf(sensor.getAvailable()),
                         "",sensor.getSensorTime(),sensor.getVedioTime(),sensor.getCameraId(),
                         sensor.getCph(),sensor.getCpColor(),sensor.getVedioStatus(),sensor.getPicLink());
@@ -95,6 +115,7 @@ public class NewSensorService {
                     sensorOperationLog.setFailTimes(sensorOperationLog.getFailTimes() + 1);
                     sensorOperationLogDao.update(sensorOperationLog);
                 }
+            }
         }
 
         saveInOutLog(sensorOperationLog);
