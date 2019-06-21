@@ -100,8 +100,8 @@ public class VedioTask {
                         sensor.setBluetooth("ASD");
                         sensorService.update(sensor);
                         HttpUtils.get(VEDIO_URL+"?mac="+sensor.getMac()+"&eventTime="+sensor.getVedioTime()+"&status=2");
-                        SendUtils.send(sensor.getHappenTime(), sensor.getMac(), String.valueOf(sensor.getAvailable()),
-                                "", sensor.getSensorTime(), sensor.getSensorTime(), "",
+                        SendUtils.send(sensor.getHappenTime(), sensor.getMac(), "",
+                                "", "", sensor.getVedioTime(), sensor.getCId(),
                                 sensor.getCph(), sensor.getCpColor(),"2", sensor.getPicLink());
                     }
                 }
