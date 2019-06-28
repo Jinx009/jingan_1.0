@@ -22,8 +22,8 @@
     <bean id="adminConfig" class="com.protops.gateway.constants.AdminConfig">
         <property name="systemId" value="2"></property>
         <property name="onTestMode" value="false"></property>
-        <property name="filePath" value="/home/baoadmin/conf/"></property>
-        <property name="contextPath" value="http://112.64.46.113:8102/iot"></property>
+        <property name="filePath" value="/apps/conf/"></property>
+        <property name="contextPath" value="http://124.74.252.162:1122/iot"></property>
     </bean>
 
     <!--<bean id="smsSender" class="com.protops.gateway.service.SmsSender">-->
@@ -33,14 +33,14 @@
 
 <!--<bean id="smsService" class="com.protops.gateway.service.SmsService">-->
     <!--<property name="onTestMode" value="false"></property>-->
-    <!--<property name="template" value="【汉口城市广场】 短信验证码：{0}，请在300秒内完成验证"></property>-->
-    <!--<property name="maxLimitCnt" value="3"></property>-->
-    <!--<property name="invalidTimespan" value="300"></property>-->
-    <!--<property name="smsSentInterval" value="60"></property>-->
+    <!--<property name="template" value="【汉口城市广场】 短信验证码：{0}，请在${sms_invalid_timespan}秒内完成验证"></property>-->
+    <!--<property name="maxLimitCnt" value="${sms_limit_cnt}"></property>-->
+    <!--<property name="invalidTimespan" value="${sms_invalid_timespan}"></property>-->
+    <!--<property name="smsSentInterval" value="${sms_sent_interval}"></property>-->
 <!--</bean>-->
 
     <bean id="fileUpload" class="com.protops.gateway.utils.FileUpload">
-        <property name="url" value="/home/baoadmin/conf/"></property>
+        <property name="url" value="${upload_url}"></property>
     </bean>
 
     <import resource="spring/spring-handler.xml"></import>

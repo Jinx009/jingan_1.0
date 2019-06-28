@@ -82,39 +82,62 @@ public class IoTDataController {
             log.setDescription(sensor.getDesc());
             log.setStatus(status);
             sensorOperationLogDao.save(log);
+            String[] macs2 = {
+                    "0001180614000011",
+                    "00011806140000A0",
+                    "00011806140000A6",
+                    "000118061400007A"
+            };
+            boolean type = false;
+            String av = String.valueOf(sensor.getAvailable());
+            for(String m : macs2){
+                if(m.equals(sensor.getMac())){
+                    type = true;
+                }
+            }
+            if(!type&&!"0001180614000062".equals(sensor.getMac())){//不是12-15号车位只推送视频信息，不夹杂地磁信息且地磁不是8号车位
+                sensor.setSensorTime("");
+                av = "";
+            }
             if(status.equals(String.valueOf(sensor.getAvailable()))){
                 Date last = sensor.getHappenTime();
                 Date now = sdf.parse(sensor.getVedioTime());
                 int c = (int)((now.getTime() - last.getTime()) / 1000);
                 if(-180<c&&c<180&&!sensor.getCph().equals(cph)) {//小于三分钟车牌号一致的过滤掉
                     sensor.setCph(cph);
-                    sensor.setSensorTime("");
                     sensorService.update(sensor);
-//                    res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), String.valueOf(sensor.getAvailable()),
-//                            "", sensor.getSensorTime(), sensor.getVedioTime(), sensor.getCameraId(),
-//                            sensor.getCph(), sensor.getCpColor(), sensor.getVedioStatus(), sensor.getPicLink());
-                    res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), "",
+                    res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), av,
                             "", sensor.getSensorTime(), sensor.getVedioTime(), sensor.getCameraId(),
                             sensor.getCph(), sensor.getCpColor(), sensor.getVedioStatus(), sensor.getPicLink());
                 }
                 if(c>180&&!sensor.getCph().equals(cph)){//大于三分钟状态车牌一样的视频先不过滤
-                    sensor.setCph(cph);
-                    sensor.setSensorTime("");
-                    sensor.setHappenTime(sdf.parse(cameraTime));
-                    sensorService.update(sensor);
-                    res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), "",
-                            "", sensor.getSensorTime(), sensor.getVedioTime(), sensor.getCameraId(),
-                            sensor.getCph(), sensor.getCpColor(), sensor.getVedioStatus(), sensor.getPicLink());
+                    if(type&&0==sensor.getAvailable()){//12-15号车位单独报一个车出不推送
+                        return "{\"status\":\"ok\"}";
+                    }else{
+                        if(!"0001180614000062".equals(sensor.getMac())){//8号不享受超三分钟推送
+                            sensor.setCph(cph);
+                            sensor.setHappenTime(sdf.parse(cameraTime));
+                            sensorService.update(sensor);
+                            res = SendUtils.send(sensor.getHappenTime(), sensor.getMac(), av,
+                                    "", sensor.getSensorTime(), sensor.getVedioTime(), sensor.getCameraId(),
+                                    sensor.getCph(), sensor.getCpColor(), sensor.getVedioStatus(), sensor.getPicLink());
+                        }
+                    }
                 }
             }else{
-                sensor.setCph(cph);
-                sensor.setSensorTime("");
-                sensor.setAvailable(Integer.valueOf(sensor.getVedioStatus()));
-                sensor.setHappenTime(sdf.parse(cameraTime));
-                sensorService.update(sensor);
-                res = SendUtils.send(sensor.getHappenTime(),sensor.getMac(),"",
-                        "",sensor.getSensorTime(),sensor.getVedioTime(),sensor.getCameraId(),
-                        sensor.getCph(),sensor.getCpColor(),sensor.getVedioStatus(),sensor.getPicLink());
+                if(type&&"0".equals(sensor.getVedioStatus())){//12-15号车位单独报一个车出不推送
+                    return "{\"status\":\"ok\"}";
+                }else{
+                    if(!"0001180614000062".equals(sensor.getMac())){
+                        sensor.setCph(cph);
+                        sensor.setAvailable(Integer.valueOf(sensor.getVedioStatus()));
+                        sensor.setHappenTime(sdf.parse(cameraTime));
+                        sensorService.update(sensor);
+                        res = SendUtils.send(sensor.getHappenTime(),sensor.getMac(),av,
+                                "",sensor.getSensorTime(),sensor.getVedioTime(),sensor.getCameraId(),
+                                sensor.getCph(),sensor.getCpColor(),sensor.getVedioStatus(),sensor.getPicLink());
+                    }
+                }
             }
             log = sensorOperationLogDao.get(log.getId());
             if(res){
