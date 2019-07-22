@@ -1055,9 +1055,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/parking-iot/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/VedioTask.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/VedioTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/parking-iot/target/" />
@@ -1093,8 +1091,8 @@
       <file leaf-file-name="IoTDataController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="761">
-              <caret line="116" column="85" lean-forward="false" selection-start-line="116" selection-start-column="85" selection-end-line="116" selection-end-column="85" />
+            <state relative-caret-position="169">
+              <caret line="213" column="84" lean-forward="false" selection-start-line="213" selection-start-column="84" selection-end-line="213" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -1113,8 +1111,8 @@
       <file leaf-file-name="VedioTask.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/VedioTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="39" />
+            <state relative-caret-position="555">
+              <caret line="53" column="40" lean-forward="false" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1125,8 +1123,8 @@
       <file leaf-file-name="NewSensorService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="89" column="18" lean-forward="false" selection-start-line="89" selection-start-column="18" selection-end-line="92" selection-end-column="41" />
+            <state relative-caret-position="361">
+              <caret line="108" column="24" lean-forward="false" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -1135,7 +1133,7 @@
       <file leaf-file-name="ReportStatusHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/ReportStatusHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
+            <state relative-caret-position="2490">
               <caret line="185" column="35" lean-forward="false" selection-start-line="185" selection-start-column="35" selection-end-line="185" selection-end-column="35" />
               <folding />
             </state>
@@ -1290,7 +1288,7 @@
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="834" />
@@ -1327,9 +1325,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -1475,6 +1472,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1799,12 +1797,17 @@
       <workItem from="1561017887308" duration="184000" />
       <workItem from="1561081546657" duration="1187000" />
       <workItem from="1561109258187" duration="967000" />
-      <workItem from="1561710290298" duration="3003000" />
+      <workItem from="1561710290298" duration="3603000" />
+      <workItem from="1561951845219" duration="841000" />
+      <workItem from="1561962299223" duration="100000" />
+      <workItem from="1562122413015" duration="305000" />
+      <workItem from="1562558516961" duration="421000" />
+      <workItem from="1563779736446" duration="252000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124899000" />
+    <option name="totallyTimeSpent" value="127418000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1817,12 +1820,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5028653" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1836,10 +1838,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282123" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282123" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7611732" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7611732" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19273743" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26934096" sideWeight="0.49281314" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2901146" sideWeight="0.49281314" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.49713466" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3653295" sideWeight="0.50718683" order="2" side_tool="true" content_ui="tabs" />
@@ -1971,7 +1973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2000,7 +2001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2106,7 +2106,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2114,7 +2113,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
           <caret line="242" column="73" lean-forward="false" selection-start-line="242" selection-start-column="73" selection-end-line="242" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2192,7 +2190,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/ReportStatusHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
+        <state relative-caret-position="2490">
           <caret line="185" column="35" lean-forward="false" selection-start-line="185" selection-start-column="35" selection-end-line="185" selection-end-column="35" />
           <folding />
         </state>
@@ -2214,28 +2212,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="89" column="18" lean-forward="false" selection-start-line="89" selection-start-column="18" selection-end-line="92" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/Job/VedioTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="39" />
+        <state relative-caret-position="555">
+          <caret line="53" column="40" lean-forward="false" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="108" column="24" lean-forward="false" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="116" column="85" lean-forward="false" selection-start-line="116" selection-start-column="85" selection-end-line="116" selection-end-column="85" />
+        <state relative-caret-position="169">
+          <caret line="213" column="84" lean-forward="false" selection-start-line="213" selection-start-column="84" selection-end-line="213" selection-end-column="84" />
           <folding />
         </state>
       </provider>

@@ -10,6 +10,7 @@ import com.protops.gateway.domain.log.SensorOperationLog;
 import com.protops.gateway.service.RouterService;
 import com.protops.gateway.service.SensorService;
 import com.protops.gateway.service.log.SensorDeviceLogService;
+import com.protops.gateway.util.HttpUtils;
 import com.protops.gateway.util.MD5Utils;
 import com.protops.gateway.utils.baoxin.SendUtils;
 import org.slf4j.Logger;
@@ -210,6 +211,7 @@ public class IoTDataController {
     @ResponseBody
     public String heartBeatLog(@RequestBody byte[] bytes){
         try {
+            HttpUtils.get("http://139.196.205.157:8090/home/cloud/server/check?id=11");
             SensorDeviceLog sensorDeviceLog = JSONObject.parseObject(new String(bytes, Constants.Default_SysEncoding),SensorDeviceLog.class);
             if(sensorDeviceLog!=null){
                 sensorDeviceLog.setCreateTime(new Date());
