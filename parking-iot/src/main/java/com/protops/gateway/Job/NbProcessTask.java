@@ -63,8 +63,7 @@ public class NbProcessTask {
                 Date date = new Date();
                 if ((date.getTime() - timestamp) / 1000 / 60 > 3) {
                     log.warn("starttime:{},endtime:{}", timestamp, date.getTime());
-                    kill();
-                    start(timestamp, date.getTime());
+                    kill(timestamp,date);
                     return true;
                 }
             }
@@ -74,7 +73,7 @@ public class NbProcessTask {
         return false;
     }
 
-    private static void kill() {
+    private static void kill(long timestamp,Date date) {
         try {
             String[] cmd = { "sh", "-c", "killall nb_router" };
             ;
@@ -82,6 +81,7 @@ public class NbProcessTask {
             Process p = Runtime.getRuntime().exec(cmd);
             p.waitFor();
             p.destroy();
+            start(timestamp, date.getTime());
         } catch (Exception e) {
             log.error("error:{}", e);
         }
@@ -100,10 +100,10 @@ public class NbProcessTask {
             FileWriter fw = new FileWriter(f, true);
             PrintWriter pw = new PrintWriter(fw);
             pw.println(stampToDate(String.valueOf(start)) + "	" + stampToDate(String.valueOf(end)));
-            FileWriter fileWriter = new FileWriter(TIME_FILE_PATH, false);
-            fileWriter.write(String.valueOf(new Date().getTime()));
-            fileWriter.flush();
-            fileWriter.close();
+//            FileWriter fileWriter = new FileWriter(TIME_FILE_PATH, false);
+//            fileWriter.write(String.valueOf(new Date().getTime()));
+//            fileWriter.flush();
+//            fileWriter.close();
             pw.flush();
             fw.flush();
             pw.close();
