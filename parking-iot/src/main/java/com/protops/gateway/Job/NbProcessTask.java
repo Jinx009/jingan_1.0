@@ -32,14 +32,18 @@ public class NbProcessTask {
     private static final String RESTART_FILE_PATH = "/apps/logs/nb_start_log.txt";
     private static final String CMD = "cd /apps/nb;nohup ./nb_router &";
 
-    @Scheduled(fixedRate = 600 * 1000) // 每10分钟S执行一次
-    public void sendNormal() {
-        try {
-            checkTime();
-        } catch (Exception e) {
-            log.error("error:{}", e);
-        }
-    }
+    /**
+     * 改为短信推送 人工重启
+     * @return
+     */
+//    @Scheduled(fixedRate = 600 * 1000) // 每10分钟S执行一次
+//    public void sendNormal() {
+//        try {
+//            checkTime();
+//        } catch (Exception e) {
+//            log.error("error:{}", e);
+//        }
+//    }
 
     private static boolean checkTime() {
         try {
