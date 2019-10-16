@@ -3,9 +3,10 @@ package com.protops.gateway.telcom;
 import com.alibaba.fastjson.JSONObject;
 import com.protops.gateway.constants.Constants;
 import com.protops.gateway.domain.iot.Sensor;
-import com.protops.gateway.domain.log.SensorOperationLog;
+import com.protops.gateway.domain.log.SensorDeviceLog;
 import com.protops.gateway.service.SensorService;
 import com.protops.gateway.service.device.NewSensorService;
+import com.protops.gateway.service.log.SensorDeviceLogService;
 import com.protops.gateway.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,8 +19,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -35,6 +34,8 @@ public class TelcomController {
     private SensorService sensorService;
     @Autowired
     private NewSensorService newSensorService;
+    @Autowired
+    private SensorDeviceLogService sensorDeviceLogService;
 
     /**
      * 点新地磁接入
@@ -88,7 +89,7 @@ public class TelcomController {
                                     }
                                     SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
                                     SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                                    File f = new File("/apps/logs/sensor_status/"+sdf.format(date)+".txt");
+                                    File f = new File("/apps/logs/sensor_status/"+sdf.format(date)+"/"+mac+".txt");
                                     File fileParent = f.getParentFile();
                                     if (!fileParent.exists()) {
                                         fileParent.mkdirs();
@@ -102,8 +103,61 @@ public class TelcomController {
                                     pw.close();
                                     fw.close();
                                 }
-                                if(cmd.equals("3d")){
-
+                                if(cmd.equals("3E")){//心跳
+                                    String dif1 = data.substring(26, 28);
+                                    String dif2 = data.substring(24, 26);
+                                    String dif = getDataBase(data.substring(26, 27), dif1+dif2);
+                                    String av = data.substring(28, 30);
+                                    Integer avalable = Integer.valueOf(av);
+                                    String bat1 = data.substring(46, 48);
+                                    String bat2 = data.substring(44, 46);
+                                    String bat = getDataBase(data.substring(44, 45), bat1+bat2);
+                                    String soft = convertHexToString(data.substring(32, 44));
+                                    String lt = String.valueOf(Integer.parseInt( data.substring(48, 50),16));
+                                    String mode = String.valueOf(Integer.parseInt( data.substring(30, 32),16));
+                                    String ht = String.valueOf(Integer.parseInt( data.substring(50, 52),16));
+                                    String wl = String.valueOf(Integer.parseInt( data.substring(52, 54),16));
+                                    String wh = String.valueOf(Integer.parseInt( data.substring(54, 56),16));
+                                    String ang =  String.valueOf(Integer.parseInt( data.substring(56, 58),16));
+                                    String wt =  String.valueOf(Integer.parseInt( data.substring(58, 60),16));
+                                    String rssi =  String.valueOf(Integer.parseInt( data.substring(66, 68),16));
+                                    String sdi =  String.valueOf(Integer.parseInt( data.substring(60, 62),16));
+                                    String sdo =  String.valueOf(Integer.parseInt( data.substring(62, 64),16));
+                                    String fdi =  String.valueOf(Integer.parseInt( data.substring(64, 66),16));
+                                    String pci1 = data.substring(88, 90);
+                                    String pci2 = data.substring(86, 88);
+                                    String pci = getDataBase(data.substring(88, 89), pci1+pci2);
+                                    String rsrp1 = data.substring(80, 82);
+                                    String rsrp2 = data.substring(78, 80);
+                                    String rsrp =  getDataBase(data.substring(80, 81), rsrp1+rsrp2);
+                                    String snr1 = data.substring(84,86);
+                                    String snr2 = data.substring(82, 84);
+                                    String snr =   getDataBase(data.substring(84, 85), snr1+snr2);
+                                    SensorDeviceLog deviceLog = new SensorDeviceLog();
+                                    deviceLog.setCreateTime(new Date());
+                                    deviceLog.setBatteryVoltage(bat);
+                                    deviceLog.setVol(bat);
+                                    deviceLog.setVer(soft);
+                                    deviceLog.setDif(dif);
+                                    deviceLog.setFdi(fdi);
+                                    deviceLog.setMac(mac);
+                                    deviceLog.setMode(mode);
+                                    deviceLog.setHt(ht);
+                                    deviceLog.setState(String.valueOf(avalable));
+                                    deviceLog.setLt(lt);
+                                    deviceLog.setWlt(wl);
+                                    deviceLog.setWht(wh);
+                                    deviceLog.setAt(ang);
+                                    deviceLog.setWt(wt);
+                                    deviceLog.setRssi(rssi);
+                                    deviceLog.setRsrp(rsrp);
+                                    deviceLog.setSdi(sdi);
+                                    deviceLog.setSdo(sdo);
+                                    deviceLog.setPci(pci);
+                                    deviceLog.setSnr(snr);
+                                    sensorDeviceLogService.save(deviceLog);
+                                    sensor.setRssi(rssi);
+                                    sensorService.update(sensor);
                                 }
                             }
                         }
@@ -132,6 +186,22 @@ public class TelcomController {
             log.error("e:{}",e);
         }
         return "{\"status\":\"ok\"}";
+    }
+
+    private String convertHexToString(String hex) {
+        StringBuilder sb = new StringBuilder();
+        StringBuilder temp = new StringBuilder();
+        // 49204c6f7665204a617661 split into two characters 49, 20, 4c...
+        for (int i = 0; i < hex.length() - 1; i += 2) {
+            // grab the hex in pairs
+            String output = hex.substring(i, (i + 2));
+            // convert hex to decimal
+            int decimal = Integer.parseInt(output, 16);
+            // convert the decimal to character
+            sb.append((char) decimal);
+            temp.append(decimal);
+        }
+        return sb.toString();
     }
 
 
