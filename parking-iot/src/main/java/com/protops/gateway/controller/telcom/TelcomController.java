@@ -156,6 +156,7 @@ public class TelcomController {
                                     deviceLog.setSdo(sdo);
                                     deviceLog.setPci(pci);
                                     deviceLog.setSnr(snr);
+                                    deviceLog.setMod(mode);
                                     sensorDeviceLogService.save(deviceLog);
                                     sensor.setRssi(rssi);
                                     sensorService.update(sensor);
