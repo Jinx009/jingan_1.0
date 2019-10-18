@@ -24,6 +24,7 @@ com/protops/gateway/handler/v1_0/ReportStatusHandler.class
 com/protops/gateway/controller/client/JavaSmsApi.class
 com/protops/gateway/domain/HeartBeatResponse.class
 com/protops/gateway/constants/AdminConfig.class
+com/protops/gateway/telcom/TModel.class
 com/protops/gateway/constants/enums/InterCode.class
 com/protops/gateway/utils/D.class
 com/protops/gateway/domain/SignInResponse.class
@@ -37,6 +38,7 @@ com/protops/gateway/utils/baoxin/HeartModelList.class
 com/protops/gateway/handler/v1_0/ErrorFlowHandler.class
 com/protops/gateway/handler/v1_0/RouterReportStatusHandler.class
 com/protops/gateway/domain/RouterReportStatusResponse.class
+com/protops/gateway/telcom/TelcomPushDataModel.class
 com/protops/gateway/domain/ReportStatusResponse.class
 com/protops/gateway/handler/v1_0/HeartBeatHandler.class
 com/protops/gateway/domain/base/IotRequstDomain.class
@@ -65,6 +67,7 @@ com/protops/gateway/constants/ResponseCodes.class
 com/protops/gateway/controller/ErrorController.class
 com/protops/gateway/utils/SHA1Utils.class
 com/protops/gateway/constants/IOTContext.class
+com/protops/gateway/telcom/TelcomController.class
 com/protops/gateway/utils/HttpUtil.class
 com/protops/gateway/controller/IoTDataController.class
 com/protops/gateway/handler/v1_0/ErrorFlowHandler$1.class
@@ -74,6 +77,7 @@ com/protops/gateway/controller/refresh/ConfigRefreshController.class
 com/protops/gateway/handler/v1_0/ReportStatusHandler$1.class
 com/protops/gateway/constants/enums/Version.class
 com/protops/gateway/utils/ResponseCodeHelper.class
+com/protops/gateway/telcom/PushModel.class
 com/protops/gateway/constants/CodeMapping.class
 com/protops/gateway/utils/baoxin/PosModel.class
 com/protops/gateway/handler/v1_0/SignInHandler$1.class

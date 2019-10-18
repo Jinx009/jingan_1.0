@@ -5,6 +5,7 @@
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/Job/NbProcessTask.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/service/device/NewRouterService.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/utils/SpringContextUtil.java
+/Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/telcom/PushModel.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/constants/AdminConfig.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/service/common/NewJobService.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/utils/HttpUtil.java
@@ -20,10 +21,12 @@
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/controller/refresh/ConfigRefreshController.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/utils/ResponseCodeHelper.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/domain/SignInRequest.java
+/Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/telcom/TelcomController.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/constants/IOTContext.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/controller/IOTController.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/domain/HeartBeatRequest.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/domain/base/IOTResponse.java
+/Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/telcom/TelcomPushDataModel.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/service/JobService.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/domain/base/IOTRequest.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/service/device/IntersectionSensorService.java
@@ -61,6 +64,7 @@
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/HeartBeatHandler.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/controller/server/Server.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/RouterReportStatusHandler.java
+/Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/telcom/TModel.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/SensorRegisterHandler.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/service/device/BluetoothService.java
 /Users/jinx/Documents/workspace/jingan_1.0/parking-iot/src/main/java/com/protops/gateway/domain/RouterReportStatusRequest.java

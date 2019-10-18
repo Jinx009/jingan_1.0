@@ -4,8 +4,6 @@ com/protops/gateway/dao/SensorDao.class
 com/protops/gateway/domain/log/SensorOperationLog.class
 com/protops/gateway/filter/SessionFilter.class
 com/protops/gateway/domain/log/BluetoothLog.class
-com/protops/gateway/constants/WeixinConfig.class
-com/protops/gateway/util/HibernateBaseDao$3.class
 com/protops/gateway/domain/common/TokenFactory.class
 com/protops/gateway/util/StringUtility.class
 com/protops/gateway/util/VerifyUtils.class
@@ -34,9 +32,7 @@ com/protops/gateway/constants/enums/EventKeyEnum.class
 com/protops/gateway/service/common/TokenFactoryService.class
 com/protops/gateway/domain/log/SensorDeviceLog.class
 com/protops/gateway/domain/log/SensorInOutMoneyLog.class
-com/protops/gateway/dao/ConfigDao.class
 com/protops/gateway/constants/common/SignConstant.class
-com/protops/gateway/domain/SystemConfig.class
 com/protops/gateway/domain/AppInfo.class
 com/protops/gateway/util/CustomDateDeserializer.class
 com/protops/gateway/exception/ProtopsException.class
@@ -55,7 +51,6 @@ com/protops/gateway/service/AppInfoService.class
 com/protops/gateway/constants/common/HttpConstant.class
 com/protops/gateway/domain/ajax/AjaxResponse.class
 com/protops/gateway/util/HibernateBaseDao$8.class
-com/protops/gateway/util/HibernateBaseDao$1.class
 com/protops/gateway/domain/StatsResult.class
 com/protops/gateway/util/HttpUtil.class
 com/protops/gateway/util/MD5Utils.class
@@ -77,7 +72,6 @@ com/protops/gateway/util/excel/RefectImpl.class
 com/protops/gateway/constants/enums/StatsTarget.class
 com/protops/gateway/util/HibernateBaseDao$7.class
 com/protops/gateway/dao/ErrorFlowDao.class
-com/protops/gateway/service/ConfigService.class
 com/protops/gateway/service/SmsSender.class
 com/protops/gateway/domain/sms/SmsRequest.class
 com/protops/gateway/service/log/SensorInOutMoneyLogService.class
@@ -118,13 +112,10 @@ com/protops/gateway/util/PropertyFilter.class
 com/protops/gateway/dao/AreaDao.class
 com/protops/gateway/domain/log/SensorUploadOperationLog.class
 com/protops/gateway/util/ZipUtils.class
-com/protops/gateway/domain/iot/Sensor.class
-com/protops/gateway/util/HibernateBaseDao$2.class
 com/protops/gateway/util/NumberGenerator.class
 com/protops/gateway/domain/iot/Router.class
 com/protops/gateway/util/HibernateBaseDao$5.class
 com/protops/gateway/constants/DeviceError.class
-com/protops/gateway/filter/ApplicationListener.class
 com/protops/gateway/util/excel/ExcelAnnotation.class
 com/protops/gateway/dao/log/BluetoothLogDao.class
 com/protops/gateway/domain/log/RouterDeviceLog.class

@@ -1,4 +1,4 @@
-package com.protops.gateway.telcom;
+package com.protops.gateway.controller.telcom;
 
 import lombok.Getter;
 import lombok.Setter;

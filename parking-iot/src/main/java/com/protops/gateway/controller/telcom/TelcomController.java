@@ -1,4 +1,4 @@
-package com.protops.gateway.telcom;
+package com.protops.gateway.controller.telcom;
 
 import com.alibaba.fastjson.JSONObject;
 import com.protops.gateway.constants.Constants;
@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.File;
@@ -42,7 +43,7 @@ public class TelcomController {
      * @param bytes
      * @return
      */
-    @RequestMapping(value = "/na/iocm/devNotify/v1.1.0/updateDeviceDatas")
+    @RequestMapping(value = "/na/iocm/devNotify/v1.1.0/updateDeviceDatas", method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
     public String pushs(@RequestBody byte[] bytes){
         try {
@@ -176,7 +177,7 @@ public class TelcomController {
      * @param bytes
      * @return
      */
-    @RequestMapping(value = "/na/iocm/devNotify/v1.1.0/updateDeviceData")
+    @RequestMapping(value = "/na/iocm/devNotify/v1.1.0/updateDeviceData", method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
     public String push(@RequestBody byte[] bytes){
         try {
