@@ -72,6 +72,10 @@ public class TelcomController {
                                 sensor.setSensorStatus(0);
                                 sensorService.save(sensor);
                             }else{
+                                if(sensor.getLastSeenTime()==null){
+                                    sensor.setLastSeenTime(new Date());
+                                    sensorService.update(sensor);
+                                }
                                 String cmd = data.substring(20, 22).toUpperCase();
                                 if(cmd.equals("3D")){
                                     String av = data.substring(24, 26);
@@ -168,7 +172,7 @@ public class TelcomController {
             }
             log.warn("");
         }catch (Exception e){
-
+            log.error("e:{}",e);
         }
         return "{\"status\":\"ok\"}";
     }
