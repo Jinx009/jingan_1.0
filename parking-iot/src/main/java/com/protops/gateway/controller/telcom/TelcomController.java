@@ -162,6 +162,7 @@ public class TelcomController {
                                     deviceLog.setSnr(snr);
                                     deviceLog.setMod(mode);
                                     sensorDeviceLogService.save(deviceLog);
+                                    sensor.setBatteryVoltage(bat);
                                     sensor.setRssi(rssi);
                                     sensorService.update(sensor);
                                 }
