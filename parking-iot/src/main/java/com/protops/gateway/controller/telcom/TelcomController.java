@@ -70,10 +70,21 @@ public class TelcomController {
                                 sensor.setCreateTime(new Date());
                                 sensor.setMac(mac);
                                 sensor.setSensorStatus(0);
+                                sensor.setVedioStatus("");
+                                sensor.setCph("");
+                                sensor.setCpColor("");
+                                sensor.setCameraId("");
+                                sensor.setCameraName("");
+                                sensor.setPicLink("");
+                                sensor.setVedioTime("");
+                                sensor.setAreaId(2);
                                 sensorService.save(sensor);
                             }else{
+                                SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                                 if(sensor.getLastSeenTime()==null){
                                     sensor.setLastSeenTime(new Date());
+                                    sensor.setHappenTime(new Date());
+                                    sensor.setSensorTime(sdf1.format(new Date()));
                                     sensorService.update(sensor);
                                 }
                                 String cmd = data.substring(20, 22).toUpperCase();
@@ -89,11 +100,21 @@ public class TelcomController {
                                         sensor.setLastSeenTime(date);
                                         sensor.setSensorStatus(avalable);
                                         sensor.setMode(String.valueOf(Long.parseLong(mode, 16)));
+                                        sensor.setLastSeenTime(new Date());
+                                        sensor.setHappenTime(new Date());
+                                        sensor.setSensorTime(sdf1.format(new Date()));
+                                        sensor.setVedioStatus("");
+                                        sensor.setCph("");
+                                        sensor.setCpColor("");
+                                        sensor.setCameraId("");
+                                        sensor.setCameraName("");
+                                        sensor.setPicLink("");
+                                        sensor.setVedioTime("");
                                         sensorService.update(sensor);
                                         newSensorService.saveOperationLog(sensor);
                                     }
                                     SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-                                    SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//                                    File f = new File("/home/baoadmin/logs/sensor_status/"+sdf.format(date)+"/"+mac+".txt");//测试环境
                                     File f = new File("/apps/logs/sensor_status/"+sdf.format(date)+"/"+mac+".txt");
                                     File fileParent = f.getParentFile();
                                     if (!fileParent.exists()) {
@@ -116,7 +137,7 @@ public class TelcomController {
                                     Integer avalable = Integer.valueOf(av);
                                     String bat1 = data.substring(46, 48);
                                     String bat2 = data.substring(44, 46);
-                                    String bat = getDataBase(data.substring(44, 45), bat1+bat2);
+                                    String bat = String.valueOf(Double.valueOf(getDataBase(data.substring(46, 47), bat1+bat2))/1000);
                                     String soft = convertHexToString(data.substring(32, 44));
                                     String lt = String.valueOf(Integer.parseInt( data.substring(48, 50),16));
                                     String mode = String.valueOf(Integer.parseInt( data.substring(30, 32),16));
