@@ -72,7 +72,7 @@ public class NewSensorService {
         sensorOperationLog.setDescription(sensor.getDesc());
         sensorOperationLog.setFailTimes(0);
         sensorOperationLog.setSendStatus(0);
-        sensorOperationLog.setSendTime(new Date());
+//        sensorOperationLog.setSendTime(new Date());
         //没有对应的logId的新记录进行插入
         if (StringUtils.isNotBlank(sensor.getLogId())) {//车进
             sensorOperationLog.setLogId(sensor.getLogId());
