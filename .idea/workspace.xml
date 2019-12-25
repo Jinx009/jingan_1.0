@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a16383b3-f1de-474d-a0d5-996bf5d4d411" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/telcom/TelcomController.java" afterPath="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/telcom/TelcomController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/parking-iot/target/" />
@@ -36,11 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TelcomController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TelcomController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/telcom/TelcomController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1040">
-              <caret line="98" column="60" lean-forward="false" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
+            <state relative-caret-position="308">
+              <caret line="177" column="60" lean-forward="true" selection-start-line="177" selection-start-column="60" selection-end-line="177" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,11 +48,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewSensorService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewSensorService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="75" column="10" lean-forward="false" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+            <state relative-caret-position="366">
+              <caret line="81" column="83" lean-forward="false" selection-start-line="81" selection-start-column="83" selection-end-line="81" selection-end-column="83" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IoTDataController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="847">
+              <caret line="140" column="17" lean-forward="false" selection-start-line="140" selection-start-column="17" selection-end-line="140" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReportStatusHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/ReportStatusHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2550">
+              <caret line="189" column="8" lean-forward="false" selection-start-line="189" selection-start-column="8" selection-end-line="195" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -131,8 +151,8 @@
         <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/telcom/PushModel.java" />
         <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/telcom/TelcomPushDataModel.java" />
         <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/telcom/TelcomController.java" />
-        <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/telcom/TelcomController.java" />
         <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java" />
+        <option value="$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/telcom/TelcomController.java" />
       </list>
     </option>
   </component>
@@ -228,10 +248,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -388,6 +407,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -736,12 +756,13 @@
       <workItem from="1576459599157" duration="945000" />
       <workItem from="1576474806489" duration="37000" />
       <workItem from="1576652043552" duration="548000" />
-      <workItem from="1576806579975" duration="113000" />
+      <workItem from="1576806579975" duration="2654000" />
+      <workItem from="1577245120681" duration="502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154168000" />
+    <option name="totallyTimeSpent" value="157211000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -770,7 +791,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18854749" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27077365" sideWeight="0.49281314" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2743553" sideWeight="0.49281314" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.49713466" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3653295" sideWeight="0.50718683" order="5" side_tool="true" content_ui="tabs" />
@@ -1149,14 +1170,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/ReportStatusHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="189" column="8" lean-forward="false" selection-start-line="189" selection-start-column="8" selection-end-line="195" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parking-common/src/main/java/com/protops/gateway/service/log/SensorDeviceLogService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1188,29 +1201,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/handler/v1_0/ReportStatusHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2550">
+          <caret line="189" column="8" lean-forward="false" selection-start-line="189" selection-start-column="8" selection-end-line="195" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/IoTDataController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="95" column="32" lean-forward="false" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+        <state relative-caret-position="847">
+          <caret line="140" column="17" lean-forward="false" selection-start-line="140" selection-start-column="17" selection-end-line="140" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="81" column="83" lean-forward="false" selection-start-line="81" selection-start-column="83" selection-end-line="81" selection-end-column="83" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/controller/telcom/TelcomController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="98" column="60" lean-forward="false" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
+        <state relative-caret-position="308">
+          <caret line="177" column="60" lean-forward="true" selection-start-line="177" selection-start-column="60" selection-end-line="177" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parking-iot/src/main/java/com/protops/gateway/service/device/NewSensorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="75" column="10" lean-forward="false" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>

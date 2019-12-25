@@ -185,6 +185,7 @@ public class TelcomController {
                                     sensorDeviceLogService.save(deviceLog);
                                     sensor.setBatteryVoltage(bat);
                                     sensor.setRssi(rssi);
+                                    sensor.setAddr(rssi);
                                     sensorService.update(sensor);
                                 }
                             }
