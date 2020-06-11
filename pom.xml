@@ -31,7 +31,7 @@
 
         <version.commons.lang>2.5</version.commons.lang>
         <version.commons.codec>1.5</version.commons.codec>
-        <version.commons.beanutils>1.8.3</version.commons.beanutils>
+        <version.commons.beanutils>1.9.2</version.commons.beanutils>
         <version.jackson>1.9.8</version.jackson>
 
         <compressingPhase></compressingPhase>
