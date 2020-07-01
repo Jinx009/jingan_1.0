@@ -25,7 +25,7 @@
 
         <hibernate.version>3.6.9.Final</hibernate.version>
 
-        <mysql.jdbc.version>5.1.21</mysql.jdbc.version>
+        <mysql.jdbc.version>8.0.16</mysql.jdbc.version>
 
         <version.springframework.all>3.2.8.RELEASE</version.springframework.all>
 
