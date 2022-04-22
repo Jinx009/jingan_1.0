@@ -27,7 +27,7 @@
 
         <mysql.jdbc.version>5.1.21</mysql.jdbc.version>
 
-        <version.springframework.all>3.2.8.RELEASE</version.springframework.all>
+        <version.springframework.all>5.3.19</version.springframework.all>
 
         <version.commons.lang>2.5</version.commons.lang>
         <version.commons.codec>1.5</version.commons.codec>
