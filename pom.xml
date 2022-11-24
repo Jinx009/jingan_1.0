@@ -23,7 +23,7 @@
         <!-- internal projects -->
         <version.gateway.common>1.0.0-SNAPSHOT</version.gateway.common>
 
-        <hibernate.version>3.6.9.Final</hibernate.version>
+        <hibernate.version>5.3.20.Final</hibernate.version>
 
         <mysql.jdbc.version>5.1.21</mysql.jdbc.version>
 
